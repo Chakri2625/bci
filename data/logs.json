@@ -1,0 +1,4440 @@
+[
+    {
+        "timestamp": "2026-09-16T11:43:09.247613",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-16T11:43:18.436891",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:43:18.571971",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-16T11:43:20.307696",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:43:20.399298",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-16T11:43:20.485908",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-16T11:43:20.604293",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:43:20.685409",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:43:20.766857",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:43:24.612699",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-16T11:43:32.314151",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:43:41.868127",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-16T11:43:53.680373",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:02.447887",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:02.508477",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:02.616910",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:02.785530",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:02.862861",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:02.956179",
+        "command": "open_chrome",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.079113",
+        "command": "open_chrome",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.204428",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.212009",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.224112",
+        "command": "FOOBAR_ACTION",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "INVALID_COMMAND: Unknown command FOOBAR_ACTION"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.325442",
+        "command": "open_youtube",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.481563",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.608958",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.686402",
+        "command": "open_notepad",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.699755",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.713549",
+        "command": "open_search_bar",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:03.727791",
+        "command": "search",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:08.162431",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:44:14.684304",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "simulated hardware failure"
+    },
+    {
+        "timestamp": "2026-09-16T11:46:17.634555",
+        "command": "compose_email",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Email: Failed to fill compose window - Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@name='subjectbox' or @placeholder='Subject']\"}\n  (Session info: chrome=153.0.8010.47); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nStacktrace:\n\tchromedriver!GetHandleVerifier [0x7ff6a2cbc895+5aa5]\n\tchromedriver!(No symbol) [0x7ff6a2be0570]\n\tchromedriver!(No symbol) [0x7ff6a2a04a7d]\n\tchromedriver!(No symbol) [0x7ff6a2a6046d]\n\tchromedriver!(No symbol) [0x7ff6a2a6072c]\n\tchromedriver!(No symbol) [0x7ff6a2ab3417]\n\tchromedriver!(No symbol) [0x7ff6a2ab008f]\n\tchromedriver!(No symbol) [0x7ff6a2a521e2]\n\tchromedriver!(No symbol) [0x7ff6a2a52ff3]\n\tchromedriver!GetHandleVerifier [0x7ff6a30db271+424481]\n\tchromedriver!GetHandleVerifier [0x7ff6a3106f77+450187]\n\tchromedriver!GetHandleVerifier [0x7ff6a30fae6e+44407e]\n\tchromedriver!GetHandleVerifier [0x7ff6a2db798e+100b9e]\n\tchromedriver!(No symbol) [0x7ff6a2bee2b5]\n\tchromedriver!(No symbol) [0x7ff6a2be9454]\n\tchromedriver!(No symbol) [0x7ff6a2be95e4]\n\tchromedriver!(No symbol) [0x7ff6a2bd438c]\n\tKERNEL32!BaseThreadInitThunk [0x7ffe0ed77374+14]\n\tntdll!RtlUserThreadStart [0x7ffe1003cc91+21]\n"
+    },
+    {
+        "timestamp": "2026-09-16T11:46:31.512194",
+        "command": "compose_email",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Email: Failed to fill compose window - Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=153.0.8010.47)\nStacktrace:\n\tchromedriver!GetHandleVerifier [0x7ff6a2cbc895+5aa5]\n\tchromedriver!(No symbol) [0x7ff6a2be0570]\n\tchromedriver!(No symbol) [0x7ff6a2a04a7d]\n\tchromedriver!(No symbol) [0x7ff6a29dbab2]\n\tchromedriver!(No symbol) [0x7ff6a2a90fb6]\n\tchromedriver!(No symbol) [0x7ff6a2aaf95d]\n\tchromedriver!(No symbol) [0x7ff6a2a521e2]\n\tchromedriver!(No symbol) [0x7ff6a2a52ff3]\n\tchromedriver!GetHandleVerifier [0x7ff6a30db271+424481]\n\tchromedriver!GetHandleVerifier [0x7ff6a3106f77+450187]\n\tchromedriver!GetHandleVerifier [0x7ff6a30fae6e+44407e]\n\tchromedriver!GetHandleVerifier [0x7ff6a2db798e+100b9e]\n\tchromedriver!(No symbol) [0x7ff6a2bee2b5]\n\tchromedriver!(No symbol) [0x7ff6a2be9454]\n\tchromedriver!(No symbol) [0x7ff6a2be95e4]\n\tchromedriver!(No symbol) [0x7ff6a2bd438c]\n\tKERNEL32!BaseThreadInitThunk [0x7ffe0ed77374+14]\n\tntdll!RtlUserThreadStart [0x7ffe1003cc91+21]\n"
+    },
+    {
+        "timestamp": "2026-09-16T11:46:49.550501",
+        "command": "send_email",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T11:47:01.311428",
+        "command": "compose_email",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Subplugin execution error: argument of type 'NoneType' is not a container or iterable"
+    },
+    {
+        "timestamp": "2026-09-16T11:50:12.902972",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-16T12:02:21.405362",
+        "command": "compose_email",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Email: Failed to fill compose window - Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@name='subjectbox' or @placeholder='Subject']\"}\n  (Session info: chrome=153.0.8010.47); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nStacktrace:\n\tchromedriver!GetHandleVerifier [0x7ff6a2cbc895+5aa5]\n\tchromedriver!(No symbol) [0x7ff6a2be0570]\n\tchromedriver!(No symbol) [0x7ff6a2a04a7d]\n\tchromedriver!(No symbol) [0x7ff6a2a6046d]\n\tchromedriver!(No symbol) [0x7ff6a2a6072c]\n\tchromedriver!(No symbol) [0x7ff6a2ab3417]\n\tchromedriver!(No symbol) [0x7ff6a2ab008f]\n\tchromedriver!(No symbol) [0x7ff6a2a521e2]\n\tchromedriver!(No symbol) [0x7ff6a2a52ff3]\n\tchromedriver!GetHandleVerifier [0x7ff6a30db271+424481]\n\tchromedriver!GetHandleVerifier [0x7ff6a3106f77+450187]\n\tchromedriver!GetHandleVerifier [0x7ff6a30fae6e+44407e]\n\tchromedriver!GetHandleVerifier [0x7ff6a2db798e+100b9e]\n\tchromedriver!(No symbol) [0x7ff6a2bee2b5]\n\tchromedriver!(No symbol) [0x7ff6a2be9454]\n\tchromedriver!(No symbol) [0x7ff6a2be95e4]\n\tchromedriver!(No symbol) [0x7ff6a2bd438c]\n\tKERNEL32!BaseThreadInitThunk [0x7ffe0ed77374+14]\n\tntdll!RtlUserThreadStart [0x7ffe1003cc91+21]\n"
+    },
+    {
+        "timestamp": "2026-09-16T12:03:30.190487",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T12:08:48.865999",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:57:44.690112",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:57:51.116545",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:57:54.636065",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T13:57:56.545048",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T13:57:58.396081",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T13:57:58.397132",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T13:58:00.979507",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:58:26.622570",
+        "command": "PULL",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-16T13:58:26.829169",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-16T13:58:36.731672",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:58:36.743633",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-16T13:58:39.046055",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:58:39.065476",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-16T13:58:39.086941",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-16T13:58:39.110214",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:58:39.130070",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:58:39.144817",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:58:44.500216",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-16T13:58:54.648758",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:59:06.457650",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T13:59:12.270641",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T13:59:13.965623",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T13:59:20.133454",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:12.185286",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:12.232309",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:13.640672",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:15.143570",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:16.580740",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:17.840525",
+        "command": "open_chrome",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:19.246794",
+        "command": "open_chrome",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:20.572777",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:20.578206",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:20.583772",
+        "command": "FOOBAR_ACTION",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "INVALID_COMMAND: Unknown command FOOBAR_ACTION"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:21.885633",
+        "command": "open_youtube",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:24.720596",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:24.724369",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:26.057654",
+        "command": "open_notepad",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:27.289547",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:30.017358",
+        "command": "open_calculator",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:30.023230",
+        "command": "open_calculator",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-16T14:00:30.044674",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:30.045851",
+        "command": "open_search_bar",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:30.047863",
+        "command": "search",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:38.749414",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:00:53.320684",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:01:03.043377",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:02:20.132600",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "simulated hardware failure"
+    },
+    {
+        "timestamp": "2026-09-16T14:03:19.431980",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:03:20.960766",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:03:56.887979",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:03:58.449054",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:03:58.455599",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:03:59.297340",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:04:00.842017",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:04:01.691792",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:04:03.232306",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:04:48.939421",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:04:50.952494",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:04:52.975302",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:04:54.995058",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:24.032454",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:38.533033",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:40.547645",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:42.565586",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:44.586756",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:51.945199",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:39:52.649198",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:39:53.540922",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:53.549418",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:54.189064",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:54.195208",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:54.332929",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:39:55.100576",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:39:55.900027",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:56.638844",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:56.690027",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:39:57.489503",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:39:58.238704",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:39:59.029282",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:45:49.348900",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:45:50.892857",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:45:50.901028",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:45:51.771401",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:45:53.319368",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:45:54.144611",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:45:55.680430",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:48:11.220608",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:48:12.770162",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:48:12.775683",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:48:13.607582",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:48:15.151243",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-16T14:48:15.942927",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-16T14:48:17.494402",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:19:56.454400",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:34:10.514390",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:34:50.700248",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:35:20.861839",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:35:22.408017",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:35:23.949489",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:35:23.977473",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:35:44.095943",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:36:22.044272",
+        "command": "PULL",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:22.329112",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:31.160096",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:36:31.187479",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:32.722731",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:36:32.747620",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:32.770550",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:32.796354",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:34.350684",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:35.912417",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:35.921927",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:35.950243",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:37.564095",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:39.130271",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:39.140626",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:39.163003",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:40.723288",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:42.278627",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:36:42.303520",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:37:13.738817",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:38:08.847703",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:38:20.731249",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:38:25.759645",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:38:31.826679",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:38:36.857724",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:38:51.872538",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:39:21.958679",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:23.516766",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:25.054584",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:25.065129",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:28.508410",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:30.058167",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:31.600910",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:31.611919",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:31.628407",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:33.193487",
+        "command": "Left_light_off",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:34.822901",
+        "command": "Left_light_off",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:34.835033",
+        "command": "Left_light_off",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:44.884520",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:45.193388",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:39:46.432032",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:47.981496",
+        "command": "Left_fan_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:47.991668",
+        "command": "Left_fan_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:58.037185",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:39:59.590768",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:01.135199",
+        "command": "Left_pump_off",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:01.153597",
+        "command": "Left_pump_off",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:15.551876",
+        "command": "PULL",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:15.804980",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:24.706794",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:40:24.736751",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:26.291373",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:40:26.313903",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:26.341943",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:26.370706",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:27.917027",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:29.498270",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:29.508688",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:29.533690",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:31.082943",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:32.654471",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:32.684901",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:32.718524",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:34.390174",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:35.954312",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:40:35.963800",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:41:06.904036",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:41:27.093438",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:12.232480",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:17.348670",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:22.410998",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:27.072669",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:27.257614",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:27.423395",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:27.612190",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:42:27.714333",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:27.849961",
+        "command": "open_chrome",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.084172",
+        "command": "open_chrome",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.232761",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.257741",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.274755",
+        "command": "FOOBAR_ACTION",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "INVALID_COMMAND: Unknown command FOOBAR_ACTION"
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.370514",
+        "command": "open_youtube",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.570216",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.694201",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.823620",
+        "command": "open_notepad",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.844997",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.858009",
+        "command": "open_search_bar",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:28.870942",
+        "command": "search",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:42:43.942854",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:43:09.027036",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:43:19.525750",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:21.095787",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:22.660591",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:22.672229",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:22.688837",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:24.087072",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:43:24.244125",
+        "command": "Left_light_off",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:25.844615",
+        "command": "Left_light_off",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:25.855048",
+        "command": "Left_light_off",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:35.888989",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:37.441874",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:39.022331",
+        "command": "Left_fan_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:39.062775",
+        "command": "Left_fan_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:49.114881",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:50.676598",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:52.229241",
+        "command": "Left_pump_off",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:43:52.364489",
+        "command": "Left_pump_off",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:22.317980",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "simulated hardware failure"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:50.122134",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:52.796513",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:53.033597",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:53.232266",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:53.383666",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:53.530287",
+        "command": "open_chrome",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:53.697334",
+        "command": "open_chrome",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:53.875264",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:53.905626",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:53.941979",
+        "command": "FOOBAR_ACTION",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "INVALID_COMMAND: Unknown command FOOBAR_ACTION"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:54.044737",
+        "command": "open_youtube",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:54.250427",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:54.354629",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:44:54.552316",
+        "command": "open_notepad",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:54.619418",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:54.655947",
+        "command": "open_search_bar",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:54.739017",
+        "command": "search",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:57.613746",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:44:58.248692",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:45:02.574695",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:45:02.691952",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:45:04.984432",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:45:06.547332",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:45:08.102436",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:45:08.115209",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:45:09.458855",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "simulated hardware failure"
+    },
+    {
+        "timestamp": "2026-09-17T11:45:09.802633",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:45:49.460102",
+        "command": "PULL",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:45:52.891856",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:46:02.147746",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:02.206207",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-17T11:46:03.745863",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:03.809261",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-17T11:46:03.843871",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-17T11:46:03.875423",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:03.917961",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:03.970275",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:07.419135",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T11:46:14.675534",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:16.721762",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:18.750984",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:20.774905",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:30.591016",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:46:32.144911",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:32.167683",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:33.162290",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:46:34.716920",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:46:35.522543",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T11:46:37.082402",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:47:25.801674",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:47:48.546479",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:47:48.735378",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:47:51.088468",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:47:51.410757",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:47:53.117614",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:47:54.035085",
+        "command": "open_chrome",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:47:55.089332",
+        "command": "open_chrome",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:47:58.129119",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:48:00.022411",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:48:00.765484",
+        "command": "FOOBAR_ACTION",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "INVALID_COMMAND: Unknown command FOOBAR_ACTION"
+    },
+    {
+        "timestamp": "2026-09-17T11:48:00.888958",
+        "command": "open_youtube",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:48:04.980710",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:48:05.805290",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-17T11:48:05.887457",
+        "command": "open_notepad",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:48:05.907982",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:48:05.922104",
+        "command": "open_search_bar",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:48:05.933377",
+        "command": "search",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:48:09.032278",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T11:48:29.548984",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "simulated hardware failure"
+    },
+    {
+        "timestamp": "2026-09-17T16:03:19.970694",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:03:45.255619",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:03:47.278840",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:03:49.305876",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:03:51.352041",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:34:37.251340",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:34:40.488755",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:34:42.965864",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:34:44.679331",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:34:46.355480",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:34:46.359917",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:34:48.070352",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:00.001468",
+        "command": "PULL",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:00.210913",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:09.341004",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:09.354094",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:11.232831",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:11.249781",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:11.283291",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:11.297641",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:11.309662",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:11.322317",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:15.176539",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:22.522833",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:24.618928",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:26.640159",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:28.985297",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:39.544618",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:43.172584",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:43.185452",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:44.492532",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:47.946735",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:35:49.372087",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:35:54.169852",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:36:34.193550",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:36:35.774106",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:36:35.786302",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:36:36.550598",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:36:38.128010",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-17T16:36:38.910533",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-17T16:36:40.530214",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T11:11:31.834250",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:13:35.643434",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:13:38.814929",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:13:41.079318",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-18T12:13:42.370041",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-18T12:13:43.651771",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-18T12:13:43.663231",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-18T12:13:45.248407",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:13:58.780909",
+        "command": "PULL",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-18T12:13:58.989758",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-18T12:14:08.011923",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:08.038228",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-18T12:14:09.561100",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:09.582954",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-18T12:14:09.605255",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-18T12:14:09.627659",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:09.654812",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:09.681049",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:12.910244",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-18T12:14:19.502159",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:21.524735",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:23.542655",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:25.571039",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:35.459421",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-18T12:14:37.009788",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:37.028165",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:37.792427",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-18T12:14:39.335406",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:40.094128",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-18T12:14:41.631472",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:14:59.704779",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:08.289163",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:08.561750",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:08.624369",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:08.767135",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:08.946499",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.040872",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.165003",
+        "command": "open_chrome",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.304838",
+        "command": "open_chrome",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.444616",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.464448",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.483219",
+        "command": "FOOBAR_ACTION",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "INVALID_COMMAND: Unknown command FOOBAR_ACTION"
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.583748",
+        "command": "open_youtube",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.769353",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:09.895909",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-18T12:15:10.032343",
+        "command": "open_notepad",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:10.106785",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:10.130578",
+        "command": "open_search_bar",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:10.142542",
+        "command": "search",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-18T12:15:18.548616",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "simulated hardware failure"
+    },
+    {
+        "timestamp": "2026-09-18T15:15:07.632539",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-18T15:20:34.620004",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:23.093461",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:26.915328",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:29.550248",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:31.119309",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:32.666335",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:32.684407",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:34.451588",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:37.669316",
+        "command": "PULL",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:47.019760",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:47.039987",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:48.586885",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:48.606120",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:48.625694",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:48.660868",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:48.689930",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:48.718595",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:49.490487",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-19T10:44:57.231006",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:44:59.253418",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:45:01.306826",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:45:03.335036",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:45:12.919086",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-19T10:45:14.468492",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:45:14.486864",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:45:15.319479",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-19T10:45:16.868195",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:45:17.755231",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-19T10:45:19.273385",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:12.667441",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:20.200212",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Plugin not found"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:20.543459",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:20.641139",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:20.844873",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:21.059678",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:21.179845",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:21.336607",
+        "command": "open_chrome",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:21.520574",
+        "command": "open_chrome",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:21.694704",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:21.732138",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:21.753435",
+        "command": "FOOBAR_ACTION",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "INVALID_COMMAND: Unknown command FOOBAR_ACTION"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:21.862841",
+        "command": "open_youtube",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:22.048832",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:22.157129",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-19T10:46:22.262208",
+        "command": "open_notepad",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:26.948094",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T10:46:34.449152",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "simulated hardware failure"
+    },
+    {
+        "timestamp": "2026-09-19T14:53:12.204520",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-19T14:53:15.219096",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T11:54:32.275510",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T11:54:37.675320",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T11:54:39.264386",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T11:54:40.442840",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T11:54:40.501423",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T11:54:42.908240",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T12:59:37.135220",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T12:59:40.388519",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T12:59:41.969193",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T12:59:43.575970",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T12:59:43.602906",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T12:59:45.289231",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:00:57.751188",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:01:00.072109",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:01:01.667726",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:01:03.263201",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:01:03.287847",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:01:04.848620",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:01:58.651741",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:01:59.705317",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:02:02.082831",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:02:03.678060",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:02:05.278268",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:02:05.298599",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:02:06.840178",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:02:48.427064",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:02:50.026605",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:02:51.635423",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:02:51.662001",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:06:10.990674",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:06:12.498909",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:06:14.853102",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:06:16.442083",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:06:18.137450",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:06:18.163916",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:06:20.453285",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:07:38.253571",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:10:54.712980",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:10:56.046153",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:10:57.820353",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:10:59.291620",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:11:00.886718",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:11:02.458894",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:11:02.485406",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:11:04.186671",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:12:02.592376",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:12:04.054236",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:12:04.895122",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:12:06.590014",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:12:08.176293",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:12:09.784264",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:12:09.810312",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:12:11.550175",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:14:21.427596",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:14:22.624023",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:14:23.445832",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:14:24.951890",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:14:26.546536",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:14:28.146532",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:14:28.174005",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:14:29.680697",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:15:00.842981",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:15:02.025308",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:15:02.747149",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:15:04.340020",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:15:05.924681",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:15:05.953141",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:15:26.743676",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:15:40.733344",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:16:09.218523",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:17:31.627204",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:17:32.711430",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:17:33.633996",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:17:35.106433",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:17:36.706449",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:17:38.336451",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:17:38.359763",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:17:40.284040",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:18:13.758355",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:18:15.338231",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:18:16.929993",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:18:16.953644",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:16.932074",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:19:17.636694",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:19:18.532243",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:19:20.036894",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:21.667698",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:23.294666",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:23.340139",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:24.944539",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:19:47.019600",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:19:47.950429",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:19:48.680294",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:19:50.108824",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:51.705779",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:53.299697",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:53.326275",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:19:55.045102",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:21:36.069759",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:21:36.838848",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:21:38.279853",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:21:40.833489",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:21:42.421350",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:21:44.021846",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:21:44.047532",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:21:45.672867",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:23:18.566141",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:23:19.404689",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:23:20.392948",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-21T13:23:22.484620",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:23:24.071933",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:23:25.650994",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:23:25.679801",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-21T13:23:27.465284",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:10:44.326812",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:10:46.345876",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:10:48.376897",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:10:50.409952",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:13:17.504370",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:42:53.083849",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:42:55.186523",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:42:55.893159",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:42:56.574537",
+        "command": "Left_pump_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:42:57.925419",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-22T11:42:59.481454",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:01.052297",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:01.063912",
+        "command": "Left_light_on",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:02.461495",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:07.570682",
+        "command": "PULL",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:16.977908",
+        "command": "turn_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:17.011475",
+        "command": "read_sensor",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "connection loss"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:18.598616",
+        "command": "read_sensor",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:18.623316",
+        "command": "set_pwm",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Hardware register write fault"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:18.648451",
+        "command": "calculate",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Fatal memory segmentation or null pointer"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:18.676158",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:18.707829",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:18.739427",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:21.883138",
+        "command": "PUSH",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Media operation failed"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:27.987129",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:30.015605",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:32.044101",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:34.083021",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:42.665550",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:44.222783",
+        "command": "Left_light_on",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:44.242853",
+        "command": "Left_light_off",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:44.910391",
+        "command": "Left_fan_on",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:46.481761",
+        "command": "Left_fan_on",
+        "attempt": 2,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:48.058743",
+        "command": "Left_fan_on",
+        "attempt": 3,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:48.816298",
+        "command": "Left_pump_off",
+        "attempt": 1,
+        "status": "RETRYING",
+        "reason": "MQTT client disconnected"
+    },
+    {
+        "timestamp": "2026-09-22T11:43:50.451621",
+        "command": "Left_pump_off",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:43:58.050325",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:44:04.852224",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Subplugin execution error: cannot access local variable 'serial' where it is not associated with a value"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:05.123880",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:44:05.186067",
+        "command": "Left_light_on",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:44:05.324649",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:44:05.507316",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:05.599197",
+        "command": "open_calculator",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:44:05.707174",
+        "command": "open_chrome",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:05.847656",
+        "command": "open_chrome",
+        "attempt": 2,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:05.987497",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:06.000838",
+        "command": "open_chrome",
+        "attempt": 3,
+        "status": "FAILED",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:06.018090",
+        "command": "FOOBAR_ACTION",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "INVALID_COMMAND: Unknown command FOOBAR_ACTION"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:06.127458",
+        "command": "open_youtube",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.08 seconds"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:06.265644",
+        "command": "open_calculator",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:44:06.390844",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "TIMEOUT",
+        "reason": "Command timed out after 0.15 seconds"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:06.484635",
+        "command": "open_notepad",
+        "attempt": 2,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:44:06.505205",
+        "command": "open_notepad",
+        "attempt": 1,
+        "status": "FAILED",
+        "reason": "Subplugin execution error: cannot access local variable 'serial' where it is not associated with a value"
+    },
+    {
+        "timestamp": "2026-09-22T11:44:11.215621",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:47:48.766689",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:47:50.817811",
+        "command": "BACKWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:47:52.853180",
+        "command": "LEFT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T11:47:54.890014",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T12:13:39.394811",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T12:13:49.141474",
+        "command": "FORWARD",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    },
+    {
+        "timestamp": "2026-09-22T12:13:53.399898",
+        "command": "RIGHT",
+        "attempt": 1,
+        "status": "SUCCESS",
+        "reason": null
+    }
+]

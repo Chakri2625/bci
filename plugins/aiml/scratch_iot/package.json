@@ -1,0 +1,23 @@
+{
+  "name": "iot-emotiv-esp32-master-hub",
+  "version": "1.0.0",
+  "description": "Master IoT Hub connecting Emotiv EPOC Headset (via Cortex API WebSockets) to ESP32 controlling Light, Fan, and Pump.",
+  "main": "server.js",
+  "scripts": {
+    "start": "python server.py",
+    "dev": "python server.py",
+    "test": "python test_state_machine.py"
+  },
+  "keywords": ["emotiv", "cortex", "bci", "esp32", "iot", "websockets"],
+  "author": "Antigravity",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ws": "^8.18.0"
+  },
+  "optionalDependencies": {
+    "serialport": "^12.0.0"
+  }
+}

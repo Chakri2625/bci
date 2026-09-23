@@ -1,0 +1,23 @@
+plugin_id: media
+name: Media Command Handler
+version: 1.0.0
+description: SynaptiMesh Media Command Handler and Provider Architecture (YouTube, Audio/Video)
+domain: MEDIA
+entrypoint: plugins.media.plugin:MediaManagerPlugin
+supported_apps:
+  - YOUTUBE
+  - JIOSAAVN
+supported_commands:
+  - PUSH
+  - PULL
+  - LEFT
+  - RIGHT
+  - PREVIOUS
+  - NEXT
+  - TOGGLE_PLAY_PAUSE
+  - PLAY
+  - PAUSE
+  - SEARCH
+  - VOLUME_UP
+  - VOLUME_DOWN
+  - CLOSE_APP

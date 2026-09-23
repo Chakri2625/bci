@@ -1,0 +1,2004 @@
+[
+  {
+    "id": "d0b8aa3b-b059-4729-b6b6-dc82c6710be2",
+    "timestamp_utc": "2026-09-17T10:31:23.889Z",
+    "timestamp_unix_ms": 1789641083889,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "9960704f-a5e6-413b-a06b-32ef729df1d1",
+    "timestamp_utc": "2026-09-17T10:31:55.570Z",
+    "timestamp_unix_ms": 1789641115570,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "e2e45de4-3f9d-434e-b341-3d4342151846",
+    "timestamp_utc": "2026-09-17T10:32:10.818Z",
+    "timestamp_unix_ms": 1789641130818,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "ab1421ea-c593-403b-b107-3060f8c272e5",
+    "timestamp_utc": "2026-09-17T10:32:29.308Z",
+    "timestamp_unix_ms": 1789641149308,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "0b6c5b71-f08f-4b32-af17-71850ef640cf",
+    "timestamp_utc": "2026-09-17T10:32:35.511Z",
+    "timestamp_unix_ms": 1789641155511,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "373938bf-80f4-4add-8fcc-91209ec8d826",
+    "timestamp_utc": "2026-09-17T10:32:41.024Z",
+    "timestamp_unix_ms": 1789641161024,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "38a4aa26-5e7f-47c3-9de3-10cdc326c4df",
+    "timestamp_utc": "2026-09-17T10:34:37.369Z",
+    "timestamp_unix_ms": 1789641277369,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "529a089b-1b32-401e-b570-f2c13afbb7ef",
+    "timestamp_utc": "2026-09-17T10:46:44.866Z",
+    "timestamp_unix_ms": 1789642004866,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "a45fb6c0-b98c-409b-b943-9b41823cb055",
+    "timestamp_utc": "2026-09-17T11:02:28.840Z",
+    "timestamp_unix_ms": 1789642948840,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "00afd5c0-11a5-420e-a204-ca72bd83e1b9",
+    "timestamp_utc": "2026-09-17T11:02:43.279Z",
+    "timestamp_unix_ms": 1789642963279,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "26daf8c8-9c6c-499a-8025-ff86867aa869",
+    "timestamp_utc": "2026-09-17T11:03:13.781Z",
+    "timestamp_unix_ms": 1789642993781,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "92b1c3f3-838d-4354-98d7-3345adeba489",
+    "timestamp_utc": "2026-09-17T11:03:31.387Z",
+    "timestamp_unix_ms": 1789643011387,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "ff85956f-ff2c-4c00-8c57-20c784b0fb5d",
+    "timestamp_utc": "2026-09-17T11:04:10.585Z",
+    "timestamp_unix_ms": 1789643050585,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "5f794e92-421b-4d0f-923d-bccae424168a",
+    "timestamp_utc": "2026-09-17T11:04:10.685Z",
+    "timestamp_unix_ms": 1789643050685,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "87b16cd3-7392-45d8-8b79-945a2364f3d2",
+    "timestamp_utc": "2026-09-17T11:04:10.693Z",
+    "timestamp_unix_ms": 1789643050693,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "3e58e22c-2417-4e27-9838-a2365e31b9b6",
+    "timestamp_utc": "2026-09-17T11:04:26.794Z",
+    "timestamp_unix_ms": 1789643066794,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "a5a50e34-c803-42ec-906d-6452319dfb7f",
+    "timestamp_utc": "2026-09-17T11:05:34.365Z",
+    "timestamp_unix_ms": 1789643134365,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARSTOP",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "c799c810-ffab-46e9-bd90-f24040136efc",
+    "timestamp_utc": "2026-09-17T11:05:34.465Z",
+    "timestamp_unix_ms": 1789643134465,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARFORWARD",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "c7075862-e5d6-4a81-94b3-94175377ac5b",
+    "timestamp_utc": "2026-09-17T11:05:34.474Z",
+    "timestamp_unix_ms": 1789643134474,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARSTOP",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "96ebf048-62ba-4a95-94d3-9549af3b6023",
+    "timestamp_utc": "2026-09-17T11:06:25.226Z",
+    "timestamp_unix_ms": 1789643185226,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "2e1ebce1-5a1b-4613-a233-1c7cc3bc833d",
+    "timestamp_utc": "2026-09-17T11:06:25.337Z",
+    "timestamp_unix_ms": 1789643185337,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "dc19b509-a3b0-48e9-8b35-3ca8af1c6022",
+    "timestamp_utc": "2026-09-17T11:06:25.349Z",
+    "timestamp_unix_ms": 1789643185349,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "b6975e06-dd68-449f-9206-0b560f734aaf",
+    "timestamp_utc": "2026-09-17T11:11:26.175Z",
+    "timestamp_unix_ms": 1789643486175,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "50792a48-967a-41ba-be10-c51dc71ef412",
+    "timestamp_utc": "2026-09-17T11:11:26.293Z",
+    "timestamp_unix_ms": 1789643486293,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "c0351cc9-39ef-4d72-97ba-a630e4b50df3",
+    "timestamp_utc": "2026-09-17T11:11:26.305Z",
+    "timestamp_unix_ms": 1789643486305,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "139ba4f5-38ff-4553-8a00-79681e2eec64",
+    "timestamp_utc": "2026-09-17T11:18:49.303Z",
+    "timestamp_unix_ms": 1789643929303,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "a9e06720-8975-4b93-b4f7-e0767a21578c",
+    "timestamp_utc": "2026-09-17T11:18:49.401Z",
+    "timestamp_unix_ms": 1789643929401,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "1e32f7e9-7955-4af1-968c-d4e93ddb6e5f",
+    "timestamp_utc": "2026-09-17T11:18:49.409Z",
+    "timestamp_unix_ms": 1789643929409,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "4620656d-039e-4d5d-a2b6-754f44ca362f",
+    "timestamp_utc": "2026-09-17T11:31:16.240Z",
+    "timestamp_unix_ms": 1789644676240,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "0e7a8f14-c6cd-4326-808d-bcc33b82554a",
+    "timestamp_utc": "2026-09-17T11:31:16.348Z",
+    "timestamp_unix_ms": 1789644676348,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "eebe000f-9a6a-422a-b092-90d3e12defea",
+    "timestamp_utc": "2026-09-17T11:31:16.357Z",
+    "timestamp_unix_ms": 1789644676357,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "2c49f2d2-0e51-4841-8b30-e94bcfb84802",
+    "timestamp_utc": "2026-09-17T11:31:41.329Z",
+    "timestamp_unix_ms": 1789644701329,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "54a18e51-e825-4f0d-a2c4-d42e35f24fa7",
+    "timestamp_utc": "2026-09-17T11:31:41.450Z",
+    "timestamp_unix_ms": 1789644701450,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "afbffeab-a506-40cc-a021-b26c10a1d2b7",
+    "timestamp_utc": "2026-09-17T11:31:41.459Z",
+    "timestamp_unix_ms": 1789644701459,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "c3ad97b5-565d-4ce8-8eef-9bb0f7930a81",
+    "timestamp_utc": "2026-09-17T11:32:14.690Z",
+    "timestamp_unix_ms": 1789644734690,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "e0d79903-4c00-490a-bc75-45e4a7e48965",
+    "timestamp_utc": "2026-09-17T11:32:14.830Z",
+    "timestamp_unix_ms": 1789644734830,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "0a7fa22c-27d8-45c4-a2f9-e045e9331d20",
+    "timestamp_utc": "2026-09-17T11:32:14.851Z",
+    "timestamp_unix_ms": 1789644734851,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "5f65d78d-9c3f-4332-85a4-4d85e7465cae",
+    "timestamp_utc": "2026-09-17T11:32:40.656Z",
+    "timestamp_unix_ms": 1789644760656,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "edf39a16-1c53-429f-bfc2-d24149cebbf0",
+    "timestamp_utc": "2026-09-17T11:32:40.762Z",
+    "timestamp_unix_ms": 1789644760762,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "e6783701-193a-4cc7-802a-7fff131676d7",
+    "timestamp_utc": "2026-09-17T11:32:40.772Z",
+    "timestamp_unix_ms": 1789644760772,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "8b2306d8-5fef-49a4-930a-607d66f5fc47",
+    "timestamp_utc": "2026-09-17T12:01:34.935Z",
+    "timestamp_unix_ms": 1789646494935,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "fdf354bf-f0ea-4558-979b-7c9caeea7558",
+    "timestamp_utc": "2026-09-17T12:01:35.054Z",
+    "timestamp_unix_ms": 1789646495054,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "d003d358-0570-4876-8414-47c8a2cae482",
+    "timestamp_utc": "2026-09-17T12:01:35.062Z",
+    "timestamp_unix_ms": 1789646495062,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "d6fa8431-8a27-4e22-8174-4d9517260e4a",
+    "timestamp_utc": "2026-09-17T12:11:37.903Z",
+    "timestamp_unix_ms": 1789647097903,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "46e39118-a458-4b0f-81ea-f56273d21f89",
+    "timestamp_utc": "2026-09-17T12:11:38.005Z",
+    "timestamp_unix_ms": 1789647098005,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "ca0a943d-98ff-4152-9f35-163e9992d4ee",
+    "timestamp_utc": "2026-09-17T12:11:38.012Z",
+    "timestamp_unix_ms": 1789647098012,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "312f8219-2557-449a-8202-2af0292cb7d2",
+    "timestamp_utc": "2026-09-18T05:41:28.244Z",
+    "timestamp_unix_ms": 1789710088244,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "941bb37a-c892-47d9-9982-dfe07323dd77",
+    "timestamp_utc": "2026-09-18T05:41:28.499Z",
+    "timestamp_unix_ms": 1789710088499,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "bd52ac30-cd71-4cb8-a713-61f323271fe0",
+    "timestamp_utc": "2026-09-18T05:41:28.511Z",
+    "timestamp_unix_ms": 1789710088511,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "e9d2dde8-4526-4856-8a39-e35059fc9b59",
+    "timestamp_utc": "2026-09-18T05:41:28.981Z",
+    "timestamp_unix_ms": 1789710088981,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARFORWARD",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "a9e9474e-b1d8-45cf-9390-19cc4991c443",
+    "timestamp_utc": "2026-09-18T05:41:41.550Z",
+    "timestamp_unix_ms": 1789710101550,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "ad156c64-40f1-464e-85eb-c49d431ca9be",
+    "timestamp_utc": "2026-09-18T05:44:43.335Z",
+    "timestamp_unix_ms": 1789710283335,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "b73321ef-5676-4748-9497-b915217c0a46",
+    "timestamp_utc": "2026-09-18T05:48:49.407Z",
+    "timestamp_unix_ms": 1789710529407,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "b84c22a3-e1b5-4e23-82d2-a41456f32dc1",
+    "timestamp_utc": "2026-09-18T06:43:26.737Z",
+    "timestamp_unix_ms": 1789713806737,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "738fba2b-5152-4a37-a7f7-12e5ae02ccba",
+    "timestamp_utc": "2026-09-18T06:44:30.486Z",
+    "timestamp_unix_ms": 1789713870486,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARSTOP",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "926fe2c5-4a11-453c-a649-5760d468e694",
+    "timestamp_utc": "2026-09-18T06:44:30.778Z",
+    "timestamp_unix_ms": 1789713870778,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARFORWARD",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "5f260344-24df-4a0a-a556-154fc77085a4",
+    "timestamp_utc": "2026-09-18T06:44:30.792Z",
+    "timestamp_unix_ms": 1789713870792,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARSTOP",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "bd8b23fc-a59d-495a-b867-fc7769d60859",
+    "timestamp_utc": "2026-09-19T05:14:13.184Z",
+    "timestamp_unix_ms": 1789794853184,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "80901c1a-ddc9-41c8-9650-6eb1955f3b2a",
+    "timestamp_utc": "2026-09-19T05:15:08.468Z",
+    "timestamp_unix_ms": 1789794908468,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARSTOP",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "bdc5bac8-0c30-4d3e-8654-a769a0e550c5",
+    "timestamp_utc": "2026-09-19T05:15:08.665Z",
+    "timestamp_unix_ms": 1789794908665,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARFORWARD",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "b9fd4578-7587-4246-9641-840921c2b344",
+    "timestamp_utc": "2026-09-19T05:15:08.766Z",
+    "timestamp_unix_ms": 1789794908766,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARSTOP",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "b7f970c2-5437-407c-86f6-c2805a19ce45",
+    "timestamp_utc": "2026-09-19T09:23:03.049Z",
+    "timestamp_unix_ms": 1789809783049,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "a6abcf54-506a-41f4-bfaa-066c2c5ce885",
+    "timestamp_utc": "2026-09-22T05:42:52.661Z",
+    "timestamp_unix_ms": 1790055772661,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "491617e4-c650-4f9b-b54c-c738bc365b67",
+    "timestamp_utc": "2026-09-22T05:42:52.810Z",
+    "timestamp_unix_ms": 1790055772810,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "b95f13a6-839f-4c99-aa49-ae67e97b583c",
+    "timestamp_utc": "2026-09-22T05:42:52.830Z",
+    "timestamp_unix_ms": 1790055772830,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "fc8ab658-e9af-404a-b605-226d8fb5ce7f",
+    "timestamp_utc": "2026-09-22T06:06:06.666Z",
+    "timestamp_unix_ms": 1790057166666,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "11fa5b06-6a82-4c6d-b2af-e1aba45c69cf",
+    "timestamp_utc": "2026-09-22T06:06:06.944Z",
+    "timestamp_unix_ms": 1790057166944,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "71815f03-ab95-4e71-9cab-340765064a50",
+    "timestamp_utc": "2026-09-22T06:06:06.959Z",
+    "timestamp_unix_ms": 1790057166959,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "4106d935-44a8-49e5-89ae-67752e84a452",
+    "timestamp_utc": "2026-09-22T06:12:43.763Z",
+    "timestamp_unix_ms": 1790057563763,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "470e3c4d-1442-4fdf-a4d3-7a0b35fb48d2",
+    "timestamp_utc": "2026-09-22T06:13:38.925Z",
+    "timestamp_unix_ms": 1790057618925,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARSTOP",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "999985b5-d56e-4c45-8432-7ac406208800",
+    "timestamp_utc": "2026-09-22T06:13:39.043Z",
+    "timestamp_unix_ms": 1790057619043,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARFORWARD",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "df1bfd8a-6308-46ea-98e5-7b7388e54e58",
+    "timestamp_utc": "2026-09-22T06:13:39.067Z",
+    "timestamp_unix_ms": 1790057619067,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": true,
+    "latency_ms": 0,
+    "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+    "endpoint": "",
+    "error": "",
+    "details": {
+      "result": {
+        "success": true,
+        "mode": "mqtt",
+        "topic": "robotcar/98:A3:16:BF:2C:C0/control",
+        "command": "LIFTCARSTOP",
+        "latency": 0,
+        "brokerAccepted": true,
+        "ackPending": true
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "0cd3d7fb-0812-427a-9298-40c602d331c0",
+    "timestamp_utc": "2026-09-22T06:17:59.821Z",
+    "timestamp_unix_ms": 1790057879821,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "6cdb8377-2318-43c1-a1bd-7759eef3e982",
+    "timestamp_utc": "2026-09-22T06:17:59.951Z",
+    "timestamp_unix_ms": 1790057879951,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "cb41f4da-597d-49b1-8267-ac5208d94a8f",
+    "timestamp_utc": "2026-09-22T06:17:59.973Z",
+    "timestamp_unix_ms": 1790057879973,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  },
+  {
+    "id": "054172fa-b985-4ac8-a1b0-36b36ce8467a",
+    "timestamp_utc": "2026-09-22T06:43:25.694Z",
+    "timestamp_unix_ms": 1790059405694,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "452851e4-d5bd-4e2a-b223-d1080b1b5c17",
+    "timestamp_utc": "2026-09-22T06:43:25.833Z",
+    "timestamp_unix_ms": 1790059405833,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "FORWARD",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CAR"
+      }
+    }
+  },
+  {
+    "id": "d1e2d776-22f8-4bf0-8b1f-ac2c23af8327",
+    "timestamp_utc": "2026-09-22T06:43:25.842Z",
+    "timestamp_unix_ms": 1790059405842,
+    "source": "DASHBOARD_API",
+    "category": "ROBOT_CAR",
+    "command": "STOP",
+    "transport": "mqtt",
+    "success": false,
+    "latency_ms": null,
+    "topic": "",
+    "endpoint": "",
+    "error": "MQTT broker not connected",
+    "details": {
+      "result": {
+        "success": false,
+        "mode": "mqtt",
+        "error": "MQTT broker not connected"
+      },
+      "metadata": {
+        "domain": "LIFT",
+        "target": "CommandTarget.CHAIR"
+      }
+    }
+  }
+]

@@ -1,0 +1,1460 @@
+- 0[
+  {
+    "timestamp": "2026-09-07T10:08:12.147563+00:00",
+    "command": "right",
+    "confidence": 0.352469,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:12.273989+00:00",
+    "command": "right",
+    "confidence": 0.466389,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:12.401265+00:00",
+    "command": "right",
+    "confidence": 0.114011,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:21.393903+00:00",
+    "command": "push",
+    "confidence": 0.369961,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:21.521605+00:00",
+    "command": "push",
+    "confidence": 0.495019,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:21.650902+00:00",
+    "command": "push",
+    "confidence": 0.595426,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:21.769763+00:00",
+    "command": "push",
+    "confidence": 0.675842,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:21.889727+00:00",
+    "command": "push",
+    "confidence": 0.74014,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:22.024291+00:00",
+    "command": "push",
+    "confidence": 0.791183,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:22.146065+00:00",
+    "command": "push",
+    "confidence": 0.823062,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:22.264128+00:00",
+    "command": "push",
+    "confidence": 0.341249,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:22.391557+00:00",
+    "command": "push",
+    "confidence": 0.151256,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:35.638450+00:00",
+    "command": "push",
+    "confidence": 0.336483,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:35.764075+00:00",
+    "command": "push",
+    "confidence": 0.440518,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:35.891708+00:00",
+    "command": "push",
+    "confidence": 0.536374,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:36.011555+00:00",
+    "command": "push",
+    "confidence": 0.561551,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:36.133997+00:00",
+    "command": "push",
+    "confidence": 0.284226,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:38.382296+00:00",
+    "command": "right",
+    "confidence": 0.414276,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:38.509519+00:00",
+    "command": "right",
+    "confidence": 0.481106,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:08:38.639051+00:00",
+    "command": "right",
+    "confidence": 0.273692,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:11.990792+00:00",
+    "command": "push",
+    "confidence": 0.401685,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:12.119405+00:00",
+    "command": "push",
+    "confidence": 0.516866,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:12.246190+00:00",
+    "command": "push",
+    "confidence": 0.609357,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:12.366107+00:00",
+    "command": "push",
+    "confidence": 0.673905,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:12.493610+00:00",
+    "command": "push",
+    "confidence": 0.726011,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:12.616527+00:00",
+    "command": "push",
+    "confidence": 0.776648,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:12.740818+00:00",
+    "command": "push",
+    "confidence": 0.80757,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:12.870121+00:00",
+    "command": "push",
+    "confidence": 0.816509,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:12.988481+00:00",
+    "command": "push",
+    "confidence": 0.673678,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:13.116853+00:00",
+    "command": "push",
+    "confidence": 0.350515,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:09:13.243306+00:00",
+    "command": "push",
+    "confidence": 0.026782,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:20.955498+00:00",
+    "command": "right",
+    "confidence": 0.336894,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:21.084110+00:00",
+    "command": "right",
+    "confidence": 0.468598,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:21.209873+00:00",
+    "command": "right",
+    "confidence": 0.573902,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:21.330039+00:00",
+    "command": "right",
+    "confidence": 0.65885,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:21.449757+00:00",
+    "command": "right",
+    "confidence": 0.726599,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:21.579552+00:00",
+    "command": "right",
+    "confidence": 0.773192,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:21.704784+00:00",
+    "command": "right",
+    "confidence": 0.496836,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:21.832719+00:00",
+    "command": "right",
+    "confidence": 0.500564,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:21.952428+00:00",
+    "command": "right",
+    "confidence": 0.559649,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:22.082540+00:00",
+    "command": "right",
+    "confidence": 0.593216,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:22.207735+00:00",
+    "command": "right",
+    "confidence": 0.415328,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:22.335683+00:00",
+    "command": "right",
+    "confidence": 0.044885,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:55.186171+00:00",
+    "command": "right",
+    "confidence": 0.31966,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:55.313414+00:00",
+    "command": "right",
+    "confidence": 0.454887,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:55.440659+00:00",
+    "command": "right",
+    "confidence": 0.563425,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:55.562463+00:00",
+    "command": "right",
+    "confidence": 0.650158,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:55.696764+00:00",
+    "command": "right",
+    "confidence": 0.719266,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:55.808793+00:00",
+    "command": "right",
+    "confidence": 0.774667,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:55.936585+00:00",
+    "command": "right",
+    "confidence": 0.818301,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:56.065214+00:00",
+    "command": "right",
+    "confidence": 0.852305,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:56.183399+00:00",
+    "command": "right",
+    "confidence": 0.850375,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:56.310404+00:00",
+    "command": "right",
+    "confidence": 0.365131,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:57.690420+00:00",
+    "command": "pull",
+    "confidence": 0.366688,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:57.804366+00:00",
+    "command": "pull",
+    "confidence": 0.492261,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:57.931553+00:00",
+    "command": "pull",
+    "confidence": 0.591671,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:58.060730+00:00",
+    "command": "pull",
+    "confidence": 0.666448,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:58.185954+00:00",
+    "command": "pull",
+    "confidence": 0.678242,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:58.312937+00:00",
+    "command": "pull",
+    "confidence": 0.488422,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:10:58.432712+00:00",
+    "command": "pull",
+    "confidence": 0.087972,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:15.428885+00:00",
+    "command": "right",
+    "confidence": 0.326567,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:15.550772+00:00",
+    "command": "right",
+    "confidence": 0.460756,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:15.676807+00:00",
+    "command": "right",
+    "confidence": 0.566515,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:15.811409+00:00",
+    "command": "right",
+    "confidence": 0.644604,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:15.930971+00:00",
+    "command": "right",
+    "confidence": 0.710988,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:16.052604+00:00",
+    "command": "right",
+    "confidence": 0.766834,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:16.186060+00:00",
+    "command": "right",
+    "confidence": 0.810972,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:16.298795+00:00",
+    "command": "right",
+    "confidence": 0.84649,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:16.426299+00:00",
+    "command": "right",
+    "confidence": 0.875152,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:16.556709+00:00",
+    "command": "right",
+    "confidence": 0.890321,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:16.673506+00:00",
+    "command": "right",
+    "confidence": 0.451646,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:11:16.802356+00:00",
+    "command": "right",
+    "confidence": 0.037986,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:12:46.879178+00:00",
+    "command": "right",
+    "confidence": 0.390803,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:12:47.008417+00:00",
+    "command": "right",
+    "confidence": 0.510634,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:12:47.126717+00:00",
+    "command": "right",
+    "confidence": 0.604577,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:12:47.260997+00:00",
+    "command": "right",
+    "confidence": 0.673494,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:12:47.373889+00:00",
+    "command": "right",
+    "confidence": 0.719321,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:12:47.503717+00:00",
+    "command": "right",
+    "confidence": 0.699414,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:12:47.636784+00:00",
+    "command": "right",
+    "confidence": 0.560648,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:12:47.756669+00:00",
+    "command": "right",
+    "confidence": 0.289239,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:13:41.097790+00:00",
+    "command": "push",
+    "confidence": 0.399567,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:13:41.226038+00:00",
+    "command": "push",
+    "confidence": 0.518417,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:13:41.353278+00:00",
+    "command": "push",
+    "confidence": 0.612875,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:13:41.474849+00:00",
+    "command": "push",
+    "confidence": 0.686474,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:13:41.600472+00:00",
+    "command": "push",
+    "confidence": 0.726211,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:13:41.727995+00:00",
+    "command": "push",
+    "confidence": 0.46326,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:13:41.855118+00:00",
+    "command": "push",
+    "confidence": 0.102336,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:14:07.708197+00:00",
+    "command": "push",
+    "confidence": 0.311848,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:14:07.835973+00:00",
+    "command": "push",
+    "confidence": 0.44665,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:14:07.966414+00:00",
+    "command": "push",
+    "confidence": 0.548283,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:14:08.084380+00:00",
+    "command": "push",
+    "confidence": 0.226099,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:14:16.455255+00:00",
+    "command": "pull",
+    "confidence": 0.388509,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:14:16.581160+00:00",
+    "command": "pull",
+    "confidence": 0.197923,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:15:14.175684+00:00",
+    "command": "pull",
+    "confidence": 0.380536,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:15:14.296107+00:00",
+    "command": "pull",
+    "confidence": 0.221615,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:24.137190+00:00",
+    "command": "right",
+    "confidence": 0.328264,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:24.264941+00:00",
+    "command": "right",
+    "confidence": 0.45266,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:24.386476+00:00",
+    "command": "right",
+    "confidence": 0.557146,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:24.520084+00:00",
+    "command": "right",
+    "confidence": 0.641107,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:24.640336+00:00",
+    "command": "right",
+    "confidence": 0.706785,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:24.759568+00:00",
+    "command": "right",
+    "confidence": 0.76326,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:24.889286+00:00",
+    "command": "right",
+    "confidence": 0.809007,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:25.007654+00:00",
+    "command": "right",
+    "confidence": 0.836262,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:25.135569+00:00",
+    "command": "right",
+    "confidence": 0.829979,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:25.261913+00:00",
+    "command": "right",
+    "confidence": 0.801773,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:25.392671+00:00",
+    "command": "right",
+    "confidence": 0.74007,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:25.509694+00:00",
+    "command": "right",
+    "confidence": 0.427053,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:25.637302+00:00",
+    "command": "right",
+    "confidence": 0.084456,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:30.639861+00:00",
+    "command": "pull",
+    "confidence": 0.377232,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:30.752359+00:00",
+    "command": "pull",
+    "confidence": 0.497939,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:30.881887+00:00",
+    "command": "pull",
+    "confidence": 0.597435,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:31.009885+00:00",
+    "command": "pull",
+    "confidence": 0.677393,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:31.135187+00:00",
+    "command": "pull",
+    "confidence": 0.741585,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:31.254781+00:00",
+    "command": "pull",
+    "confidence": 0.791163,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:31.383838+00:00",
+    "command": "pull",
+    "confidence": 0.826107,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:31.509792+00:00",
+    "command": "pull",
+    "confidence": 0.859059,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:31.638522+00:00",
+    "command": "pull",
+    "confidence": 0.886132,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:31.757154+00:00",
+    "command": "pull",
+    "confidence": 0.817728,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:31.879172+00:00",
+    "command": "pull",
+    "confidence": 0.340177,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:32.013111+00:00",
+    "command": "pull",
+    "confidence": 0.098211,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:37.000247+00:00",
+    "command": "push",
+    "confidence": 0.326602,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:37.127665+00:00",
+    "command": "push",
+    "confidence": 0.458849,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:37.255328+00:00",
+    "command": "push",
+    "confidence": 0.497446,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:37.384520+00:00",
+    "command": "push",
+    "confidence": 0.126232,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:39.752709+00:00",
+    "command": "push",
+    "confidence": 0.325211,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:39.874858+00:00",
+    "command": "push",
+    "confidence": 0.45887,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:40.000631+00:00",
+    "command": "push",
+    "confidence": 0.566393,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:40.128125+00:00",
+    "command": "push",
+    "confidence": 0.651527,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:40.255431+00:00",
+    "command": "push",
+    "confidence": 0.713981,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:40.376951+00:00",
+    "command": "push",
+    "confidence": 0.375739,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:41.500264+00:00",
+    "command": "right",
+    "confidence": 0.367571,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:41.627945+00:00",
+    "command": "right",
+    "confidence": 0.493576,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:41.755764+00:00",
+    "command": "right",
+    "confidence": 0.594474,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:41.885053+00:00",
+    "command": "right",
+    "confidence": 0.674294,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:42.002469+00:00",
+    "command": "right",
+    "confidence": 0.729068,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:42.123217+00:00",
+    "command": "right",
+    "confidence": 0.774597,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:42.251109+00:00",
+    "command": "right",
+    "confidence": 0.782212,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:42.379411+00:00",
+    "command": "right",
+    "confidence": 0.330539,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:48.123194+00:00",
+    "command": "push",
+    "confidence": 0.301601,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:16:48.251620+00:00",
+    "command": "push",
+    "confidence": 0.137327,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:49.431156+00:00",
+    "command": "right",
+    "confidence": 0.349716,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:49.559303+00:00",
+    "command": "right",
+    "confidence": 0.473012,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:49.686312+00:00",
+    "command": "right",
+    "confidence": 0.572191,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:49.807951+00:00",
+    "command": "right",
+    "confidence": 0.646803,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:49.933764+00:00",
+    "command": "right",
+    "confidence": 0.714213,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:50.061116+00:00",
+    "command": "right",
+    "confidence": 0.770623,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:50.188412+00:00",
+    "command": "right",
+    "confidence": 0.814888,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:50.310881+00:00",
+    "command": "right",
+    "confidence": 0.846196,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:50.429037+00:00",
+    "command": "right",
+    "confidence": 0.864664,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:50.556578+00:00",
+    "command": "right",
+    "confidence": 0.796234,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:50.683718+00:00",
+    "command": "right",
+    "confidence": 0.318016,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:18:50.812747+00:00",
+    "command": "right",
+    "confidence": 0.041061,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:29.289716+00:00",
+    "command": "pull",
+    "confidence": 0.329623,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:29.415549+00:00",
+    "command": "pull",
+    "confidence": 0.45986,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:29.542250+00:00",
+    "command": "pull",
+    "confidence": 0.565358,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:29.662301+00:00",
+    "command": "pull",
+    "confidence": 0.639648,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:29.792763+00:00",
+    "command": "pull",
+    "confidence": 0.675018,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:29.909832+00:00",
+    "command": "pull",
+    "confidence": 0.715073,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:30.037531+00:00",
+    "command": "pull",
+    "confidence": 0.743732,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:30.157959+00:00",
+    "command": "pull",
+    "confidence": 0.771507,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:30.287012+00:00",
+    "command": "pull",
+    "confidence": 0.789194,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:30.412908+00:00",
+    "command": "pull",
+    "confidence": 0.598119,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:30.540905+00:00",
+    "command": "pull",
+    "confidence": 0.22807,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:34.154951+00:00",
+    "command": "push",
+    "confidence": 0.391852,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:34.284539+00:00",
+    "command": "push",
+    "confidence": 0.482992,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:34.410616+00:00",
+    "command": "push",
+    "confidence": 0.239776,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:34.537373+00:00",
+    "command": "push",
+    "confidence": 0.196759,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:34.664917+00:00",
+    "command": "push",
+    "confidence": 0.320243,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:34.787561+00:00",
+    "command": "push",
+    "confidence": 0.448479,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:34.912268+00:00",
+    "command": "push",
+    "confidence": 0.510742,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:35.032953+00:00",
+    "command": "push",
+    "confidence": 0.474195,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:35.160815+00:00",
+    "command": "push",
+    "confidence": 0.471024,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:35.289466+00:00",
+    "command": "push",
+    "confidence": 0.485529,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:35.409364+00:00",
+    "command": "push",
+    "confidence": 0.276129,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:36.532934+00:00",
+    "command": "right",
+    "confidence": 0.391678,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:36.660619+00:00",
+    "command": "right",
+    "confidence": 0.505257,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:36.789656+00:00",
+    "command": "right",
+    "confidence": 0.595592,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:36.915603+00:00",
+    "command": "right",
+    "confidence": 0.668158,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:37.027403+00:00",
+    "command": "right",
+    "confidence": 0.727756,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:37.155314+00:00",
+    "command": "right",
+    "confidence": 0.777523,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:37.284336+00:00",
+    "command": "right",
+    "confidence": 0.813678,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:37.409572+00:00",
+    "command": "right",
+    "confidence": 0.813853,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:37.537688+00:00",
+    "command": "right",
+    "confidence": 0.396381,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:37.658889+00:00",
+    "command": "right",
+    "confidence": 0.089867,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:59.393725+00:00",
+    "command": "pull",
+    "confidence": 0.394682,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:59.521065+00:00",
+    "command": "pull",
+    "confidence": 0.514795,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:59.648411+00:00",
+    "command": "pull",
+    "confidence": 0.610629,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:59.777306+00:00",
+    "command": "pull",
+    "confidence": 0.68614,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:19:59.895613+00:00",
+    "command": "pull",
+    "confidence": 0.744734,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:00.023609+00:00",
+    "command": "pull",
+    "confidence": 0.781886,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:00.159411+00:00",
+    "command": "pull",
+    "confidence": 0.767354,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:00.272552+00:00",
+    "command": "pull",
+    "confidence": 0.665548,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:00.390713+00:00",
+    "command": "pull",
+    "confidence": 0.599219,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:00.518025+00:00",
+    "command": "pull",
+    "confidence": 0.610144,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:00.646219+00:00",
+    "command": "pull",
+    "confidence": 0.659982,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:00.774510+00:00",
+    "command": "pull",
+    "confidence": 0.722999,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:00.901577+00:00",
+    "command": "pull",
+    "confidence": 0.777169,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:01.021107+00:00",
+    "command": "pull",
+    "confidence": 0.820574,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:01.148492+00:00",
+    "command": "pull",
+    "confidence": 0.854838,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:01.278723+00:00",
+    "command": "pull",
+    "confidence": 0.880534,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:01.395609+00:00",
+    "command": "pull",
+    "confidence": 0.891199,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:01.516066+00:00",
+    "command": "pull",
+    "confidence": 0.781334,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:01.643734+00:00",
+    "command": "pull",
+    "confidence": 0.331731,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:33.511807+00:00",
+    "command": "pull",
+    "confidence": 0.308851,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:33.632247+00:00",
+    "command": "pull",
+    "confidence": 0.441009,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:33.753518+00:00",
+    "command": "pull",
+    "confidence": 0.460965,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:33.879638+00:00",
+    "command": "pull",
+    "confidence": 0.485023,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:33.999586+00:00",
+    "command": "pull",
+    "confidence": 0.525648,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:34.127094+00:00",
+    "command": "pull",
+    "confidence": 0.440329,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:34.256289+00:00",
+    "command": "pull",
+    "confidence": 0.05618,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:47.551671+00:00",
+    "command": "PULL",
+    "confidence": 0.95,
+    "source": "api_bci_command"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:58.870067+00:00",
+    "command": "pull",
+    "confidence": 0.367392,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:58.989763+00:00",
+    "command": "pull",
+    "confidence": 0.464634,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:59.109558+00:00",
+    "command": "pull",
+    "confidence": 0.54986,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:59.239722+00:00",
+    "command": "pull",
+    "confidence": 0.630164,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:59.365373+00:00",
+    "command": "pull",
+    "confidence": 0.694202,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:59.492675+00:00",
+    "command": "pull",
+    "confidence": 0.712772,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:59.620336+00:00",
+    "command": "pull",
+    "confidence": 0.369809,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:59.742418+00:00",
+    "command": "pull",
+    "confidence": 0.031853,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:59.867340+00:00",
+    "command": "pull",
+    "confidence": 0.188731,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:20:59.994934+00:00",
+    "command": "pull",
+    "confidence": 0.350554,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:00.115014+00:00",
+    "command": "pull",
+    "confidence": 0.478243,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:00.236561+00:00",
+    "command": "pull",
+    "confidence": 0.245213,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:00.310545+00:00",
+    "command": "PUSH",
+    "confidence": 0.95,
+    "source": "api_bci_command"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:00.362902+00:00",
+    "command": "pull",
+    "confidence": 0.11382,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:00.805940+00:00",
+    "command": "RIGHT",
+    "confidence": 0.95,
+    "source": "api_bci_command"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:04.615269+00:00",
+    "command": "pull",
+    "confidence": 0.346539,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:04.744635+00:00",
+    "command": "pull",
+    "confidence": 0.47713,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.115014+00:00",
+    "command": "pull",
+    "confidence": 0.581577,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.123157+00:00",
+    "command": "pull",
+    "confidence": 0.665158,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.131236+00:00",
+    "command": "pull",
+    "confidence": 0.731977,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.247286+00:00",
+    "command": "pull",
+    "confidence": 0.785022,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.365385+00:00",
+    "command": "pull",
+    "confidence": 0.825489,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.484894+00:00",
+    "command": "pull",
+    "confidence": 0.855436,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.612935+00:00",
+    "command": "pull",
+    "confidence": 0.881905,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.741876+00:00",
+    "command": "pull",
+    "confidence": 0.904293,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.867411+00:00",
+    "command": "pull",
+    "confidence": 0.923113,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:05.987397+00:00",
+    "command": "pull",
+    "confidence": 0.936203,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:06.107991+00:00",
+    "command": "pull",
+    "confidence": 0.737007,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:06.237138+00:00",
+    "command": "pull",
+    "confidence": 0.361282,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:06.362479+00:00",
+    "command": "pull",
+    "confidence": 0.026763,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:13.569925+00:00",
+    "command": "PULL",
+    "confidence": 0.95,
+    "source": "api_bci_command"
+  },
+  {
+    "timestamp": "2026-09-07T10:21:15.081529+00:00",
+    "command": "PULL",
+    "confidence": 0.95,
+    "source": "api_bci_command"
+  }
+]

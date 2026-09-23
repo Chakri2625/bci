@@ -1,0 +1,8 @@
+plugin_id: iot
+name: IoT Smart Relays
+version: 1.0.0
+description: ESP32 IoT relay control via MQTT — Light, Fan, Pump appliances
+dashboard_url: /iot
+author: SynaptiMesh IoT Team
+domain: IOT
+entrypoint: plugins.iot.plugin:IoTPlugin

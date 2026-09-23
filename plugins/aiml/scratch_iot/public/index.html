@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🧠 Emotiv Cortex BCI — Neural Telemetry & Training Hub</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <!-- Three.js for 3D Emotiv Training Cube -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Glow & Grid Canvas -->
+  <div class="bg-grid"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <div class="app-container">
+    <!-- TOP HEADER -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo-pulse">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" opacity="0.3"/>
+            <path d="M12 6v6l4 2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-title">EMOTIV CORTEX <span>BCI</span></h1>
+          <p class="brand-subtitle">Neural Telemetry &amp; Mental Command Classifier</p>
+        </div>
+      </div>
+
+      <div class="header-badges">
+        <!-- Theme Toggle Button -->
+        <button class="status-badge" id="themeToggleBtn" onclick="toggleBciTheme()" title="Toggle Light / Dark Theme">
+          <span id="themeIcon" style="font-size:0.95rem;">☀️</span>
+          <span class="badge-label">THEME:</span>
+          <span class="badge-val" id="themeLabel">LIGHT</span>
+        </button>
+
+        <!-- Cortex Status Badge (Clickable) -->
+        <button class="status-badge" id="cortexBadge" title="Click to configure Emotiv Cortex">
+          <span class="status-dot dot-offline" id="cortexDot"></span>
+          <span class="badge-label">CORTEX:</span>
+          <span class="badge-val" id="cortexStatusText">DISCONNECTED</span>
+        </button>
+
+        <!-- EPOC X Headset Badge -->
+        <div class="status-badge" id="headsetBadge" title="EPOC X 14-Channel Headset Status">
+          <span style="font-size:0.95rem;">🧠</span>
+          <span class="badge-label">EPOC X:</span>
+          <span class="badge-val" id="headsetBatteryText">94% ⚡ (128Hz)</span>
+        </div>
+
+        <!-- Master Hub Return Link (:8000) -->
+        <a href="http://localhost:8000/" target="_blank" class="status-badge master-hub-link" title="Open SynaptiMesh Master Hub at http://localhost:8000/">
+          <span style="font-size:0.95rem;">🌐</span>
+          <span class="badge-label">MASTER HUB:</span>
+          <span class="badge-val" style="color:var(--accent-cyan);">:8000 ↗</span>
+        </a>
+
+        <!-- Settings / Connection Menu Trigger Button -->
+        <button class="btn-icon" id="openSettingsBtn" title="Open Cortex API & BCI Configuration">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span class="btn-icon-label">Cortex API</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN BCI DUAL-COLUMN GRID -->
+    <main class="main-grid bci-only-grid">
+      
+      <!-- LEFT COLUMN: Neural Telemetry, EEG Stream & Contact Quality -->
+      <section class="panel panel-telemetry">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">🧠</span>
+            <h2>Neural Telemetry &amp; EEG Stream</h2>
+          </div>
+          <span class="stream-pill" id="streamTypePill">STREAM: COM</span>
+        </div>
+
+        <!-- Brainwave Waveform Visualizer Canvas -->
+        <div class="eeg-canvas-wrapper">
+          <canvas id="eegCanvas" height="95"></canvas>
+          <div class="eeg-overlay">
+            <span id="headsetName">EPOC X • 14 CHANNELS</span>
+            <span id="eegSampleRate">128 Hz • 14-Bit ADC</span>
+          </div>
+        </div>
+
+        <!-- Current Mental Command Visualizer -->
+        <div class="command-display-card">
+          <div class="cmd-meta">Active Mental Command Intent</div>
+          <div class="cmd-action" id="cmdActionText">NEUTRAL</div>
+          
+          <div class="power-bar-wrapper">
+            <div class="power-bar-header">
+              <span>Mental Power Confidence</span>
+              <span id="cmdPowerPercent" style="font-family:'JetBrains Mono'; font-weight:800; color:var(--accent-cyan);">0%</span>
+            </div>
+            <div class="power-bar-track">
+              <div class="power-bar-fill" id="cmdPowerFill" style="width: 0%;"></div>
+              <div class="power-threshold-line" id="thresholdLine" style="left: 35%;" title="Power Trigger Threshold (35%)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUSH + PULL / PUSH + LEFT / PUSH + RIGHT COMBINATION COMMAND TIMER CARD -->
+        <div class="combo-timer-card" id="comboCard">
+          <div class="combo-circle-wrap">
+            <svg class="combo-circle-svg" viewBox="0 0 100 100">
+              <circle class="combo-circle-bg" cx="50" cy="50" r="42"></circle>
+              <circle class="combo-circle-fill" id="comboCircleFill" cx="50" cy="50" r="42" stroke-dasharray="263.89" stroke-dashoffset="0"></circle>
+            </svg>
+            <div class="combo-countdown-text" id="comboCountdownText">2.0s</div>
+          </div>
+
+          <div class="combo-content">
+            <div class="combo-header-row">
+              <div class="combo-title-group">
+                <span class="combo-shield-icon">⚡</span>
+                <span class="combo-title" id="comboTitleText">PUSH + GESTURE Combo Timer</span>
+              </div>
+              <span class="combo-status-pill status-ready" id="comboStatusPill">STANDBY</span>
+            </div>
+
+            <p class="combo-description" id="comboDescription">
+              When <strong>PUSH</strong> is registered, a combo window opens. Think <strong>LEFT</strong>, <strong>PULL</strong>, or <strong>RIGHT</strong> within the window.
+            </p>
+
+            <!-- Interactive Combo Duration Customizer Bar -->
+            <div class="combo-customizer-bar">
+              <div class="combo-customizer-left">
+                <div class="combo-customizer-label">
+                  <span class="label-icon">⏱️</span>
+                  <span class="label-text">Window:</span>
+                  <strong class="current-combo-display" id="comboCurrentDuration">2.0s</strong>
+                </div>
+
+                <!-- Quick Presets -->
+                <div class="combo-presets" id="comboPresets">
+                  <button class="preset-btn" data-sec="1.0">1s</button>
+                  <button class="preset-btn" data-sec="1.5">1.5s</button>
+                  <button class="preset-btn active" data-sec="2.0">2s</button>
+                  <button class="preset-btn" data-sec="3.0">3s</button>
+                  <button class="preset-btn" data-sec="4.0">4s</button>
+                  <button class="preset-btn" data-sec="5.0">5s</button>
+                </div>
+
+                <!-- Stepper Controls & Slider -->
+                <div class="combo-stepper-wrap">
+                  <button class="stepper-btn" id="btnComboDec" title="Decrease combo duration by 0.5s">−0.5s</button>
+                  <input type="range" class="combo-mini-slider" id="comboCardSlider" min="0.5" max="6.0" step="0.5" value="2.0" title="Slide to customize combo window seconds">
+                  <button class="stepper-btn" id="btnComboInc" title="Increase combo duration by 0.5s">+0.5s</button>
+                </div>
+              </div>
+
+              <!-- Interactive Test Triggers -->
+              <div class="combo-trigger-actions" style="display:flex; gap:6px; margin-top:4px; flex-wrap:wrap;">
+                <button class="btn-combo-trigger" id="btnComboTestPushLeft" style="color:var(--accent-cyan); border-color:rgba(0,242,254,0.4); padding:3px 8px; font-size:0.68rem; font-weight:800; border-radius:4px; background:var(--bg-card); cursor:pointer;">
+                  <span class="btn-icon">⚡</span> Test PUSH+LEFT
+                </button>
+                <button class="btn-combo-trigger" id="btnComboTestPushRight" style="color:var(--accent-purple); border-color:rgba(121,40,202,0.4); padding:3px 8px; font-size:0.68rem; font-weight:800; border-radius:4px; background:var(--bg-card); cursor:pointer;">
+                  <span class="btn-icon">⚡</span> Test PUSH+RIGHT
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="combo-bottom-track">
+            <div class="combo-bottom-fill" id="comboBottomFill"></div>
+          </div>
+        </div>
+
+        <!-- 14-Channel EPOC X Contact Quality & Sensor Map -->
+        <div class="bci-sensor-map-card">
+          <div class="card-section-title">
+            <span>📡 14-Channel Sensor Contact Map</span>
+            <span class="badge-tag" style="color:var(--accent-green); background:rgba(16,185,129,0.12);">100% FIT</span>
+          </div>
+          <div class="sensor-nodes-grid">
+            <div class="sensor-node valid"><span class="node-dot"></span>AF3</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>F7</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>F3</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>FC5</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>T7</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>P7</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>O1</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>O2</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>P8</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>T8</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>FC6</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>F4</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>F8</div>
+            <div class="sensor-node valid"><span class="node-dot"></span>AF4</div>
+          </div>
+        </div>
+
+        <!-- Frequency Band Power Spectrum -->
+        <div class="bci-bands-card">
+          <div class="card-section-title">
+            <span>⚡ EEG Frequency Band Power Spectrum</span>
+            <span class="badge-tag">BAND POWER</span>
+          </div>
+          <div class="band-meters-list">
+            <div class="band-meter-item">
+              <div class="band-meta"><span>Delta (0.5–4 Hz)</span><strong id="valDelta">42%</strong></div>
+              <div class="band-track"><div class="band-fill fill-delta" id="fillDelta" style="width:42%;"></div></div>
+            </div>
+            <div class="band-meter-item">
+              <div class="band-meta"><span>Theta (4–8 Hz)</span><strong id="valTheta">58%</strong></div>
+              <div class="band-track"><div class="band-fill fill-theta" id="fillTheta" style="width:58%;"></div></div>
+            </div>
+            <div class="band-meta-item band-meter-item">
+              <div class="band-meta"><span>Alpha (8–12 Hz) [Relaxation]</span><strong id="valAlpha">76%</strong></div>
+              <div class="band-track"><div class="band-fill fill-alpha" id="fillAlpha" style="width:76%;"></div></div>
+            </div>
+            <div class="band-meter-item">
+              <div class="band-meta"><span>Beta (12–30 Hz) [Focus / Intent]</span><strong id="valBeta">84%</strong></div>
+              <div class="band-track"><div class="band-fill fill-beta" id="fillBeta" style="width:84%;"></div></div>
+            </div>
+            <div class="band-meter-item">
+              <div class="band-meta"><span>Gamma (30–45 Hz) [High Cognition]</span><strong id="valGamma">35%</strong></div>
+              <div class="band-track"><div class="band-fill fill-gamma" id="fillGamma" style="width:35%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN: 3D Emotiv Cube, Temporal Framing & Interactive Simulator -->
+      <section class="panel panel-cube-workspace">
+        
+        <!-- EPOC 3D TRAINING CUBE (Centerpiece Neural Visualizer) -->
+        <div class="bci-3d-cube-stage-card">
+          <div class="panel-header" style="padding: 0 0 10px 0; border: none;">
+            <div class="panel-title">
+              <span class="icon">🎲</span>
+              <h2>EPOC 3D Mental Command Cube</h2>
+            </div>
+            <span class="stream-pill" style="color:var(--accent-cyan); background:rgba(0,242,254,0.12);">THREE.JS ENGINE</span>
+          </div>
+
+          <div class="bci-stage-viewport" id="bciStageViewport">
+            <canvas id="bci-stage-canvas"></canvas>
+            <div class="cube-stage-tag top-left">
+              <span class="tag-lbl">INTENT</span>
+              <strong id="stageCubeIntent" style="color:var(--accent-cyan);">NEUTRAL</strong>
+            </div>
+            <div class="cube-stage-tag top-right">
+              <span class="tag-lbl">POWER</span>
+              <strong id="stageCubePower">0%</strong>
+            </div>
+            <div class="cube-stage-tag bottom-bar">
+              <span>LIVE TRANSLATION &amp; ROTATION MOTOR MATRIX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEMPORAL WINDOW FRAMING CONTROL CARD -->
+        <div class="temporal-framing-card" id="temporalFramingCard">
+          <div class="framing-circle-wrap">
+            <svg class="framing-circle-svg" viewBox="0 0 100 100">
+              <circle class="framing-circle-bg" cx="50" cy="50" r="42"></circle>
+              <circle class="framing-circle-fill" id="framingCircleFill" cx="50" cy="50" r="42" stroke-dasharray="263.89" stroke-dashoffset="0"></circle>
+            </svg>
+            <div class="framing-countdown-text" id="framingCountdownText">4.0s</div>
+          </div>
+
+          <div class="framing-content">
+            <div class="framing-header-row">
+              <div class="framing-title-group">
+                <span class="framing-shield-icon">🛡️</span>
+                <span class="framing-title">Temporal Window Framing</span>
+              </div>
+              <span class="framing-status-pill status-ready" id="framingStatusPill">STANDBY</span>
+              
+              <!-- Quick PUSH+PULL Cancel Button (active when holding) -->
+              <button class="btn-cancel-framing" id="btnCancelFraming" style="display: none;" title="Abort active frame via PUSH+PULL">
+                🛑 Abort (PUSH + PULL)
+              </button>
+            </div>
+            
+            <p class="framing-description" id="framingDescription">
+              Neural confirmation window active. When a mental command is selected, execution is held in confirmation buffer before actuator dispatch. Think <strong>PUSH + PULL</strong> to abort.
+            </p>
+
+            <!-- Interactive Window Duration Customizer & Quick PUSH+PULL Trigger -->
+            <div class="framing-customizer-bar">
+              <div class="framing-customizer-left">
+                <div class="framing-customizer-label">
+                  <span class="label-icon">⏱️</span>
+                  <span class="label-text">Window:</span>
+                  <strong class="current-duration-display" id="framingCurrentDuration">4.0s</strong>
+                </div>
+
+                <!-- Quick Presets -->
+                <div class="framing-presets" id="framingPresets">
+                  <button class="preset-btn" data-sec="1.0">1s</button>
+                  <button class="preset-btn" data-sec="2.0">2s</button>
+                  <button class="preset-btn" data-sec="3.0">3s</button>
+                  <button class="preset-btn active" data-sec="4.0">4s</button>
+                  <button class="preset-btn" data-sec="5.0">5s</button>
+                  <button class="preset-btn" data-sec="6.0">6s</button>
+                </div>
+
+                <!-- Stepper Controls & Slider -->
+                <div class="framing-stepper-wrap">
+                  <button class="stepper-btn" id="btnFramingDec" title="Decrease duration by 0.5s">−0.5s</button>
+                  <input type="range" class="framing-mini-slider" id="framingCardSlider" min="0.5" max="15.0" step="0.5" value="4.0" title="Slide to customize window seconds">
+                  <button class="stepper-btn" id="btnFramingInc" title="Increase duration by 0.5s">+0.5s</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="framing-bottom-track">
+            <div class="framing-bottom-fill" id="framingBottomFill"></div>
+          </div>
+        </div>
+
+        <!-- BCI Mental Simulator Pad (Tactile D-Pad) -->
+        <div class="sim-panel">
+          <div class="sim-header">
+            <span class="sim-title">⚡ Interactive Neural Command Simulator</span>
+            <div class="sim-power-control">
+              <span>Power:</span>
+              <input type="range" id="simPowerSlider" min="0.1" max="1.0" step="0.05" value="0.85" style="width: 80px;">
+              <span id="simPowerLabel" style="font-family:'JetBrains Mono'; font-weight:800; color:var(--accent-cyan);">85%</span>
+            </div>
+          </div>
+
+          <div class="sim-grid">
+            <button class="sim-btn" data-action="push">
+              <span class="btn-icon">▲</span>
+              <span class="btn-label">PUSH</span>
+              <span class="btn-hint">[W] Key</span>
+            </button>
+            <button class="sim-btn" data-action="pull">
+              <span class="btn-icon">▼</span>
+              <span class="btn-label">PULL</span>
+              <span class="btn-hint">[S] Key</span>
+            </button>
+            <button class="sim-btn" data-action="left">
+              <span class="btn-icon">◀</span>
+              <span class="btn-label">LEFT</span>
+              <span class="btn-hint">[A] Key</span>
+            </button>
+            <button class="sim-btn" data-action="right">
+              <span class="btn-icon">▶</span>
+              <span class="btn-label">RIGHT</span>
+              <span class="btn-hint">[D] Key</span>
+            </button>
+            <button class="sim-btn sim-neutral" data-action="neutral">
+              <span class="btn-icon">⏸</span>
+              <span class="btn-label">NEUTRAL</span>
+              <span class="btn-hint">[Space] Key</span>
+            </button>
+            <button class="sim-btn sim-combo" id="simPushPullCombo">
+              <span class="btn-icon">⚡</span>
+              <span class="btn-label">PUSH + PULL</span>
+              <span class="btn-timer-pill" id="simPushPullPill">2.0s</span>
+              <span class="btn-hint">[X] Key Abort</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- LIVE EVENT & SIGNAL STREAM TERMINAL -->
+        <div class="bci-terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-title">
+              <span style="color:var(--accent-cyan);">●</span> Live Cortex Signal &amp; Event Stream
+            </div>
+            <button class="btn-tiny" id="btnClearLog">Clear Log</button>
+          </div>
+          <div class="terminal-body" id="consoleBody">
+            <div class="log-entry log-info">
+              <span class="log-time">[00:00:00]</span>
+              <span class="log-source">[SYSTEM]</span>
+              <span>Emotiv Cortex BCI Engine initialized on port 3000. Listening for neural stream...</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- SETTINGS & CORTEX API CONFIGURATION MODAL -->
+  <div class="modal-overlay" id="settingsModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2>⚙️ Cortex API &amp; BCI Parameters</h2>
+        <button class="modal-close" id="closeSettingsBtn">&times;</button>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab active" data-tab="tab-cortex">🧠 Cortex API Credentials</button>
+        <button class="modal-tab" data-tab="tab-bci">🎛️ Sensitivity &amp; Framing Tuning</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- TAB 1: CORTEX API -->
+        <div class="tab-content active" id="tab-cortex">
+          <div class="config-section">
+            <h3>Emotiv Cortex WebSocket Authentication (wss://localhost:6868)</h3>
+            <p class="section-desc">Create your credentials in the Emotiv Developer Portal and paste them below.</p>
+            
+            <div class="form-group">
+              <label for="cfgClientId">Client ID</label>
+              <input type="text" id="cfgClientId" placeholder="Enter your Emotiv Client ID...">
+            </div>
+
+            <div class="form-group">
+              <label for="cfgClientSecret">Client Secret</label>
+              <input type="password" id="cfgClientSecret" placeholder="Enter your Emotiv Client Secret...">
+            </div>
+
+            <div class="form-group">
+              <label for="cfgProfileSelect">Trained BCI Profile</label>
+              <div class="profile-select-row">
+                <select id="cfgProfileSelect">
+                  <option value="">-- No Profile Selected (Use Raw Detection) --</option>
+                </select>
+                <button class="btn-secondary" id="btnRefreshProfiles" title="Fetch profiles from Cortex">🔄 Refresh</button>
+                <button class="btn-primary" id="btnLoadProfile">Load Profile</button>
+              </div>
+            </div>
+
+            <div class="form-row action-row" style="margin-top:14px;">
+              <button class="btn-primary" id="btnCortexConnect">Connect to Cortex</button>
+              <button class="btn-secondary" id="btnCortexDisconnect">Disconnect</button>
+              <span class="diag-badge" id="cortexDiagBadge">Status: Ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: BCI TUNING & STATE MACHINE -->
+        <div class="tab-content" id="tab-bci">
+          <div class="config-section">
+            <h3>🎛️ BCI Sensitivity &amp; Temporal Framing Parameters</h3>
+            
+            <div class="form-group">
+              <div class="slider-label-row">
+                <label for="cfgThreshold">Power Trigger Threshold</label>
+                <span id="valThreshold">0.35</span>
+              </div>
+              <input type="range" id="cfgThreshold" min="0.05" max="0.95" step="0.05" value="0.35">
+              <small class="field-hint">Lower values make detection easier; higher values filter out weak noise.</small>
+            </div>
+
+            <div class="form-group">
+              <div class="slider-label-row">
+                <label for="cfgDebounce">Debounce Cooldown (ms)</label>
+                <span id="valDebounce">900 ms</span>
+              </div>
+              <input type="range" id="cfgDebounce" min="200" max="2000" step="50" value="900">
+            </div>
+
+            <div class="form-group">
+              <div class="slider-label-row">
+                <label for="cfgSingleFire">Single-Fire Hold Window (ms)</label>
+                <span id="valSingleFire">1500 ms</span>
+              </div>
+              <input type="range" id="cfgSingleFire" min="300" max="3000" step="100" value="1500">
+              <small class="field-hint">Sustained thought frames are accepted only 1 time within this window.</small>
+            </div>
+
+            <div class="form-group">
+              <div class="slider-label-row">
+                <label for="cfgComboWindow">Combination Command Window (ms) [PUSH + PULL]</label>
+                <span id="valComboWindow">2000 ms</span>
+              </div>
+              <input type="range" id="cfgComboWindow" min="500" max="6000" step="100" value="2000">
+              <small class="field-hint">Time allowed after PUSH to think PULL to trigger Abort / Cancel.</small>
+            </div>
+
+            <div class="form-group">
+              <div class="slider-label-row">
+                <label for="cfgFramingWindow">Temporal Framing Confirmation Window (s)</label>
+                <span id="valFramingWindow">4.0 s</span>
+              </div>
+              <input type="range" id="cfgFramingWindow" min="0.5" max="15.0" step="0.5" value="4.0">
+              <small class="field-hint">Commands are held and execute ONLY after this confirmation window finishes.</small>
+            </div>
+
+            <div class="form-group framing-toggle-row">
+              <input type="checkbox" id="cfgFramingEnabled" checked>
+              <label for="cfgFramingEnabled">
+                Enable Temporal Window Framing (Deferred Execution with Cancel)
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-primary btn-save" id="btnSaveConfig">Save &amp; Apply Configuration</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    function toggleBciTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme') || 'light';
+      const next = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('bci_theme', next);
+      updateThemeUI(next);
+    }
+    function updateThemeUI(theme) {
+      const label = document.getElementById('themeLabel');
+      const icon = document.getElementById('themeIcon');
+      if (label && icon) {
+        if (theme === 'dark') {
+          label.textContent = 'DARK';
+          icon.textContent = '🌙';
+        } else {
+          label.textContent = 'LIGHT';
+          icon.textContent = '☀️';
+        }
+      }
+    }
+    // Initialize theme from storage
+    (function() {
+      const saved = localStorage.getItem('bci_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      updateThemeUI(saved);
+    })();
+  </script>
+</body>
+</html>

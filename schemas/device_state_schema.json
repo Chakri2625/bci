@@ -1,0 +1,270 @@
+{
+  "$defs": {
+    "ConnectionStatus": {
+      "description": "Physical or network transport connectivity state.",
+      "enum": [
+        "ONLINE",
+        "OFFLINE",
+        "CONNECTING",
+        "DISCONNECTED",
+        "DEGRADED",
+        "ERROR"
+      ],
+      "title": "ConnectionStatus",
+      "type": "string"
+    },
+    "DeviceDomain": {
+      "description": "Supported ecosystem domains.",
+      "enum": [
+        "IOT",
+        "EMBEDDED",
+        "ROBOTICS",
+        "BCI",
+        "DESKTOP",
+        "MEDIA",
+        "AIML"
+      ],
+      "title": "DeviceDomain",
+      "type": "string"
+    },
+    "DeviceProtocol": {
+      "description": "Communication protocols used to interface with the device.",
+      "enum": [
+        "MQTT",
+        "WEBSOCKET",
+        "TCP_SOCKET",
+        "HTTP",
+        "UART",
+        "CAN",
+        "BLE",
+        "SERIAL",
+        "MOCK"
+      ],
+      "title": "DeviceProtocol",
+      "type": "string"
+    },
+    "DeviceType": {
+      "description": "Device category classifications across all domains.",
+      "enum": [
+        "SMART_RELAY",
+        "SENSOR_NODE",
+        "SMART_HUB",
+        "RC_CAR",
+        "WHEELCHAIR",
+        "ROBOTIC_ARM",
+        "BCI_HEADSET",
+        "DESKTOP_NODE",
+        "MEDIA_PLAYER",
+        "INFERENCE_NODE",
+        "GENERIC"
+      ],
+      "title": "DeviceType",
+      "type": "string"
+    },
+    "NetworkInfo": {
+      "description": "Network connection details and hardware identifiers.",
+      "properties": {
+        "ip_address": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "IPv4 or IPv6 network address",
+          "title": "Ip Address"
+        },
+        "mac_address": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Hardware MAC address",
+          "title": "Mac Address"
+        },
+        "wifi_rssi_dbm": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "WiFi RSSI signal level in dBm",
+          "title": "Wifi Rssi Dbm"
+        },
+        "port": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Active communication port",
+          "title": "Port"
+        },
+        "hostname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Device network hostname",
+          "title": "Hostname"
+        },
+        "uptime_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Device uptime since last boot in seconds",
+          "title": "Uptime Seconds"
+        }
+      },
+      "title": "NetworkInfo",
+      "type": "object"
+    },
+    "OperationalStatus": {
+      "description": "Operational / execution availability state.",
+      "enum": [
+        "IDLE",
+        "BUSY",
+        "EXECUTING",
+        "STANDBY",
+        "ERROR",
+        "MAINTENANCE"
+      ],
+      "title": "OperationalStatus",
+      "type": "string"
+    }
+  },
+  "description": "Unified Standard Device-State Model for SynaptiMesh.\nProvides authoritative representation of device identity, connectivity health,\noperational status, capabilities, firmware, and domain-specific state snapshots.",
+  "properties": {
+    "device_id": {
+      "description": "Unique hardware MAC, serial number, or logical ID",
+      "title": "Device Id",
+      "type": "string"
+    },
+    "device_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Human-friendly device name or label",
+      "title": "Device Name"
+    },
+    "domain": {
+      "$ref": "#/$defs/DeviceDomain",
+      "description": "Operational domain (IOT, EMBEDDED, ROBOTICS, BCI, etc.)"
+    },
+    "device_type": {
+      "$ref": "#/$defs/DeviceType",
+      "description": "Device classification (SMART_RELAY, RC_CAR, BCI_HEADSET, etc.)"
+    },
+    "protocol": {
+      "$ref": "#/$defs/DeviceProtocol",
+      "default": "MQTT",
+      "description": "Primary transport protocol"
+    },
+    "connection_status": {
+      "$ref": "#/$defs/ConnectionStatus",
+      "default": "ONLINE",
+      "description": "Physical/network connection state"
+    },
+    "operational_status": {
+      "$ref": "#/$defs/OperationalStatus",
+      "default": "IDLE",
+      "description": "Operational readiness / execution state"
+    },
+    "capabilities": {
+      "description": "Supported commands and operational features",
+      "items": {
+        "type": "string"
+      },
+      "title": "Capabilities",
+      "type": "array"
+    },
+    "last_seen_timestamp": {
+      "description": "Epoch timestamp of last contact",
+      "title": "Last Seen Timestamp",
+      "type": "number"
+    },
+    "last_seen_iso": {
+      "description": "ISO-8601 UTC timestamp of last contact",
+      "title": "Last Seen Iso",
+      "type": "string"
+    },
+    "firmware_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Firmware or software release version",
+      "title": "Firmware Version"
+    },
+    "network_info": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/NetworkInfo"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Network connection parameters and metrics"
+    },
+    "state": {
+      "additionalProperties": true,
+      "description": "Domain-specific operational state snapshot",
+      "title": "State",
+      "type": "object"
+    },
+    "metadata": {
+      "additionalProperties": true,
+      "description": "Extensible device metadata or configuration properties",
+      "title": "Metadata",
+      "type": "object"
+    }
+  },
+  "required": [
+    "device_id",
+    "domain",
+    "device_type"
+  ],
+  "title": "DeviceState",
+  "type": "object"
+}

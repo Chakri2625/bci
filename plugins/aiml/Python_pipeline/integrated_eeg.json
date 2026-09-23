@@ -1,0 +1,510 @@
+{
+    "metadata": {
+        "sampling_rate": 128,
+        "window_seconds": 5,
+        "samples_per_command": 640,
+        "domain_sequence": [
+            "IoT",
+            "Python",
+            "Embedded",
+            "AI_ML"
+        ]
+    },
+    "data": [
+        {
+            "sample": 0,
+            "timestamp": 0.0,
+            "domain": "IoT",
+            "state": 0,
+            "operation": "Domain Selection",
+            "command": "LEFT",
+            "confidence": 0.908
+        },
+        {
+            "sample": 640,
+            "timestamp": 5.0,
+            "domain": "IoT",
+            "state": 1,
+            "operation": "light on",
+            "command": "LEFT_LIGHT_ON",
+            "confidence": 0.902
+        },
+        {
+            "sample": 1280,
+            "timestamp": 10.0,
+            "domain": "IoT",
+            "state": 1,
+            "operation": "light off",
+            "command": "LEFT_LIGHT_OFF",
+            "confidence": 0.902
+        },
+        {
+            "sample": 1920,
+            "timestamp": 15.0,
+            "domain": "IoT",
+            "state": 1,
+            "operation": "fan on",
+            "command": "LEFT_FAN_ON",
+            "confidence": 0.902
+        },
+        {
+            "sample": 2560,
+            "timestamp": 20.0,
+            "domain": "IoT",
+            "state": 1,
+            "operation": "fan off",
+            "command": "LEFT_FAN_OFF",
+            "confidence": 0.902
+        },
+        {
+            "sample": 3200,
+            "timestamp": 25.0,
+            "domain": "IoT",
+            "state": 1,
+            "operation": "pump on",
+            "command": "LEFT_PUMP_ON",
+            "confidence": 0.902
+        },
+        {
+            "sample": 3840,
+            "timestamp": 30.0,
+            "domain": "IoT",
+            "state": 1,
+            "operation": "pump off",
+            "command": "LEFT_PUMP_OFF",
+            "confidence": 0.902
+        },
+        {
+            "sample": 4480,
+            "timestamp": 35.0,
+            "domain": "IoT",
+            "state": 1,
+            "operation": "reset_to_stage_1",
+            "command": "LEFT_DROP",
+            "confidence": 0.902
+        },
+        {
+            "sample": 5120,
+            "timestamp": 40.0,
+            "domain": "Python",
+            "state": 0,
+            "operation": "Python",
+            "command": "Push",
+            "confidence": 0.95
+        },
+        {
+            "sample": 5760,
+            "timestamp": 45.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "S1",
+            "command": "Push",
+            "confidence": 0.91
+        },
+        {
+            "sample": 6400,
+            "timestamp": 50.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "YouTube",
+            "command": "Push_YouTube",
+            "confidence": 0.92
+        },
+        {
+            "sample": 7040,
+            "timestamp": 55.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Back",
+            "command": "Drop",
+            "confidence": 0.9
+        },
+        {
+            "sample": 7680,
+            "timestamp": 60.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Outlook",
+            "command": "Push_Outlook",
+            "confidence": 0.95
+        },
+        {
+            "sample": 8320,
+            "timestamp": 65.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Back",
+            "command": "Drop",
+            "confidence": 0.94
+        },
+        {
+            "sample": 8960,
+            "timestamp": 70.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Calculator",
+            "command": "Push_Calculator",
+            "confidence": 0.93
+        },
+        {
+            "sample": 9600,
+            "timestamp": 75.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Back",
+            "command": "Drop",
+            "confidence": 0.93
+        },
+        {
+            "sample": 10240,
+            "timestamp": 80.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Calendar",
+            "command": "Push_Calendar",
+            "confidence": 0.95
+        },
+        {
+            "sample": 10880,
+            "timestamp": 85.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Back",
+            "command": "Drop",
+            "confidence": 0.93
+        },
+        {
+            "sample": 11520,
+            "timestamp": 90.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Notepad",
+            "command": "Push_Notepad",
+            "confidence": 0.94
+        },
+        {
+            "sample": 12160,
+            "timestamp": 95.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Back",
+            "command": "Drop",
+            "confidence": 0.98
+        },
+        {
+            "sample": 12800,
+            "timestamp": 100.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Chrome",
+            "command": "Push_Chrome",
+            "confidence": 0.98
+        },
+        {
+            "sample": 13440,
+            "timestamp": 105.0,
+            "domain": "Python",
+            "state": 1,
+            "operation": "Back",
+            "command": "Drop",
+            "confidence": 0.93
+        },
+        {
+            "sample": 14080,
+            "timestamp": 110.0,
+            "domain": "Embedded",
+            "state": 0,
+            "operation": "Domain",
+            "command": "Lift",
+            "confidence": 0.939
+        },
+        {
+            "sample": 14720,
+            "timestamp": 115.0,
+            "domain": "Embedded",
+            "state": 1,
+            "operation": "Chair",
+            "command": "Lift Chair",
+            "confidence": 0.892
+        },
+        {
+            "sample": 15360,
+            "timestamp": 120.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Forward",
+            "confidence": 0.924
+        },
+        {
+            "sample": 16000,
+            "timestamp": 125.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Backward",
+            "confidence": 0.965
+        },
+        {
+            "sample": 16640,
+            "timestamp": 130.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Left",
+            "confidence": 0.926
+        },
+        {
+            "sample": 17280,
+            "timestamp": 135.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Right",
+            "confidence": 0.977
+        },
+        {
+            "sample": 17920,
+            "timestamp": 140.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Stop",
+            "confidence": 0.929
+        },
+        {
+            "sample": 18560,
+            "timestamp": 145.0,
+            "domain": "Embedded",
+            "state": 1,
+            "operation": "Car",
+            "command": "Lift Car",
+            "confidence": 0.881
+        },
+        {
+            "sample": 19200,
+            "timestamp": 150.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Forward",
+            "confidence": 0.953
+        },
+        {
+            "sample": 19840,
+            "timestamp": 155.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Backward",
+            "confidence": 0.92
+        },
+        {
+            "sample": 20480,
+            "timestamp": 160.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Left",
+            "confidence": 0.927
+        },
+        {
+            "sample": 21120,
+            "timestamp": 165.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Right",
+            "confidence": 0.936
+        },
+        {
+            "sample": 21760,
+            "timestamp": 170.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Stop",
+            "confidence": 0.945
+        },
+        {
+            "sample": 22400,
+            "timestamp": 175.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Forward",
+            "confidence": 0.932
+        },
+        {
+            "sample": 23040,
+            "timestamp": 180.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Forward",
+            "confidence": 0.957
+        },
+        {
+            "sample": 23680,
+            "timestamp": 185.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Left",
+            "confidence": 0.966
+        },
+        {
+            "sample": 24320,
+            "timestamp": 190.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Right",
+            "confidence": 0.955
+        },
+        {
+            "sample": 24960,
+            "timestamp": 195.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Backward",
+            "confidence": 0.965
+        },
+        {
+            "sample": 25600,
+            "timestamp": 200.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Backward",
+            "confidence": 0.907
+        },
+        {
+            "sample": 26240,
+            "timestamp": 205.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Right",
+            "confidence": 0.986
+        },
+        {
+            "sample": 26880,
+            "timestamp": 210.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Left",
+            "confidence": 0.945
+        },
+        {
+            "sample": 27520,
+            "timestamp": 215.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Chair",
+            "command": "Lift Chair Stop",
+            "confidence": 0.978
+        },
+        {
+            "sample": 28160,
+            "timestamp": 220.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Car",
+            "command": "Lift Car Stop",
+            "confidence": 0.965
+        },
+        {
+            "sample": 28800,
+            "timestamp": 225.0,
+            "domain": "Embedded",
+            "state": 2,
+            "operation": "Domain",
+            "command": "Drop",
+            "confidence": 0.962
+        },
+        {
+            "sample": 29440,
+            "timestamp": 230.0,
+            "domain": "AI_ML",
+            "state": 0,
+            "operation": "AI/ML",
+            "command": "Right",
+            "confidence": 0.95
+        },
+        {
+            "sample": 30080,
+            "timestamp": 235.0,
+            "domain": "AI_ML",
+            "state": 2,
+            "operation": "S1",
+            "command": "Right_jiosaavn",
+            "confidence": 0.91
+        },
+        {
+            "sample": 30720,
+            "timestamp": 240.0,
+            "domain": "AI_ML",
+            "state": 1,
+            "operation": "JioSaavn",
+            "command": "Right_Play_Pause",
+            "confidence": 0.92
+        },
+        {
+            "sample": 31360,
+            "timestamp": 245.0,
+            "domain": "AI_ML",
+            "state": 1,
+            "operation": "JioSaavn",
+            "command": "Right_Next_Song",
+            "confidence": 0.9
+        },
+        {
+            "sample": 32000,
+            "timestamp": 250.0,
+            "domain": "AI_ML",
+            "state": 1,
+            "operation": "JioSaavn",
+            "command": "Right_Previous_Song",
+            "confidence": 0.91
+        },
+        {
+            "sample": 32640,
+            "timestamp": 255.0,
+            "domain": "AI_ML",
+            "state": 1,
+            "operation": "JioSaavn",
+            "command": "Right_Volume_Up",
+            "confidence": 0.93
+        },
+        {
+            "sample": 33280,
+            "timestamp": 260.0,
+            "domain": "AI_ML",
+            "state": 1,
+            "operation": "JioSaavn",
+            "command": "Right_Volume_Down",
+            "confidence": 0.92
+        },
+        {
+            "sample": 33920,
+            "timestamp": 265.0,
+            "domain": "AI_ML",
+            "state": 1,
+            "operation": "JioSaavn",
+            "command": "Right_Search_Playlist",
+            "confidence": 0.92
+        },
+        {
+            "sample": 34560,
+            "timestamp": 270.0,
+            "domain": "AI_ML",
+            "state": 1,
+            "operation": "Back",
+            "command": "Drop",
+            "confidence": 0.90
+        }
+    ]
+}

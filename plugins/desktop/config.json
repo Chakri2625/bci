@@ -1,0 +1,13 @@
+{
+    "uart": {
+        "enabled": true,
+        "port": "COM3",
+        "baudrate": 9600,
+        "timeout": 1,
+        "ack_timeout": 8,
+        "retry_attempts": 2,
+        "retry_delay": 1,
+        "auto_detect_port": true,
+        "fallback_to_local": false
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "current_media": {
+        "domain": "MEDIA",
+        "platform": "JIOSAAVN",
+        "media_type": "AUDIO",
+        "title": null,
+        "artist": null,
+        "state": null,
+        "position_seconds": null,
+        "duration_seconds": null,
+        "volume": null,
+        "current_command": "LEFT",
+        "current_action": "TOGGLE_PLAY_PAUSE",
+        "last_updated": "2026-09-22T11:43:53.563626"
+    },
+    "history": [
+        {
+            "session_id": "test_session_aiml",
+            "level": 3,
+            "domain": "MEDIA",
+            "application": "JIOSAAVN",
+            "command": "LEFT",
+            "action": "TOGGLE_PLAY_PAUSE",
+            "media_type": "AUDIO",
+            "source": "JIOSAAVN",
+            "status": "SUCCESS",
+            "execution_time_ms": 0,
+            "error": null,
+            "timestamp": "2026-09-22T11:43:53.563626"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+# SynaptiMesh Dashboard Backend & WebSocket Layer Configuration
+
+app:
+  name: "SynaptiMesh Dashboard"
+  env: "development"
+  debug: true
+  host: "0.0.0.0"
+  port: 8000
+  api_prefix: "/api/v1"
+  cors_origins:
+    - "*"
+  log_level: "INFO"
+
+websocket:
+  enabled: true
+  host: "0.0.0.0"
+  port: 8000
+  path: "/ws"
+  bci_path: "/api/v1/bci/ws"
+  heartbeat_interval_sec: 15.0
+  client_timeout_sec: 30.0
+  max_message_bytes: 1048576
+  broadcast_rate_hz: 30.0
+  auto_reconnect: true
+  reconnect_backoff_sec: 2.0
+  ssl_enabled: false
+  cortex_ws_url: "wss://localhost:6868"
+
+dashboard:
+  framing_duration_sec: 4.0
+  power_threshold: 0.65
+  sensitivity: 0.65
+  telemetry_history_size: 100
+  authoritative_dashboards:
+    PYTHON: "/"
+    IOT: "/iot"
+    EMBEDDED: "/embedded"
+    AIML: "/aiml"

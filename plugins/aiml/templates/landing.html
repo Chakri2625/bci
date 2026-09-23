@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JioSaavn Master Hub - Analog Console</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* Wood / Leather Desk Background */
+        body {
+            background-color: #1a1512;
+            background-image: 
+                radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%),
+                repeating-linear-gradient(
+                    45deg,
+                    #2c1f17,
+                    #2c1f17 10px,
+                    #231811 10px,
+                    #231811 20px
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Cinzel Decorative', serif;
+            user-select: none;
+        }
+
+        /* The Main Analog Amplifier Console */
+        .console-chassis {
+            position: relative;
+            background: #2a2a2a;
+            border-radius: 16px;
+            padding: 40px 60px;
+            box-shadow: 
+                0 30px 60px rgba(0,0,0,0.8),
+                inset 0 4px 6px rgba(255,255,255,0.2),
+                inset 0 -4px 6px rgba(0,0,0,0.6);
+            /* Brushed metal texture */
+            background-image: 
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.03) 0%,
+                    rgba(255,255,255,0.03) 1px,
+                    transparent 1px,
+                    transparent 2px
+                ),
+                linear-gradient(to bottom, #3b3b3b 0%, #1c1c1c 100%);
+            border: 2px solid #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 600px;
+        }
+
+        /* Wood side panels */
+        .console-chassis::before,
+        .console-chassis::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            bottom: -5px;
+            width: 30px;
+            background: linear-gradient(to bottom, #5c3a21, #2b180d);
+            border: 1px solid #1a0e07;
+            box-shadow: 
+                inset 2px 0 5px rgba(255,255,255,0.1),
+                inset -2px 0 5px rgba(0,0,0,0.5),
+                5px 10px 15px rgba(0,0,0,0.5);
+            border-radius: 4px;
+        }
+        .console-chassis::before {
+            left: -30px;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+        .console-chassis::after {
+            right: -30px;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            box-shadow: 
+                inset 2px 0 5px rgba(255,255,255,0.1),
+                inset -2px 0 5px rgba(0,0,0,0.5),
+                -5px 10px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Screws/Rivets on the chassis */
+        .screw {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: radial-gradient(circle, #a0a0a0, #444);
+            border-radius: 50%;
+            box-shadow: inset 1px 1px 3px rgba(255,255,255,0.5), 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        .screw::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            width: 70%;
+            height: 2px;
+            background: rgba(0,0,0,0.7);
+            transform: translateY(-50%) rotate(45deg);
+            box-shadow: 0 1px 0 rgba(255,255,255,0.4);
+        }
+        .screw.tl { top: 15px; left: 15px; transform: rotate(15deg); }
+        .screw.tr { top: 15px; right: 15px; transform: rotate(85deg); }
+        .screw.bl { bottom: 15px; left: 15px; transform: rotate(-35deg); }
+        .screw.br { bottom: 15px; right: 15px; transform: rotate(110deg); }
+
+        /* Brand Plate */
+        .brand-plate {
+            background: linear-gradient(to bottom, #d0b060, #8a6a20);
+            border: 1px solid #5a4510;
+            padding: 8px 24px;
+            border-radius: 4px;
+            box-shadow: 
+                inset 0 1px 2px rgba(255,255,255,0.8),
+                0 4px 6px rgba(0,0,0,0.6);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .brand-title {
+            color: #2a1f0a;
+            font-size: 28px;
+            margin: 0;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.4), 0 -1px 1px rgba(0,0,0,0.4);
+            letter-spacing: 2px;
+        }
+        .brand-subtitle {
+            font-family: 'VT323', monospace;
+            color: #111;
+            font-size: 16px;
+            letter-spacing: 4px;
+            margin-top: 4px;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+        }
+
+        /* LED Display Panel */
+        .led-screen {
+            background: #080a08;
+            border: 3px solid #111;
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin-bottom: 40px;
+            box-shadow: 
+                inset 0 5px 15px rgba(0,0,0,0.9),
+                0 2px 0 rgba(255,255,255,0.1);
+            width: 80%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .led-screen::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.05), transparent);
+            pointer-events: none;
+        }
+        .led-text {
+            font-family: 'VT323', monospace;
+            color: #ff3333;
+            font-size: 22px;
+            text-shadow: 0 0 8px #ff3333, 0 0 15px #ff3333;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        /* Physical Buttons Container */
+        .controls-deck {
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Physical Switch/Button styling */
+        .mech-btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mech-btn {
+            position: relative;
+            width: 120px;
+            height: 80px;
+            background: linear-gradient(to bottom, #e8e8e8, #a5a5a5);
+            border-radius: 8px;
+            border: 1px solid #555;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 
+                inset 0 4px 6px rgba(255,255,255,0.9),
+                inset 0 -2px 4px rgba(0,0,0,0.2),
+                0 10px 0 #5a5a5a,
+                0 15px 15px rgba(0,0,0,0.5);
+            transition: all 0.1s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .mech-btn::before {
+            /* Button top surface detail */
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            right: 10%;
+            bottom: 10%;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 4px;
+            background: linear-gradient(to bottom, #dcdcdc, #c0c0c0);
+        }
+
+        /* Indicator LED on button */
+        .btn-led {
+            position: absolute;
+            top: -12px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #550000, #220000);
+            border: 2px solid #111;
+            box-shadow: 
+                inset 0 2px 4px rgba(0,0,0,0.8),
+                0 1px 1px rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .mech-btn.selected .btn-led {
+            background: radial-gradient(circle, #ff6666, #cc0000);
+            box-shadow: 
+                inset 0 2px 4px rgba(0,0,0,0.3),
+                0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 1px 1px rgba(255,255,255,0.2);
+        }
+
+        .mech-btn:active {
+            transform: translateY(8px);
+            box-shadow: 
+                inset 0 2px 4px rgba(255,255,255,0.5),
+                inset 0 -1px 2px rgba(0,0,0,0.2),
+                0 2px 0 #5a5a5a,
+                0 5px 5px rgba(0,0,0,0.6);
+        }
+
+        .mech-btn-label {
+            position: relative;
+            z-index: 2;
+            font-family: 'Share Tech Mono', monospace;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+            pointer-events: none;
+        }
+
+        .mech-btn-engraving {
+            font-family: 'Share Tech Mono', monospace;
+            color: #1a1a1a;
+            font-size: 13px;
+            font-weight: bold;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.2);
+            background: #2a2a2a; /* match chassis */
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid #111;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.8);
+            letter-spacing: 1px;
+        }
+
+        /* Power cord detail */
+        .power-cord {
+            position: absolute;
+            bottom: -80px;
+            right: 40px;
+            width: 15px;
+            height: 80px;
+            background: linear-gradient(to right, #111, #333, #111);
+            border-left: 2px solid #000;
+            border-right: 2px solid #000;
+            box-shadow: 15px 5px 15px rgba(0,0,0,0.8);
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="console-chassis">
+        <!-- Screws -->
+        <div class="screw tl"></div>
+        <div class="screw tr"></div>
+        <div class="screw bl"></div>
+        <div class="screw br"></div>
+
+        <div class="power-cord"></div>
+
+        <!-- Brand Plate -->
+        <div class="brand-plate">
+            <h1 class="brand-title">JioSaavn</h1>
+            <div class="brand-subtitle">MASTER HUB MK-I</div>
+        </div>
+
+        <!-- LED Display -->
+        <div class="led-screen">
+            <p class="led-text">SELECT OPERATION MODE</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="controls-deck">
+            
+            <div class="mech-btn-wrapper">
+                <div class="mech-btn-engraving">CH 1: MOBILE</div>
+                <div id="btn-mobile" class="mech-btn" onclick="selectDashboardUI('mobile')">
+                    <div class="btn-led"></div>
+                    <span class="mech-btn-label">ENGAGE<br>MOBILE</span>
+                </div>
+            </div>
+
+            <div class="mech-btn-wrapper">
+                <div class="mech-btn-engraving">CH 2: DESKTOP</div>
+                <div id="btn-desktop" class="mech-btn" onclick="selectDashboardUI('desktop')">
+                    <div class="btn-led"></div>
+                    <span class="mech-btn-label">ENGAGE<br>DESKTOP</span>
+                </div>
+            </div>
+
+            <div class="mech-btn-wrapper" id="start-automation-wrapper" style="display: none; margin-left: 20px;">
+                <div class="mech-btn-engraving" style="color: #00ff00;">EXECUTE</div>
+                <div id="btn-start" class="mech-btn" style="background: linear-gradient(to bottom, #d4ffd4, #a5cda5);" onclick="startAutomation()">
+                    <div class="btn-led" style="background: radial-gradient(circle, #005500, #002200);"></div>
+                    <span class="mech-btn-label">START<br>AUTOMATION</span>
+                </div>
+            </div>
+
+            <!-- Settings Button -->
+            <div class="mech-btn-wrapper" style="margin-left: 20px;">
+                <div class="mech-btn-engraving">CORTEX LINK</div>
+                <div id="btn-cortex" class="mech-btn" onclick="toggleCortexModal()">
+                    <div class="btn-led" id="cortex-led"></div>
+                    <span class="mech-btn-label">BCI<br>SETTINGS</span>
+                </div>
+            </div>
+
+            <!-- Back to SynaptiMesh Dashboard Button -->
+            <div class="mech-btn-wrapper" style="margin-left: 20px;">
+                <div class="mech-btn-engraving" style="color: #ffaa00;">SYNAPTIMESH</div>
+                <div id="btn-back-domains" class="mech-btn" style="background: linear-gradient(to bottom, #ffe8cc, #d99b66); cursor: pointer;" onclick="backToDomain()">
+                    <div class="btn-led" style="background: radial-gradient(circle, #ff8800, #993300);"></div>
+                    <span class="mech-btn-label">BACK TO<br>DASHBOARD</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Cortex Settings Modal -->
+    <div id="cortex-modal" class="console-chassis" style="display: none; position: absolute; z-index: 100; min-width: 400px; padding: 20px 40px;">
+        <div class="brand-plate" style="margin-bottom: 20px; padding: 5px 15px;">
+            <h2 class="brand-title" style="font-size: 20px;">CORTEX LINK</h2>
+        </div>
+        <div style="width: 100%; font-family: 'VT323', monospace; color: #d0b060; font-size: 18px;">
+            <div style="margin-bottom: 10px;">
+                <label>CLIENT ID</label><br>
+                <input type="text" id="ctx-client-id" style="width: 100%; background: #111; color: #0f0; border: 1px solid #5a4510; padding: 5px; font-family: 'VT323';" placeholder="Enter Client ID">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label>CLIENT SECRET</label><br>
+                <input type="password" id="ctx-client-secret" style="width: 100%; background: #111; color: #0f0; border: 1px solid #5a4510; padding: 5px; font-family: 'VT323';" placeholder="Enter Client Secret">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label>PROFILE</label><br>
+                <div style="display: flex; gap: 10px;">
+                    <select id="ctx-profile" style="flex-grow: 1; background: #111; color: #0f0; border: 1px solid #5a4510; padding: 5px; font-family: 'VT323';">
+                        <option value="">-- No Profiles --</option>
+                    </select>
+                    <button onclick="fetchProfiles()" style="background: #2a2a2a; color: #d0b060; border: 1px solid #5a4510; font-family: 'VT323'; cursor: pointer;">REFRESH</button>
+                    <button onclick="loadProfile()" style="background: #2a2a2a; color: #d0b060; border: 1px solid #5a4510; font-family: 'VT323'; cursor: pointer;">LOAD</button>
+                </div>
+            </div>
+            <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+                <button onclick="connectCortex()" style="background: #113311; color: #0f0; border: 1px solid #050; padding: 5px 15px; font-family: 'VT323'; cursor: pointer;">CONNECT</button>
+                <button onclick="disconnectCortex()" style="background: #331111; color: #f00; border: 1px solid #500; padding: 5px 15px; font-family: 'VT323'; cursor: pointer;">DISCONNECT</button>
+                <button onclick="diagnoseCortex()" style="background: #222; color: #aaa; border: 1px solid #555; padding: 5px 15px; font-family: 'VT323'; cursor: pointer;">DIAGNOSE</button>
+                <button onclick="toggleCortexModal()" style="background: #444; color: #fff; border: 1px solid #777; padding: 5px 15px; font-family: 'VT323'; cursor: pointer;">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script>
+        let currentSelected = null;
+        let currentState = null;
+
+        function updateUI(state, selected) {
+            currentState = state;
+            currentSelected = selected;
+            
+            const ledScreen = document.querySelector('.led-text');
+            const btnMobile = document.getElementById('btn-mobile');
+            const btnDesktop = document.getElementById('btn-desktop');
+            const startWrapper = document.getElementById('start-automation-wrapper');
+            
+            if (state === 'DOMAIN_SELECTION') {
+                ledScreen.textContent = 'AWAITING DOMAIN SELECTION...';
+                btnMobile.classList.remove('selected');
+                btnDesktop.classList.remove('selected');
+                startWrapper.style.display = 'none';
+            } else if (state === 'SUB_MASTER_DASHBOARD') {
+                if (selected === 'mobile') {
+                    ledScreen.textContent = 'MOBILE DASHBOARD SELECTED';
+                    btnMobile.classList.add('selected');
+                    btnDesktop.classList.remove('selected');
+                    startWrapper.style.display = 'flex';
+                } else if (selected === 'desktop') {
+                    ledScreen.textContent = 'DESKTOP DASHBOARD SELECTED';
+                    btnDesktop.classList.add('selected');
+                    btnMobile.classList.remove('selected');
+                    startWrapper.style.display = 'flex';
+                } else {
+                    ledScreen.textContent = 'SELECT OPERATION MODE';
+                    btnMobile.classList.remove('selected');
+                    btnDesktop.classList.remove('selected');
+                    startWrapper.style.display = 'none';
+                }
+            } else if (state === 'MOBILE_DASHBOARD_ACTIVE') {
+                window.location.href = '/mobile';
+            } else if (state === 'DESKTOP_DASHBOARD_ACTIVE') {
+                window.location.href = '/desktop';
+            }
+        }
+
+        function pollFSMState() {
+            fetch('/api/master/fsm_state')
+                .then(res => res.json())
+                .then(data => {
+                    updateUI(data.state, data.selected);
+                })
+                .catch(err => console.error("FSM Poll Error:", err));
+        }
+
+        setInterval(pollFSMState, 1000);
+        
+        function selectDashboardUI(target) {
+            updateUI('SUB_MASTER_DASHBOARD', target);
+            fetch('/api/master/select_dashboard', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dashboard: target })
+            }).catch(err => console.error("Error selecting dashboard:", err));
+        }
+
+        function startAutomation() {
+            if (!currentSelected) return;
+            fetch('/api/master/start_automation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dashboard: currentSelected })
+            }).then(res => res.json())
+              .then(data => {
+                  if (data.status === 'success') {
+                      window.location.href = '/' + currentSelected;
+                  }
+              });
+        }
+        
+        function backToDomain() {
+            Promise.allSettled([
+                fetch('/api/fsm/back', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({level: 1}) }),
+                fetch('/api/fsm/reset', { method: 'POST' }),
+                fetch('/api/v1/state/reset?session=default', { method: 'POST' }),
+                fetch('/api/master/reset_state', { method: 'POST' })
+            ]).finally(() => {
+                window.location.href = '/';
+            });
+        }
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+            const key = e.key.toLowerCase();
+            if (key === '1' || key === 'm') selectDashboardUI('mobile');
+            else if (key === '2' || key === 'd') selectDashboardUI('desktop');
+            else if (key === 'enter' || key === ' ') startAutomation();
+            else if (key === 'escape' || key === 'h' || key === 'backspace') backToDomain();
+        });
+        
+        // When the page loads (e.g. user pressed 'Back' button), reset the backend state
+        // to prevent instantly redirecting them back if the state was left as ACTIVE.
+        window.addEventListener('load', () => {
+            fetch('/api/master/reset_state', { method: 'POST' })
+                .catch(err => console.error("Error resetting state:", err));
+        });
+
+        // Cortex JS Logic
+        const socket = io();
+        
+        socket.on('cortex_status', (status) => {
+            const led = document.getElementById('cortex-led');
+            if (status.connected && status.authorized && status.sessionActive) {
+                led.style.background = 'radial-gradient(circle, #00ff00, #005500)';
+                led.style.boxShadow = '0 0 10px #0f0, 0 0 20px #0f0';
+            } else if (status.connected) {
+                led.style.background = 'radial-gradient(circle, #ffff00, #555500)';
+                led.style.boxShadow = '0 0 10px #ff0, 0 0 20px #ff0';
+            } else {
+                led.style.background = 'radial-gradient(circle, #550000, #220000)';
+                led.style.boxShadow = 'inset 0 2px 4px rgba(0,0,0,0.8), 0 1px 1px rgba(255,255,255,0.2)';
+            }
+        });
+
+        function toggleCortexModal() {
+            const modal = document.getElementById('cortex-modal');
+            if (modal.style.display === 'none') {
+                modal.style.display = 'block';
+                fetch('/api/cortex/status')
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.hasCredentials) {
+                            document.getElementById('ctx-client-id').value = '********';
+                            document.getElementById('ctx-client-secret').value = '********';
+                        }
+                    }).catch(console.error);
+            } else {
+                modal.style.display = 'none';
+            }
+        }
+
+        function connectCortex() {
+            const clientId = document.getElementById('ctx-client-id').value;
+            const clientSecret = document.getElementById('ctx-client-secret').value;
+            
+            const payload = {};
+            if (clientId && clientId !== '********') payload.clientId = clientId;
+            if (clientSecret && clientSecret !== '********') payload.clientSecret = clientSecret;
+
+            fetch('/api/cortex/connect', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(res => res.json())
+              .then(data => alert(data.message || 'Connected!'))
+              .catch(err => alert('Error connecting: ' + err));
+        }
+
+        function disconnectCortex() {
+            fetch('/api/cortex/disconnect', { method: 'POST' })
+                .then(res => res.json())
+                .then(data => alert(data.message || 'Disconnected'))
+                .catch(err => alert('Error disconnecting: ' + err));
+        }
+
+        function diagnoseCortex() {
+            fetch('/api/cortex/diagnose', { method: 'POST' })
+                .then(res => res.json())
+                .then(data => alert(JSON.stringify(data, null, 2)))
+                .catch(err => alert('Error: ' + err));
+        }
+
+        function fetchProfiles() {
+            fetch('/api/cortex/profiles')
+                .then(res => res.json())
+                .then(data => {
+                    const sel = document.getElementById('ctx-profile');
+                    sel.innerHTML = '';
+                    if (data.profiles && data.profiles.length > 0) {
+                        data.profiles.forEach(p => {
+                            const opt = document.createElement('option');
+                            opt.value = p;
+                            opt.textContent = p;
+                            if (p === data.activeProfile) opt.selected = true;
+                            sel.appendChild(opt);
+                        });
+                    } else {
+                        sel.innerHTML = '<option value="">-- No Profiles Found --</option>';
+                    }
+                }).catch(err => alert('Error fetching profiles: ' + err));
+        }
+
+        function loadProfile() {
+            const sel = document.getElementById('ctx-profile');
+            const profile = sel.value;
+            if (!profile) return alert('Select a profile first');
+            
+            fetch('/api/cortex/load-profile', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ profile: profile })
+            }).then(res => res.json())
+              .then(data => alert('Profile loaded: ' + data.activeProfile))
+              .catch(err => alert('Error loading profile: ' + err));
+        }
+    </script>
+</body>
+</html>

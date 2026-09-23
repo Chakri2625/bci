@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2026-09-07T10:04:34.887674+00:00",
+    "command": "pull",
+    "confidence": 0.427514,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:04:35.015773+00:00",
+    "command": "pull",
+    "confidence": 0.507474,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:04:35.143885+00:00",
+    "command": "pull",
+    "confidence": 0.132568,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:04:58.252987+00:00",
+    "command": "right",
+    "confidence": 0.360418,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:04:58.379274+00:00",
+    "command": "right",
+    "confidence": 0.461019,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:04:58.498567+00:00",
+    "command": "right",
+    "confidence": 0.264506,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:42.855169+00:00",
+    "command": "right",
+    "confidence": 0.316929,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:42.982683+00:00",
+    "command": "right",
+    "confidence": 0.411271,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:43.103143+00:00",
+    "command": "right",
+    "confidence": 0.486429,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:43.232735+00:00",
+    "command": "right",
+    "confidence": 0.581646,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:43.350249+00:00",
+    "command": "right",
+    "confidence": 0.66393,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:43.477038+00:00",
+    "command": "right",
+    "confidence": 0.730635,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:43.605091+00:00",
+    "command": "right",
+    "confidence": 0.783952,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:43.733900+00:00",
+    "command": "right",
+    "confidence": 0.823746,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:43.853310+00:00",
+    "command": "right",
+    "confidence": 0.428194,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:05:43.987400+00:00",
+    "command": "right",
+    "confidence": 0.019192,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:06:25.336071+00:00",
+    "command": "right",
+    "confidence": 0.30159,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:06:25.455411+00:00",
+    "command": "right",
+    "confidence": 0.436426,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:06:25.575891+00:00",
+    "command": "right",
+    "confidence": 0.431714,
+    "source": "cortex"
+  },
+  {
+    "timestamp": "2026-09-07T10:06:25.705647+00:00",
+    "command": "right",
+    "confidence": 0.02296,
+    "source": "cortex"
+  }
+]
