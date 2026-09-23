@@ -1,0 +1,225 @@
+{
+  "test_sequences": [
+    {
+      "name": "Select AI/ML Domain",
+      "description": "Level 1: wake the AI/ML domain with a single RIGHT command",
+      "commands": [
+        {
+          "level": 1,
+          "timestamp": "2026-08-17 14:00:00.000",
+          "command": "right",
+          "confidence": 0.9850,
+          "expected_action": "Select AI/ML Domain"
+        }
+      ]
+    },
+    {
+      "name": "Open Mobile Dashboard",
+      "description": "Level 1 + Level 2: select AI/ML domain and select the Mobile dashboard",
+      "commands": [
+        {
+          "level": 1,
+          "timestamp": "2026-08-17 14:00:00.000",
+          "command": "right",
+          "confidence": 0.9850,
+          "expected_action": "Select AI/ML Domain"
+        },
+        {
+          "level": 2,
+          "timestamp": "2026-08-17 14:00:01.250",
+          "command": "push",
+          "confidence": 0.9520,
+          "expected_action": "Select Mobile Dashboard"
+        }
+      ]
+    },
+    {
+      "name": "Open Desktop Dashboard",
+      "description": "Level 1 + Level 2: select AI/ML domain and select the Desktop dashboard",
+      "commands": [
+        {
+          "level": 1,
+          "timestamp": "2026-08-17 14:00:00.000",
+          "command": "right",
+          "confidence": 0.9810,
+          "expected_action": "Select AI/ML Domain"
+        },
+        {
+          "level": 2,
+          "timestamp": "2026-08-17 14:00:01.500",
+          "command": "pull",
+          "confidence": 0.9440,
+          "expected_action": "Select Desktop Dashboard"
+        }
+      ]
+    },
+    {
+      "name": "Mobile Next Track",
+      "description": "Level 3: single PUSH after the mobile dashboard is open",
+      "commands": [
+        {
+          "level": 1,
+          "timestamp": "2026-08-17 14:00:00.000",
+          "command": "right",
+          "confidence": 0.9800,
+          "expected_action": "Select AI/ML Domain"
+        },
+        {
+          "level": 2,
+          "timestamp": "2026-08-17 14:00:01.200",
+          "command": "push",
+          "confidence": 0.9500,
+          "expected_action": "Select Mobile Dashboard"
+        },
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:00:04.000",
+          "command": "push",
+          "confidence": 0.9660,
+          "expected_action": "Next Track"
+        }
+      ]
+    },
+    {
+      "name": "Volume Up Command",
+      "description": "Level 3: RIGHT + PUSH ordered double within 8s window -> Volume + (single RIGHT at L3 is Search)",
+      "commands": [
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:01:00.000",
+          "command": "right",
+          "confidence": 0.9810,
+          "expected_action": "Volume Up"
+        },
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:01:01.200",
+          "command": "push",
+          "confidence": 0.9650,
+          "expected_action": "Volume Up"
+        }
+      ]
+    },
+    {
+      "name": "Volume Down Command",
+      "description": "Level 3: RIGHT + PULL ordered double within 8s window -> Volume -",
+      "commands": [
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:02:00.000",
+          "command": "right",
+          "confidence": 0.9780,
+          "expected_action": "Volume Down"
+        },
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:02:01.100",
+          "command": "pull",
+          "confidence": 0.9700,
+          "expected_action": "Volume Down"
+        }
+      ]
+    },
+    {
+      "name": "Search Command",
+      "description": "Level 3: single RIGHT -> Search (per spec)",
+      "commands": [
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:03:00.000",
+          "command": "right",
+          "confidence": 0.9720,
+          "expected_action": "Search"
+        }
+      ]
+    },
+    {
+      "name": "Return To Level 2",
+      "description": "Level 3: PUSH + RIGHT ordered double within 6s -> Back to Sub-Domain",
+      "commands": [
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:04:00.000",
+          "command": "push",
+          "confidence": 0.9780,
+          "expected_action": "Back to Level 2"
+        },
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:04:01.100",
+          "command": "right",
+          "confidence": 0.9700,
+          "expected_action": "Back to Level 2"
+        }
+      ]
+    },
+    {
+      "name": "Return To Level 1",
+      "description": "Level 2: LEFT navigation back to domain selection",
+      "commands": [
+        {
+          "level": 1,
+          "timestamp": "2026-08-17 14:05:00.000",
+          "command": "right",
+          "confidence": 0.9800,
+          "expected_action": "Select AI/ML Domain"
+        },
+        {
+          "level": 2,
+          "timestamp": "2026-08-17 14:05:01.100",
+          "command": "push",
+          "confidence": 0.9500,
+          "expected_action": "Select Mobile Dashboard"
+        },
+        {
+          "level": 2,
+          "timestamp": "2026-08-17 14:05:02.300",
+          "command": "left",
+          "confidence": 0.9600,
+          "expected_action": "Return to Level 1"
+        }
+      ]
+    },
+    {
+      "name": "Full Mobile Session",
+      "description": "Complete end-to-end flow: domain wake, mobile select, Start Automation (UI), then media control with 8s window doubles",
+      "commands": [
+        {
+          "level": 1,
+          "timestamp": "2026-08-17 14:10:00.000",
+          "command": "right",
+          "confidence": 0.9850,
+          "expected_action": "Select AI/ML Domain"
+        },
+        {
+          "level": 2,
+          "timestamp": "2026-08-17 14:10:01.200",
+          "command": "push",
+          "confidence": 0.9520,
+          "expected_action": "Select Mobile Dashboard"
+        },
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:10:05.000",
+          "command": "push",
+          "confidence": 0.9700,
+          "expected_action": "Next Track"
+        },
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:10:14.000",
+          "command": "right",
+          "confidence": 0.9800,
+          "expected_action": "Volume Up"
+        },
+        {
+          "level": 3,
+          "timestamp": "2026-08-17 14:10:15.100",
+          "command": "push",
+          "confidence": 0.9640,
+          "expected_action": "Volume Up"
+        }
+      ]
+    }
+  ]
+}

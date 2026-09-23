@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url={{ url_for('car_control') }}">
+    <title>SynaptiMesh — Car Control</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}?v=20260916theme-position2">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/desktop_car_control.css') }}?v=20260916theme-position2">
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"
+    }
+}
+</script>
+
+<script src="{{ url_for('static', filename='js/websocket_manager.js') }}?v=20260916theme-position2"></script>
+    <script src="{{ url_for('static', filename='js/command_manager.js') }}?v=20260916theme-position2"></script>
+<script type="module" src="{{ url_for('static', filename='js/desktop_car_control.js') }}?v=20260916theme-position2"></script>
+
+</head>
+
+<body>
+    <div class="background-layer"></div>
+    <div class="background-overlay"></div>
+
+    <main class="app-container car-control-page">
+
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <div class="brand-text">
+                    <h1>SynaptiMesh</h1>
+                    <span>CAR CONTROL SYSTEM</span>
+                </div>
+            </div>
+
+            <nav class="page-menu" aria-label="Page navigation">
+                <a href="{{ url_for('index') }}">DASHBOARD</a>
+                <a href="{{ url_for('car_control') }}" class="active">CAR CONTROL</a>
+            </nav>
+
+            <div class="connection-area">
+                <div class="device-info">
+                    <span id="connectionDot" class="status-dot"></span>
+                    <div>
+                        <span class="status-label">MASTER HUB</span>
+                        <strong id="connectionStatus" class="status-value">DISCONNECTED</strong>
+                    </div>
+                </div>
+
+                <div class="device-info">
+                    <span id="robotDot" class="status-dot"></span>
+                    <div>
+                        <span class="status-label">ROBOT CAR</span>
+                        <strong id="robotStatus" class="status-value">UNKNOWN</strong>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="car-control-layout">
+
+            <section class="glass-card car-view-card">
+                <div class="card-header">
+                    <div>
+                        <span class="section-label">SIMULATION</span>
+                        <h2>3D Robot View</h2>
+                    </div>
+                    <span id="modelStatus" class="response-indicator">LOADING</span>
+                </div>
+
+                <div id="car3dViewport" class="car3d-viewport">
+                    <div class="car3d-overlay top-left">
+                        <span>MODE</span>
+                        <strong>LIVE CONTROL</strong>
+                    </div>
+
+                    <div class="car3d-overlay top-right">
+                        <span>STATE</span>
+                        <strong id="visualState">STOP</strong>
+                    </div>
+
+                    <div id="frontWarning" class="sensor-warning front-warning">
+                        FRONT OBSTACLE
+                    </div>
+
+                    <div id="rearWarning" class="sensor-warning rear-warning">
+                        REAR OBSTACLE
+                    </div>
+
+                    <!-- ==================================================
+                         MOBILE / TABLET FULLSCREEN DRIVE CONTROLS
+                         Hidden outside fullscreen and on desktop.
+                         Forward / Backward = left side
+                         Left / Right = right side
+                         ================================================== -->
+                    
+
+                    <!-- Static fullscreen device dropdown. Hidden outside fullscreen. -->
+                    
+
+                    
+                </div>
+
+                <div class="car-view-footer">
+                    <span>3D visualization follows transmitted commands.</span>
+                    <span id="fpsStatus">FPS: --</span>
+                </div>
+            </section>
+
+            <!-- ==================================================
+                 MOBILE / TABLET-ONLY CONTROL PANEL
+                 Never rendered as part of the desktop layout.
+                 ================================================== -->
+            
+
+
+            <aside class="car-side-panel">
+
+            <!-- ==================================================
+                 DESKTOP-ONLY CONTROL PANEL
+                 Keyboard + mouse controls stay completely separate
+                 from the mobile/tablet touch controls.
+                 ================================================== -->
+            <section class="glass-card desktop-control-card desktop-only" aria-label="Desktop car controls">
+                <div class="card-header">
+                    <div>
+                        <span class="section-label">DESKTOP CONTROL</span>
+                        <h2>Keyboard Drive</h2>
+                    </div>
+                    <span class="response-indicator">W / A / S / D</span>
+                </div>
+
+                <div class="desktop-drive-layout">
+                    <div class="desktop-drive-cluster">
+                        <button type="button" class="desktop-drive-button" data-command="LIFTCARFORWARD" aria-label="Forward">
+                            <span>▲</span>
+                            <small>W / ↑</small>
+                        </button>
+                        <div class="desktop-drive-row">
+                            <button type="button" class="desktop-drive-button" data-command="LIFTCARLEFT" aria-label="Turn left">
+                                <span>◀</span>
+                                <small>A / ←</small>
+                            </button>
+                            <button type="button" class="desktop-drive-button desktop-stop-button" data-command="LIFTCARSTOP" aria-label="Stop">
+                                <span>■</span>
+                                <small>SPACE</small>
+                            </button>
+                            <button type="button" class="desktop-drive-button" data-command="LIFTCARRIGHT" aria-label="Turn right">
+                                <span>▶</span>
+                                <small>D / →</small>
+                            </button>
+                        </div>
+                        <button type="button" class="desktop-drive-button" data-command="LIFTCARBACKWARD" aria-label="Backward">
+                            <span>▼</span>
+                            <small>S / ↓</small>
+                        </button>
+                    </div>
+
+                    <label class="keyboard-switch">
+                        <input id="keyboardToggle" type="checkbox" checked>
+                        <span>KEYBOARD CONTROL</span>
+                    </label>
+                    <small id="keyboardStatusText" class="keyboard-status-text">Keyboard control enabled</small>
+                </div>
+            </section>
+
+
+                <section class="glass-card target-card">
+                    <div class="card-header">
+                        <div>
+                            <span class="section-label">DEVICE</span>
+                            <h2>Target Car</h2>
+                        </div>
+                        <span id="deviceLiveIndicator" class="live-indicator">
+                            <span></span> LIVE
+                        </span>
+                    </div>
+
+                    <label class="section-label" for="deviceSelector">
+                        TARGET DEVICE
+                    </label>
+
+                    <select id="deviceSelector" class="device-selector">
+                        <option value="">SELECT EMBEDDED DEVICE</option>
+                        <option value="98:A3:16:BF:2C:C0">
+                            Robot Car — 98:A3:16:BF:2C:C0
+                        </option>
+                        <option value="ROBOTCAR_01">
+                            Robot Car — ROBOTCAR_01
+                        </option>
+                        <option value="WHEELCHAIR_01">
+                            Smart Wheelchair — WHEELCHAIR_01
+                        </option>
+                    </select>
+
+                    <small id="selectedDeviceInfo" class="selected-device-text">
+                        No device selected
+                    </small>
+
+                    <div class="mqtt-connection-panel" aria-label="MQTT connection status">
+                        <div class="mqtt-connection-header">
+                            <span class="section-label">MQTT CONNECTION</span>
+                            <span id="mqttDiagramState" class="mqtt-diagram-state offline">OFFLINE</span>
+                        </div>
+
+                        <div class="mqtt-network-diagram">
+                            <div id="mqttNodeHub" class="mqtt-node inactive">
+                                <div class="mqtt-node-icon">H</div>
+                                <span>MASTER HUB</span>
+                            </div>
+
+                            <div id="mqttLineHubBroker" class="mqtt-connection-line inactive">
+                                <span class="mqtt-line-cross">×</span>
+                            </div>
+
+                            <div id="mqttNodeBroker" class="mqtt-node inactive">
+                                <div class="mqtt-node-icon">M</div>
+                                <span>MQTT BROKER</span>
+                            </div>
+
+                            <div id="mqttLineBrokerSlave" class="mqtt-connection-line inactive">
+                                <span class="mqtt-line-cross">×</span>
+                            </div>
+
+                            <div id="mqttNodeSlave" class="mqtt-node inactive">
+                                <div class="mqtt-node-icon">R</div>
+                                <span>ROBOT CAR</span>
+                            </div>
+                        </div>
+
+                        <div class="mqtt-connection-details">
+                            <span>HUB ↔ BROKER: <strong id="mqttBrokerConnectionText">OFFLINE</strong></span>
+                            <span>BROKER ↔ SLAVE: <strong id="mqttSlaveConnectionText">OFFLINE</strong></span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-card safety-card">
+                    <div class="card-header">
+                        <div>
+                            <span class="section-label">SAFETY</span>
+                            <h2>Sensor Status</h2>
+                        </div>
+                    </div>
+
+                    <div class="safety-grid">
+                        <div id="frontSafetyItem" class="safety-item">
+                            <span class="safety-name">FRONT SENSOR</span>
+                            <strong id="frontSafety">CLEAR</strong>
+                        </div>
+
+                        <div id="rearSafetyItem" class="safety-item">
+                            <span class="safety-name">REAR SENSOR</span>
+                            <strong id="rearSafety">CLEAR</strong>
+                        </div>
+                    </div>
+
+                    <button id="emergencyBtn"
+                            class="emergency-button"
+                            data-command="LIFTCARSTOP">
+                        ⚠ EMERGENCY STOP
+                    </button>
+                </section>
+
+                <section class="glass-card ack-card">
+                    <div class="card-header">
+                        <div>
+                            <span class="section-label">DEVICE RESPONSE</span>
+                            <h2>ACK / STATUS</h2>
+                        </div>
+                        <span id="responseIndicator" class="response-indicator">
+                            WAITING
+                        </span>
+                    </div>
+
+                    <div class="ack-display">
+                        <span id="ackType" class="ack-type">SYSTEM</span>
+                        <strong id="ackMessage">Waiting for ESP32 response...</strong>
+                        <small id="ackTime">--</small>
+                    </div>
+                </section>
+
+            </aside>
+        </section>
+
+        <footer class="footer">
+            <span>SYNAPTIMESH CAR CONTROL</span>
+            <span id="footerTime">--</span>
+        </footer>
+    </main>
+
+    <div id="notification" class="notification">
+        <span id="notificationMessage"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,2568 @@
+/* ==========================================================
+   SYNAPTIMESH CAR CONTROL PAGE
+   ========================================================== */
+
+.car-control-page {
+    min-height: 100vh;
+}
+
+.page-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: 24px;
+}
+
+.page-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 108px;
+    height: 38px;
+    padding: 0 15px;
+    border: 1px solid rgba(0, 220, 255, 0.45);
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    background: rgba(0, 150, 220, 0.10);
+    box-shadow: inset 0 0 12px rgba(0, 180, 255, 0.025);
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease;
+}
+
+.page-menu a:hover {
+    background: rgba(0, 190, 255, 0.16);
+    border-color: rgba(0, 225, 255, 0.75);
+    box-shadow:
+        0 0 12px rgba(0, 210, 255, 0.18),
+        inset 0 0 12px rgba(0, 200, 255, 0.05);
+    transform: translateY(-1px);
+}
+
+.page-menu a.active {
+    background: rgba(0, 180, 235, 0.12);
+    border-color: rgba(0, 220, 255, 0.58);
+    color: #ffffff;
+}
+
+.car-control-layout {
+    width: 100%;
+    min-width: 0;
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(330px, 0.8fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.car-view-card,
+.car-side-panel > .glass-card {
+    width: 100%;
+    min-width: 0;
+}
+
+.car-view-card {
+    min-height: 720px;
+}
+
+.car3d-viewport {
+    position: relative;
+    width: 100%;
+    min-height: 610px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(0, 220, 255, 0.06), transparent 45%),
+        rgba(0, 0, 0, 0.25);
+}
+
+.car3d-viewport canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.car3d-overlay {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    pointer-events: none;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9px;
+    background: rgba(5, 8, 18, 0.58);
+    backdrop-filter: blur(8px);
+}
+
+.car3d-overlay span {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    opacity: 0.6;
+}
+
+.car3d-overlay strong {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+}
+
+.car3d-overlay.top-left {
+    top: 14px;
+    left: 14px;
+}
+
+.car3d-overlay.top-right {
+    top: 14px;
+    right: 14px;
+}
+
+.sensor-warning {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    padding: 8px 15px;
+    border: 1px solid rgba(255, 60, 80, 0.55);
+    border-radius: 999px;
+    background: rgba(80, 0, 10, 0.72);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.sensor-warning.active {
+    display: block;
+}
+
+.front-warning {
+    top: 72px;
+}
+
+.rear-warning {
+    bottom: 72px;
+}
+
+.car-view-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 10px;
+    opacity: 0.62;
+}
+
+.car-side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.car-drive-card .control-pad {
+    margin-top: 14px;
+}
+
+.car-drive-card .secondary-controls {
+    margin-top: 14px;
+}
+
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.safety-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.safety-name {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    opacity: 0.55;
+}
+
+.safety-item strong {
+    font-size: 12px;
+}
+
+.safety-item.obstacle {
+    border-color: rgba(255, 60, 80, 0.55);
+    background: rgba(255, 40, 60, 0.08);
+}
+
+.emergency-button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.ack-display {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.ack-display strong {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+    .car-control-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .car-side-panel {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    .car-drive-card {
+        grid-column: 1 / -1;
+    }
+
+    .car-view-card {
+        min-height: 0;
+    }
+
+    .car3d-viewport {
+        min-height: 560px;
+    }
+}
+
+@media (max-width: 720px) {
+    .page-menu {
+        width: 100%;
+        margin: 0;
+        justify-content: stretch;
+    }
+
+    .page-menu a {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .car-side-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .car3d-viewport {
+        min-height: 420px;
+    }
+
+    .car-view-footer {
+        flex-direction: column;
+    }
+
+    .safety-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================================
+   SIMULATION HEADER / FULLSCREEN
+   ========================================================== */
+
+.car-view-card:fullscreen {
+    box-sizing: border-box;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(5, 8, 18, 0.98);
+}
+
+/*
+ * Fullscreen canvas is the entire surface.
+ * UI is layered above it instead of taking layout space.
+ */
+.car-view-card:fullscreen .car3d-viewport {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.car-view-card:fullscreen .car3d-viewport canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/*
+ * Header overlay.
+ * Keep it compact and give it its own vertical lane.
+ */
+.car-view-card:fullscreen > .card-header {
+    position: absolute !important;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 72px;
+    margin: 0 !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(3, 7, 16, .90),
+        rgba(3, 7, 16, .45),
+        transparent
+    );
+}
+
+.car-view-card:fullscreen > .card-header > * {
+    pointer-events: auto;
+}
+
+.car-view-card:fullscreen > .card-header .section-label {
+    margin: 0;
+    position: absolute;
+    top: 12px;
+    left: 18px;
+}
+
+.car-view-card:fullscreen > .card-header h2 {
+    margin: 23px 0 0;
+    line-height: 1.05;
+}
+
+.car-view-card:fullscreen > .card-header .model-status {
+    margin-top: 23px;
+}
+
+/*
+ * Right-side header controls occupy their own lane.
+ */
+.car-view-card:fullscreen .simulation-header-controls {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    z-index: 35;
+}
+
+/*
+ * Device selector is an overlay INSIDE the simulation.
+ * It sits below the header lane, centered horizontally.
+ */
+.car-view-card:fullscreen .fullscreen-target-card {
+    position: absolute !important;
+    z-index: 25;
+    top: 76px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    width: min(680px, calc(100% - 32px));
+    min-width: 0;
+    margin: 0 !important;
+    padding: 7px 10px !important;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 220, 255, .24);
+    border-radius: 11px;
+    background: rgba(4, 10, 22, .80);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .22);
+}
+
+/*
+ * Top row: Target Car + LIVE + robot status.
+ * The selector is deliberately NOT in this row.
+ */
+.car-view-card:fullscreen .fullscreen-target-card .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .card-header h2 {
+    margin: 0;
+    font-size: clamp(9px, 0.65vw, 11px);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .card-header .section-label,
+.car-view-card:fullscreen .fullscreen-target-card > .section-label {
+    display: none;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .live-indicator {
+    margin: 0;
+    white-space: nowrap;
+}
+
+/*
+ * The dropdown gets its own centered row.
+ * This keeps it visually above the status information and out of the
+ * user's central driving view.
+ */
+.car-view-card:fullscreen .fullscreen-target-card .device-selector {
+    display: block;
+    width: min(560px, 100%) !important;
+    min-width: 240px;
+    height: 34px;
+    margin: 0 !important;
+    box-sizing: border-box;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .selected-device-text {
+    margin: 0;
+    max-width: min(560px, 100%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: clamp(7px, 0.55vw, 9px);
+}
+
+/*
+ * Dynamic online/offline badge sits below the selector.
+ */
+.car-view-card:fullscreen .fullscreen-target-card .fullscreen-target-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(7px, 0.55vw, 9px);
+    line-height: 1;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card::after {
+    display: none !important;
+}
+
+.fullscreen-target-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.fullscreen-target-status::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #7c8794;
+}
+
+.fullscreen-target-status.online::before {
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, .12);
+}
+
+.fullscreen-target-status.offline::before {
+    background: #7c8794;
+}
+
+.car-view-card:fullscreen > .car-view-footer {
+    position: absolute !important;
+    z-index: 20;
+    left: 18px;
+    right: 18px;
+    bottom: 9px;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .75);
+}
+
+@media (max-width: 720px) {
+    .car-view-card:fullscreen > .card-header {
+        min-height: 64px;
+        padding: 10px !important;
+    }
+
+    .car-view-card:fullscreen > .card-header .section-label {
+        top: 9px;
+        left: 10px;
+    }
+
+    .car-view-card:fullscreen > .card-header h2,
+    .car-view-card:fullscreen > .card-header .model-status {
+        margin-top: 20px;
+    }
+
+    .car-view-card:fullscreen .simulation-header-controls {
+        top: 10px;
+        right: 10px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-target-card {
+        top: 72px !important;
+        width: min(520px, calc(100% - 16px));
+        padding: 7px !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-target-card .device-selector {
+        min-width: 0;
+        width: 100% !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-target-card .selected-device-text {
+        max-width: 100%;
+    }
+}
+
+
+.car-view-card .card-header {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/*
+ * Normal page:
+ * the simulation remains a normal card in the two-column layout.
+ */
+.simulation-header-controls {
+    min-width: 0;
+}
+
+/*
+ * Fullscreen:
+ * the WebGL viewport becomes the entire simulation surface.
+ * The header/footer are layered over it instead of taking layout
+ * space away from the grid.
+ */
+.car-view-card:fullscreen {
+    box-sizing: border-box;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
+    background: rgba(5, 8, 18, 0.98);
+}
+
+.car-view-card:fullscreen > .card-header {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 70px;
+    margin: 0;
+    padding: 16px 18px;
+    box-sizing: border-box;
+    background: linear-gradient(
+        to bottom,
+        rgba(3, 7, 16, .88),
+        rgba(3, 7, 16, .20),
+        transparent
+    );
+    pointer-events: none;
+}
+
+.car-view-card:fullscreen > .card-header > * {
+    pointer-events: auto;
+}
+
+.car-view-card:fullscreen .car3d-viewport {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(0, 220, 255, 0.06),
+            transparent 45%
+        ),
+        rgba(0, 0, 0, 0.25);
+}
+
+.car-view-card:fullscreen .car3d-viewport canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/*
+ * Existing Target Car selector moved INTO the simulation viewport.
+ * It is an overlay, so it no longer creates an empty layout area.
+ */
+.car-view-card:fullscreen .fullscreen-target-card {
+    position: absolute;
+    z-index: 15;
+    top: 82px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: auto minmax(260px, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    width: min(760px, calc(100% - 36px));
+    min-width: 0;
+    margin: 0;
+    padding: 9px 12px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 220, 255, 0.28);
+    border-radius: 12px;
+    background: rgba(4, 10, 22, 0.82);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .25);
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 auto;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .card-header > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .card-header h2 {
+    margin: 0;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .card-header .section-label {
+    display: none;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .live-indicator {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card > .section-label {
+    display: none;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .device-selector {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+.car-view-card:fullscreen .fullscreen-target-card .selected-device-text {
+    margin: 0;
+    min-width: 0;
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 8px;
+}
+
+/*
+ * The normal ROBOT CAR status is kept in the existing target card
+ * while fullscreen. JS mirrors its value into this compact badge.
+ */
+.car-view-card:fullscreen .fullscreen-target-card::after {
+    content: "";
+    display: block;
+    min-width: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #7c8794;
+    box-shadow: 0 0 0 3px rgba(124, 135, 148, .10);
+}
+
+/*
+ * Footer becomes a small transparent overlay at the bottom.
+ * The grid remains visible underneath it.
+ */
+.car-view-card:fullscreen > .car-view-footer {
+    position: absolute;
+    z-index: 20;
+    left: 18px;
+    right: 18px;
+    bottom: 10px;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .7);
+}
+
+/*
+ * Fullscreen target-card status badge created by the JS.
+ */
+.fullscreen-target-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.fullscreen-target-status::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #7c8794;
+}
+
+.fullscreen-target-status.online::before {
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, .12);
+}
+
+.fullscreen-target-status.offline::before {
+    background: #7c8794;
+}
+
+@media (max-width: 720px) {
+    .car-view-card:fullscreen > .card-header {
+        min-height: 62px;
+        padding: 10px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-target-card {
+        top: 70px;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        width: calc(100% - 20px);
+        padding: 9px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-target-card .device-selector {
+        width: 100%;
+    }
+
+    .car-view-card:fullscreen .fullscreen-target-card .selected-device-text {
+        max-width: none;
+    }
+
+    .car-view-card:fullscreen > .car-view-footer {
+        left: 10px;
+        right: 10px;
+        bottom: 7px;
+    }
+}
+
+
+
+
+/* ==========================================================
+   FULLSCREEN SIMULATION HUD
+   ========================================================== */
+
+.car-view-card:fullscreen {
+    position: relative !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box;
+}
+
+.car-view-card:fullscreen .car3d-viewport {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    z-index: 1 !important;
+}
+
+/* Header */
+.car-view-card:fullscreen > .card-header {
+    position: absolute !important;
+    z-index: 50 !important;
+    inset: 0 0 auto 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: clamp(8px, 1.2vw, 18px)
+             clamp(12px, 2vw, 28px) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto auto !important;
+    align-items: start !important;
+    column-gap: clamp(8px, 1vw, 18px) !important;
+    box-sizing: border-box;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(2, 6, 15, .94),
+            rgba(2, 6, 15, .55) 55%,
+            transparent
+        );
+}
+
+.car-view-card:fullscreen > .card-header > * {
+    pointer-events: auto;
+    min-width: 0;
+}
+
+.car-view-card:fullscreen > .card-header > div:first-child {
+    grid-column: 1;
+    min-width: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+}
+
+.car-view-card:fullscreen > .card-header
+> div:first-child .section-label {
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: clamp(7px, .65vw, 10px) !important;
+    line-height: 1 !important;
+}
+
+.car-view-card:fullscreen > .card-header
+> div:first-child h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: clamp(18px, 1.7vw, 28px) !important;
+    line-height: 1.05 !important;
+    white-space: nowrap;
+}
+
+.car-view-card:fullscreen > .card-header > .model-status {
+    grid-column: 2;
+    align-self: start;
+    margin: 0 !important;
+    white-space: nowrap;
+}
+
+.car-view-card:fullscreen .simulation-header-controls {
+    grid-column: 3;
+    position: static !important;
+    min-width: 0;
+    max-width: min(35vw, 360px);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: clamp(5px, .8vw, 10px) !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    z-index: 60 !important;
+}
+
+.car-view-card:fullscreen .simulation-header-controls
+[data-fullscreen],
+.car-view-card:fullscreen .simulation-header-controls
+.fullscreen-button,
+.car-view-card:fullscreen .simulation-header-controls
+button[aria-label*="fullscreen" i] {
+    display: none !important;
+}
+
+/* ----------------------------------------------------------
+   DEDICATED TOP-CENTER SELECTION HUD
+   ---------------------------------------------------------- */
+
+.car-view-card:fullscreen .fullscreen-selection-hud {
+    position: absolute !important;
+    z-index: 70 !important;
+
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    top: var(--fullscreen-hud-top, 72px) !important;
+
+    width: clamp(300px, 38vw, 560px) !important;
+    max-width: calc(100vw - 32px) !important;
+    min-width: min(280px, calc(100vw - 32px)) !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto auto !important;
+
+    gap: clamp(4px, .55vh, 7px) !important;
+    padding: clamp(7px, .8vh, 10px)
+             clamp(9px, 1vw, 12px) !important;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(0, 220, 255, .30);
+    border-radius: clamp(9px, .8vw, 12px);
+
+    background: rgba(4, 10, 22, .90);
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, .28),
+        0 0 0 1px rgba(0, 220, 255, .04);
+
+    color: #f5f7fb;
+}
+
+.car-view-card:fullscreen .fullscreen-selection-title {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+
+    font-size: clamp(7px, .55vw, 9px);
+    font-weight: 800;
+    letter-spacing: .12em;
+    line-height: 1;
+    color: #00dcff;
+}
+
+/* The ACTUAL existing select is reused here. */
+.car-view-card:fullscreen .fullscreen-selection-hud
+.device-selector {
+    grid-row: 2 !important;
+
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: clamp(32px, 3.6vh, 39px) !important;
+
+    margin: 0 !important;
+    padding: 0 clamp(8px, .8vw, 12px) !important;
+
+    box-sizing: border-box;
+
+    color: #f5f7fb !important;
+    background-color: #081426 !important;
+
+    font-size: clamp(9px, .7vw, 12px) !important;
+    font-weight: 700 !important;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.car-view-card:fullscreen .fullscreen-selection-hud
+.device-selector option {
+    color: #f5f7fb !important;
+    background-color: #081426 !important;
+    font-size: clamp(9px, .7vw, 12px) !important;
+    font-weight: 700 !important;
+}
+
+/* Target + LIVE + ONLINE/OFFLINE */
+.car-view-card:fullscreen .fullscreen-selection-status-row {
+    grid-row: 3 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+
+    gap: clamp(5px, .55vw, 8px) !important;
+}
+
+.fullscreen-selection-target,
+.fullscreen-selection-live,
+.fullscreen-target-status {
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.fullscreen-selection-target {
+    font-size: clamp(8px, .6vw, 10px);
+}
+
+.fullscreen-selection-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: clamp(7px, .52vw, 9px);
+    font-weight: 800;
+    color: #4ade80;
+}
+
+.fullscreen-selection-live span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, .10);
+}
+
+.fullscreen-target-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: clamp(7px, .52vw, 9px);
+    font-weight: 800;
+    letter-spacing: .05em;
+}
+
+.fullscreen-target-status::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #7c8794;
+}
+
+.fullscreen-target-status.online::before {
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, .10);
+}
+
+.fullscreen-target-status.offline::before {
+    background: #7c8794;
+}
+
+/* Selected device helper text */
+.car-view-card:fullscreen .fullscreen-selection-device-text {
+    grid-row: 4 !important;
+
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: center !important;
+
+    font-size: clamp(7px, .48vw, 8px) !important;
+    line-height: 1 !important;
+    color: rgba(190, 210, 230, .72);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* MODE / STATE stay outside the top-center HUD. */
+.car-view-card:fullscreen .car3d-overlay.top-left,
+.car-view-card:fullscreen .car3d-overlay.top-right {
+    top: var(--fullscreen-side-hud-top, 88px) !important;
+    z-index: 20 !important;
+}
+
+.car-view-card:fullscreen .car3d-overlay.top-left {
+    left: clamp(12px, 1.5vw, 24px) !important;
+}
+
+.car-view-card:fullscreen .car3d-overlay.top-right {
+    right: clamp(12px, 1.5vw, 24px) !important;
+}
+
+.car-view-card:fullscreen > .car-view-footer {
+    position: absolute !important;
+    z-index: 20 !important;
+    left: clamp(10px, 1.5vw, 24px) !important;
+    right: clamp(10px, 1.5vw, 24px) !important;
+    bottom: clamp(6px, 1vh, 12px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .75);
+}
+
+@media (max-width: 720px) {
+    .car-view-card:fullscreen .fullscreen-selection-hud {
+        width: min(430px, calc(100vw - 20px)) !important;
+        min-width: 0 !important;
+    }
+
+    .car-view-card:fullscreen .car3d-overlay.top-left,
+    .car-view-card:fullscreen .car3d-overlay.top-right {
+        top: var(--fullscreen-side-hud-top, 100px) !important;
+    }
+}
+
+/* ==========================================================
+   STATIC FULLSCREEN DEVICE DROPDOWN
+   ========================================================== */
+
+.fullscreen-device-hud {
+    display: none;
+}
+
+.car-view-card:fullscreen .fullscreen-device-hud {
+    position: absolute;
+    z-index: 100;
+    top: clamp(42px, 5vh, 58px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+    width: min(560px, calc(100vw - 32px));
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 220, 255, .38);
+    border-radius: 12px;
+    background: rgba(4, 10, 22, .94);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .35);
+    pointer-events: auto;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.car-view-card:fullscreen .fullscreen-device-title {
+    text-align: center;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    opacity: .72;
+}
+
+.car-view-card:fullscreen .fullscreen-device-label {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.car-view-card:fullscreen .fullscreen-device-selector {
+    display: block !important;
+    width: 100% !important;
+    height: 42px;
+    min-height: 42px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    color: #f5f7fb;
+    background: #081426;
+    border: 1px solid rgba(0, 220, 255, .58);
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 42px;
+    cursor: pointer;
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    appearance: auto;
+    -webkit-appearance: menulist;
+}
+
+.car-view-card:fullscreen .fullscreen-device-selector:focus {
+    outline: 2px solid rgba(0, 220, 255, .55);
+    outline-offset: 2px;
+}
+
+.car-view-card:fullscreen .fullscreen-device-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 18px;
+}
+
+.car-view-card:fullscreen .fullscreen-device-meta small {
+    max-width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 9px;
+    opacity: .7;
+}
+
+.car-view-card:fullscreen .fullscreen-device-hud .fullscreen-target-status {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.car-view-card:fullscreen .fullscreen-device-hud .fullscreen-target-status::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #7c8794;
+}
+
+.car-view-card:fullscreen .fullscreen-device-hud .fullscreen-target-status.online::before {
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, .12);
+}
+
+@media (max-width: 600px) {
+    .car-view-card:fullscreen .fullscreen-device-hud {
+        top: 42px;
+        width: calc(100vw - 20px);
+        padding: 8px 9px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-device-selector {
+        height: 38px;
+        min-height: 38px;
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================================
+   MQTT PHYSICAL CONNECTION DIAGRAM — CAR CONTROL
+   ========================================================== */
+
+.mqtt-connection-panel,
+.fullscreen-mqtt-connection-panel {
+    padding: 14px;
+    border: 1px solid rgba(0, 214, 255, 0.14);
+    border-radius: 16px;
+    background: rgba(3, 18, 39, 0.46);
+}
+
+.mqtt-connection-panel {
+    margin-top: 14px;
+}
+
+.mqtt-connection-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 13px;
+}
+
+.mqtt-diagram-state {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 5px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.mqtt-network-diagram {
+    display: grid;
+    grid-template-columns: minmax(48px, 1fr) minmax(22px, .62fr)
+                           minmax(48px, 1fr) minmax(22px, .62fr)
+                           minmax(48px, 1fr);
+    align-items: center;
+    width: 100%;
+    min-height: 76px;
+}
+
+.mqtt-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+    color: rgba(255, 255, 255, 0.42);
+    transition: 180ms ease;
+}
+
+.mqtt-node span {
+    max-width: 88px;
+    font-size: 7px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: 0.07em;
+    text-align: center;
+}
+
+.mqtt-node-icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.035);
+    font-size: 12px;
+    font-weight: 900;
+    transition: 180ms ease;
+}
+
+.mqtt-node.active {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.mqtt-node.active .mqtt-node-icon {
+    border-color: rgba(0, 238, 196, 0.45);
+    background: rgba(0, 238, 196, 0.10);
+    box-shadow: 0 0 16px rgba(0, 238, 196, 0.12);
+}
+
+.mqtt-node.disconnected {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.mqtt-node.disconnected .mqtt-node-icon {
+    border-color: rgba(255, 75, 110, 0.48);
+    background: rgba(255, 75, 110, 0.09);
+}
+
+.mqtt-connection-line {
+    position: relative;
+    height: 2px;
+    margin: 0 2px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.10);
+    transition: 180ms ease;
+}
+
+.mqtt-connection-line.active {
+    background: rgba(0, 238, 196, 0.72);
+    box-shadow: 0 0 10px rgba(0, 238, 196, 0.24);
+}
+
+.mqtt-connection-line.disconnected {
+    background: rgba(255, 75, 110, 0.28);
+}
+
+.mqtt-line-cross {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    width: 17px;
+    height: 17px;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 75, 110, 0.55);
+    border-radius: 50%;
+    background: #06142a;
+    color: rgba(255, 110, 135, 0.95);
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1;
+    z-index: 2;
+}
+
+.mqtt-connection-line.disconnected .mqtt-line-cross,
+.mqtt-connection-line.inactive .mqtt-line-cross {
+    display: flex;
+}
+
+.mqtt-connection-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-top: 10px;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.40);
+}
+
+.mqtt-connection-details strong {
+    margin-left: 2px;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.mqtt-diagram-state.online,
+.fullscreen-mqtt-connection-panel .mqtt-diagram-state.online {
+    color: #00eec4;
+}
+
+.mqtt-diagram-state.connected {
+    color: #4fdcff;
+}
+
+.mqtt-diagram-state.disconnected {
+    color: #ff6f91;
+}
+
+.mqtt-diagram-state.offline {
+    color: rgba(255, 255, 255, 0.48);
+}
+
+/* Fullscreen-only connection diagram. */
+.fullscreen-mqtt-connection-panel {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    width: min(520px, calc(100vw - 40px));
+    transform: translateX(-50%);
+    z-index: 30;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.fullscreen-mqtt-connection-panel .mqtt-network-diagram {
+    min-height: 72px;
+}
+
+.fullscreen-mqtt-connection-panel .mqtt-connection-details {
+    margin-top: 8px;
+}
+
+@media (max-width: 620px) {
+    .mqtt-network-diagram {
+        grid-template-columns: minmax(40px, 1fr) minmax(16px, .5fr)
+                               minmax(40px, 1fr) minmax(16px, .5fr)
+                               minmax(40px, 1fr);
+    }
+
+    .mqtt-node span {
+        font-size: 6px;
+    }
+
+    .mqtt-node-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .fullscreen-mqtt-connection-panel {
+        top: 10px;
+        width: calc(100vw - 20px);
+    }
+}
+
+/* ==========================================================
+   FULLSCREEN 3D GLASS UI
+   ----------------------------------------------------------
+   All simulation UI chrome uses the same glass language while
+   the center/front of the 3D scene remains unobstructed.
+   ========================================================== */
+
+/* Shared simulation glass surface. */
+.car-view-card .card-header > div,
+.car-view-card .card-header > span,
+.car-view-card .car3d-overlay,
+.car-view-card .car-view-footer,
+.car-view-card .sensor-warning,
+.fullscreen-device-hud,
+.fullscreen-mqtt-connection-panel {
+    background: rgba(5, 18, 35, 0.62);
+    border: 1px solid rgba(120, 220, 255, 0.14);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(12px) saturate(125%);
+    -webkit-backdrop-filter: blur(12px) saturate(125%);
+}
+
+/* Simulation title/header chrome. */
+.car-view-card .card-header > div {
+    padding: 9px 12px;
+    border-radius: 12px;
+}
+
+.car-view-card .card-header > span {
+    padding: 8px 11px;
+    border-radius: 999px;
+}
+
+/* Make the 3D viewport itself feel like a contained glass stage. */
+.car3d-viewport {
+    border-color: rgba(120, 220, 255, 0.16) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035),
+        0 16px 40px rgba(0, 0, 0, 0.20);
+}
+
+/* Existing mode/state overlays become consistent glass cards. */
+.car3d-overlay {
+    border-color: rgba(120, 220, 255, 0.14) !important;
+    background: rgba(5, 18, 35, 0.60) !important;
+}
+
+/* Sensor warnings stay highly visible but still use the same glass language. */
+.car3d-viewport .sensor-warning {
+    background: rgba(70, 8, 22, 0.72) !important;
+    border-color: rgba(255, 75, 110, 0.48) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Footer/status chrome. */
+.car-view-footer {
+    padding: 9px 12px;
+    border-radius: 11px;
+}
+
+/* ==========================================================
+   FULLSCREEN POSITIONING
+   ----------------------------------------------------------
+   Target Device = lower-left
+   MQTT Connection = lower-right
+   Center/front of the simulation remains open.
+   ========================================================== */
+
+.fullscreen-device-hud {
+    position: absolute !important;
+    left: 18px !important;
+    right: auto !important;
+    bottom: 18px !important;
+    top: auto !important;
+    width: min(390px, calc(50% - 28px)) !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 45 !important;
+    border-radius: 16px !important;
+}
+
+.fullscreen-mqtt-connection-panel {
+    position: absolute !important;
+    left: auto !important;
+    right: 18px !important;
+    bottom: 18px !important;
+    top: auto !important;
+    width: min(390px, calc(50% - 28px)) !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 40 !important;
+    border-radius: 16px !important;
+}
+
+.fullscreen-device-hud[hidden],
+.fullscreen-mqtt-connection-panel[hidden] {
+    display: none !important;
+}
+
+/* In HTML fullscreen, keep normal scene overlays above the canvas but
+   below the corner glass panels. */
+.car-view-card:fullscreen .car3d-overlay.top-left,
+.car-view-card:fullscreen .car3d-overlay.top-right {
+    z-index: 20;
+}
+
+.car-view-card:fullscreen .card-header > div,
+.car-view-card:fullscreen .card-header > span {
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    .fullscreen-device-hud,
+    .fullscreen-mqtt-connection-panel {
+        width: calc(50% - 22px) !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .fullscreen-device-hud {
+        left: 10px !important;
+        bottom: 150px !important;
+        width: calc(100% - 20px) !important;
+    }
+
+    .fullscreen-mqtt-connection-panel {
+        right: 10px !important;
+        bottom: 10px !important;
+        width: calc(100% - 20px) !important;
+    }
+}
+
+@media (max-height: 620px) and (min-width: 681px) {
+    .fullscreen-device-hud,
+    .fullscreen-mqtt-connection-panel {
+        bottom: 10px !important;
+        transform: scale(0.90) !important;
+        transform-origin: bottom center !important;
+    }
+
+    .fullscreen-device-hud {
+        left: 10px !important;
+        transform-origin: bottom left !important;
+    }
+
+    .fullscreen-mqtt-connection-panel {
+        right: 10px !important;
+        transform-origin: bottom right !important;
+    }
+}
+
+/* Page-specific MQTT/glass styles moved from car_control.html. */
+
+
+/* ==========================================================
+   RESPONSIVE CAR CONTROL — FINAL MOBILE/TABLET OVERRIDES
+   ----------------------------------------------------------
+   The previous desktop grid kept a 330px minimum side column,
+   which caused the car-control page to become extremely narrow
+   on phones. These rules deliberately override that minimum.
+   ========================================================== */
+
+.car-control-page,
+.car-control-page .car-control-layout,
+.car-control-page .car-view-card,
+.car-control-page .car-side-panel,
+.car-control-page .glass-card {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.car-control-layout {
+    grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.8fr);
+}
+
+/* Fullscreen mobile/tablet drive controls are markup-based so the
+   normal button command wiring handles them exactly like desktop buttons. */
+.fullscreen-drive-controls {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .car-control-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .car-view-card {
+        min-height: 0;
+    }
+
+    .car3d-viewport {
+        min-height: 0;
+        height: clamp(460px, 58vw, 600px);
+    }
+
+    .car-side-panel {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .car-side-panel > .glass-card {
+        min-width: 0;
+    }
+
+    /* Physical keyboards are not part of tablet/mobile operation. */
+    .keyboard-control {
+        display: none !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .car-control-page {
+        width: calc(100% - 16px);
+        padding-top: 8px;
+    }
+
+    .car-control-page .topbar {
+        padding: 15px;
+        gap: 14px;
+    }
+
+    .car-control-page .page-menu {
+        width: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .car-control-page .page-menu a {
+        width: 100%;
+        min-width: 0;
+        height: 42px;
+        padding: 0 8px;
+        font-size: 9px;
+    }
+
+    .car-control-page .connection-area {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .car-control-page .device-info {
+        min-width: 0;
+    }
+
+    .car-control-layout {
+        margin-top: 12px;
+        gap: 12px;
+    }
+
+    .car-side-panel {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .car3d-viewport {
+        height: min(72vw, 430px);
+        min-height: 340px;
+        border-radius: 14px;
+    }
+
+    .car3d-overlay {
+        padding: 8px 10px;
+        border-radius: 10px;
+    }
+
+    .car3d-overlay span {
+        font-size: 7px;
+    }
+
+    .car3d-overlay strong {
+        font-size: 9px;
+    }
+
+    .car3d-overlay.top-left {
+        top: 10px;
+        left: 10px;
+    }
+
+    .car3d-overlay.top-right {
+        top: 10px;
+        right: 10px;
+    }
+
+    .car-view-footer {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* ==========================================================
+   MOBILE / TABLET FULLSCREEN CONTROLS
+   ========================================================== */
+
+@media (max-width: 1100px) {
+    .car-view-card:fullscreen .fullscreen-drive-controls {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        box-sizing: border-box;
+        z-index: 120;
+        pointer-events: none;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-group {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        pointer-events: auto;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 78px;
+        height: 78px;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid rgba(110, 225, 255, 0.30);
+        border-radius: 20px;
+        background: rgba(4, 16, 32, 0.70);
+        color: rgba(255, 255, 255, 0.94);
+        box-shadow:
+            0 10px 28px rgba(0, 0, 0, 0.30),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px) saturate(135%);
+        -webkit-backdrop-filter: blur(12px) saturate(135%);
+        font-family: inherit;
+        cursor: pointer;
+        touch-action: none;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-button:active,
+    .car-view-card:fullscreen .fullscreen-drive-button.is-pressed {
+        transform: scale(0.94);
+        background: rgba(0, 170, 225, 0.24);
+        border-color: rgba(100, 235, 255, 0.65);
+    }
+
+    .fullscreen-drive-icon {
+        font-size: 25px;
+        line-height: 1;
+    }
+
+    .fullscreen-drive-label {
+        font-size: 7px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        opacity: 0.72;
+    }
+
+    /* Keep the target selector compact at the top instead of taking a
+       full-width lower panel that conflicts with the drive controls. */
+    .car-view-card:fullscreen .fullscreen-device-hud {
+        top: 12px !important;
+        left: 50% !important;
+        bottom: auto !important;
+        width: min(300px, calc(100vw - 150px)) !important;
+        transform: translateX(-50%) !important;
+        padding: 8px 10px !important;
+        gap: 5px !important;
+        border-radius: 12px !important;
+        z-index: 130 !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-device-title,
+    .car-view-card:fullscreen .fullscreen-device-label {
+        font-size: 7px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-device-selector {
+        height: 34px !important;
+        min-height: 34px !important;
+        font-size: 10px !important;
+        line-height: 34px !important;
+        padding: 0 9px !important;
+    }
+
+    /* MQTT diagram is useful on the normal page but is visual clutter in
+       mobile/tablet fullscreen where the driving controls are the priority. */
+    .car-view-card:fullscreen .fullscreen-mqtt-connection-panel {
+        display: none !important;
+    }
+
+    /* The desktop header chrome is unnecessary in touch fullscreen mode. */
+    .car-view-card:fullscreen > .card-header .simulation-header-controls {
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .car-view-card:fullscreen .fullscreen-drive-controls {
+        padding: 0 10px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-group {
+        gap: 10px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-button {
+        width: 66px;
+        height: 66px;
+        border-radius: 17px;
+    }
+
+    .fullscreen-drive-icon {
+        font-size: 22px;
+    }
+
+    .fullscreen-drive-label {
+        font-size: 6px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-device-hud {
+        width: min(230px, calc(100vw - 150px)) !important;
+    }
+
+    .car-view-card:fullscreen .car3d-overlay.top-left,
+    .car-view-card:fullscreen .car3d-overlay.top-right {
+        top: 88px !important;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1100px) {
+    .car-view-card:fullscreen .fullscreen-drive-controls {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-group {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .car-view-card:fullscreen .fullscreen-device-hud {
+        width: min(280px, 38vw) !important;
+    }
+}
+
+
+/* ==========================================================
+   SYNAPTIMESH CAR CONTROL — MOBILE/TABLET HARD OVERRIDE
+   ========================================================== */
+
+/* The Car Control page owns its responsive geometry.  This prevents
+   the desktop side-column minimums from collapsing the page on phones. */
+@media (max-width: 1100px) {
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .car-control-page {
+        width: calc(100% - 24px) !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .car-control-page .car-control-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        gap: 14px !important;
+    }
+
+    .car-control-page .car-view-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .car-control-page .car3d-viewport {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: clamp(420px, 62vw, 620px) !important;
+        box-sizing: border-box !important;
+    }
+
+    .car-control-page .car-side-panel {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        gap: 14px !important;
+    }
+
+    .car-control-page .car-side-panel > .glass-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Keyboard UI is desktop-only. */
+    .car-control-page .keyboard-control {
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .car-control-page {
+        width: calc(100% - 16px) !important;
+    }
+
+    .car-control-page .topbar {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .car-control-page .brand-text h1 {
+        font-size: 22px !important;
+    }
+
+    .car-control-page .brand-text span {
+        font-size: 7px !important;
+        letter-spacing: 1.4px !important;
+    }
+
+    .car-control-page .car-control-layout {
+        margin-top: 10px !important;
+        gap: 10px !important;
+    }
+
+    .car-control-page .car-view-card {
+        padding: 12px !important;
+        border-radius: 15px !important;
+    }
+
+    .car-control-page .car3d-viewport {
+        height: min(82vw, 390px) !important;
+        min-height: 300px !important;
+        border-radius: 12px !important;
+    }
+
+    .car-control-page .card-header {
+        gap: 8px !important;
+    }
+
+    .car-control-page .card-header h2 {
+        font-size: 15px !important;
+    }
+
+    .car-control-page .page-menu a {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    .car-control-page .connection-area {
+        min-width: 0 !important;
+    }
+}
+
+/* ==========================================================
+   TOUCH FULLSCREEN DRIVE UI
+   ========================================================== */
+
+.fullscreen-drive-controls {
+    display: none !important;
+}
+
+@media (max-width: 1100px) {
+    .car-view-card:fullscreen .fullscreen-drive-controls {
+        position: fixed !important;
+        inset: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 max(14px, env(safe-area-inset-left)) 0 max(14px, env(safe-area-inset-right)) !important;
+        box-sizing: border-box !important;
+        z-index: 1000 !important;
+        pointer-events: none !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+        pointer-events: auto !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-button {
+        display: flex !important;
+        width: 76px !important;
+        height: 76px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+        padding: 8px !important;
+        box-sizing: border-box !important;
+        border: 1px solid rgba(110,225,255,.38) !important;
+        border-radius: 22px !important;
+        background: rgba(4,16,32,.78) !important;
+        color: #fff !important;
+        backdrop-filter: blur(14px) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
+        touch-action: none !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+        pointer-events: auto !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-button.is-pressed,
+    .car-view-card:fullscreen .fullscreen-drive-button:active {
+        transform: scale(.94) !important;
+        background: rgba(0,170,225,.30) !important;
+        border-color: rgba(100,235,255,.78) !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-icon {
+        font-size: 28px !important;
+        line-height: 1 !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-label {
+        font-size: 7px !important;
+        font-weight: 800 !important;
+        letter-spacing: .08em !important;
+    }
+
+    /* Compact device selector at the top-center. */
+    .car-view-card:fullscreen .fullscreen-device-hud {
+        top: max(10px, env(safe-area-inset-top)) !important;
+        left: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: min(270px, calc(100vw - 190px)) !important;
+        transform: translateX(-50%) !important;
+        padding: 8px 10px !important;
+        z-index: 1010 !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-mqtt-connection-panel {
+        display: none !important;
+    }
+
+    .car-view-card:fullscreen > .card-header {
+        display: none !important;
+    }
+
+    .car-view-card:fullscreen .car-view-footer {
+        display: none !important;
+    }
+
+    .car-view-card:fullscreen .car3d-overlay.top-left,
+    .car-view-card:fullscreen .car3d-overlay.top-right {
+        top: 12px !important;
+        z-index: 20 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .car-view-card:fullscreen .fullscreen-drive-controls {
+        padding-left: max(10px, env(safe-area-inset-left)) !important;
+        padding-right: max(10px, env(safe-area-inset-right)) !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-button {
+        width: 68px !important;
+        height: 68px !important;
+        border-radius: 20px !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-icon {
+        font-size: 24px !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-label {
+        font-size: 6px !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-device-hud {
+        width: min(210px, calc(100vw - 150px)) !important;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1100px) {
+    .car-view-card:fullscreen .fullscreen-drive-group {
+        flex-direction: row !important;
+        gap: 10px !important;
+    }
+
+    .car-view-card:fullscreen .fullscreen-drive-button {
+        width: 64px !important;
+        height: 64px !important;
+    }
+}
+
+/* ==========================================================
+   SYNAPTIMESH — PLATFORM-SPECIFIC CONTROL SEPARATION
+   ----------------------------------------------------------
+   Desktop and mobile/tablet controls are intentionally separate.
+   Desktop keeps the keyboard controller. Mobile/tablet uses touch.
+   ========================================================== */
+
+.desktop-only,
+.mobile-tablet-only {
+    display: none !important;
+}
+
+/* ----------------------------------------------------------
+   DESKTOP — 1101px+
+   ---------------------------------------------------------- */
+
+@media (min-width: 1101px) {
+    .desktop-only {
+        display: block !important;
+    }
+
+    .mobile-tablet-only {
+        display: none !important;
+    }
+
+    .car-control-page .car-control-layout {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1.8fr) minmax(330px, .8fr) !important;
+        align-items: start;
+    }
+
+    .car-control-page .car-side-panel {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        min-width: 0 !important;
+    }
+
+    .desktop-control-card {
+        min-width: 0;
+    }
+
+    .desktop-drive-layout {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        min-width: 0;
+    }
+
+    .desktop-drive-cluster {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        flex: 0 0 auto;
+    }
+
+    .desktop-drive-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .desktop-drive-button {
+        width: 64px;
+        height: 54px;
+        border: 1px solid rgba(110, 225, 255, .25);
+        border-radius: 12px;
+        background: rgba(4, 16, 32, .58);
+        color: rgba(255, 255, 255, .94);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        cursor: pointer;
+        user-select: none;
+        touch-action: none;
+        font: inherit;
+        transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+
+    .desktop-drive-button > span {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .desktop-drive-button > small {
+        font-size: 7px;
+        letter-spacing: .06em;
+        opacity: .65;
+    }
+
+    .desktop-drive-button:hover {
+        border-color: rgba(110, 225, 255, .5);
+        background: rgba(0, 170, 225, .14);
+    }
+
+    .desktop-drive-button.is-pressed,
+    .desktop-drive-button:active {
+        transform: scale(.95);
+        background: rgba(0, 170, 225, .25);
+        border-color: rgba(100, 235, 255, .7);
+    }
+
+    .desktop-stop-button {
+        border-color: rgba(255, 90, 100, .3);
+    }
+
+    .keyboard-switch {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 120px;
+        font-size: 8px;
+        font-weight: 800;
+        letter-spacing: .06em;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .keyboard-switch input {
+        width: 16px;
+        height: 16px;
+        accent-color: #55dfff;
+    }
+
+    .keyboard-status-text {
+        display: block;
+        margin-top: 7px;
+        opacity: .58;
+        font-size: 8px;
+    }
+
+    .mobile-control-card {
+        display: none !important;
+    }
+}
+
+/* ----------------------------------------------------------
+   MOBILE / TABLET — 1100px and below
+   ---------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-tablet-only {
+        display: block !important;
+    }
+
+    .car-control-page .car-control-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .car-control-page .car-view-card,
+    .car-control-page .mobile-control-card,
+    .car-control-page .car-side-panel {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .mobile-control-card {
+        order: 2;
+    }
+
+    .car-control-page .car-side-panel {
+        order: 3;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .car-control-page .car-view-card {
+        order: 1;
+    }
+
+    .mobile-drive-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-areas:
+            ". forward ."
+            "left stop right"
+            ". backward .";
+        gap: 8px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .mobile-drive-button {
+        min-height: 62px;
+        border: 1px solid rgba(110, 225, 255, .25);
+        border-radius: 15px;
+        background: rgba(4, 16, 32, .62);
+        color: rgba(255, 255, 255, .95);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        cursor: pointer;
+        user-select: none;
+        touch-action: none;
+        font-size: 21px;
+        line-height: 1;
+        font-family: inherit;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+
+    .mobile-drive-button small {
+        font-size: 6px;
+        font-weight: 800;
+        letter-spacing: .08em;
+        opacity: .65;
+    }
+
+    .mobile-drive-button.is-pressed,
+    .mobile-drive-button:active {
+        transform: scale(.95);
+        background: rgba(0, 170, 225, .25);
+        border-color: rgba(100, 235, 255, .7);
+    }
+
+    .mobile-stop-button {
+        border-color: rgba(255, 90, 100, .3);
+    }
+
+    .mobile-drive-grid .mobile-drive-button:nth-child(1) { grid-area: forward; }
+    .mobile-drive-grid .mobile-drive-button:nth-child(2) { grid-area: left; }
+    .mobile-drive-grid .mobile-drive-button:nth-child(3) { grid-area: stop; }
+    .mobile-drive-grid .mobile-drive-button:nth-child(4) { grid-area: right; }
+    .mobile-drive-grid .mobile-drive-button:nth-child(5) { grid-area: backward; }
+
+    /* The desktop keyboard controller never participates on touch layouts. */
+    .keyboard-switch,
+    #keyboardToggle,
+    #keyboardStatusText {
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .mobile-drive-grid {
+        max-width: 300px;
+        gap: 7px;
+    }
+
+    .mobile-drive-button {
+        min-height: 56px;
+        border-radius: 13px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE / TABLET VARIANT — loaded only by mobile_car_control.html
+   ========================================================== */
+@media (max-width: 1100px) {
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .car-control-page {
+        width: calc(100% - 20px) !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+
+    .car-control-page .car-control-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        gap: 14px !important;
+        margin-top: 14px !important;
+    }
+
+    .car-control-page .car-view-card,
+    .car-control-page .mobile-control-card,
+    .car-control-page .car-side-panel,
+    .car-control-page .car-side-panel > .glass-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .car-control-page .car-view-card { order: 1; min-height: 0 !important; }
+    .car-control-page .mobile-control-card { order: 2; display: block !important; }
+    .car-control-page .car-side-panel {
+        order: 3;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+    }
+
+    .desktop-control-card,
+    .keyboard-switch,
+    #keyboardToggle,
+    #keyboardStatusText {
+        display: none !important;
+    }
+
+    .car3d-viewport {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: clamp(360px, 68vw, 560px) !important;
+        min-height: 0 !important;
+        box-sizing: border-box;
+    }
+
+    .mobile-drive-grid {
+        width: min(100%, 360px);
+        margin-inline: auto;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .mobile-drive-button {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .car-control-page {
+        width: calc(100% - 14px) !important;
+    }
+
+    .car-control-page .topbar {
+        min-width: 0 !important;
+    }
+
+    .car-control-page .connection-area,
+    .car-control-page .page-menu {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .car3d-viewport {
+        height: clamp(320px, 78vw, 430px) !important;
+    }
+}

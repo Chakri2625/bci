@@ -1,0 +1,4478 @@
+/* ==========================================================
+   SYNAPTIMESH MASTER HUB
+   FUTURISTIC ROBOTICS DASHBOARD
+   RESPONSIVE MASTER STYLESHEET
+========================================================== */
+
+
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #ffffff;
+
+    background: #020817;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================
+   FIXED BACKGROUND
+========================================================== */
+
+.background-layer {
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        url("/static/images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -3;
+
+    transform: scale(1.02);
+}
+
+.background-overlay {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 225, 255, 0.08),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(120, 60, 255, 0.12),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            rgba(2, 8, 25, 0.80),
+            rgba(2, 8, 25, 0.72)
+        );
+
+    backdrop-filter: blur(1px);
+
+    z-index: -2;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            #00eaff,
+            #7b4dff
+        );
+
+    border-radius: 20px;
+}
+
+
+/* ==========================================================
+   APPLICATION
+========================================================== */
+
+.app-container {
+    width: min(1600px, 95%);
+
+    margin: 0 auto;
+
+    padding: 24px 0 35px;
+
+    position: relative;
+
+    z-index: 1;
+
+    min-width: 0;
+}
+
+
+/* ==========================================================
+   TOP BAR
+========================================================== */
+
+.topbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 116px;
+
+    padding: 20px 24px;
+
+    gap: 20px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5, 20, 45, 0.92),
+            rgba(7, 13, 34, 0.88)
+        );
+
+    border:
+        1px solid rgba(0, 220, 255, 0.42);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 0 30px rgba(0, 190, 255, 0.06);
+
+    backdrop-filter: blur(18px);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* TOP EDGE LIGHT */
+
+.topbar::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 20px;
+    right: 20px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 220, 255, 0.55),
+            rgba(110, 80, 255, 0.45),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   BRAND
+========================================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-width: 320px;
+
+    flex-shrink: 0;
+}
+
+
+.brand-icon {
+
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 29px;
+
+    font-weight: 900;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #00d9ff 0%,
+            #3671ff 48%,
+            #743fff 100%
+        );
+
+    box-shadow:
+        0 0 22px rgba(0, 210, 255, 0.32),
+        0 0 35px rgba(90, 65, 255, 0.14),
+        inset 0 1px 1px rgba(255, 255, 255, 0.42);
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.brand-text {
+
+    min-width: 0;
+}
+
+
+.brand-text h1 {
+
+    margin: 0;
+
+    font-size: clamp(28px, 3vw, 38px);
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 0%,
+            #c9f7ff 42%,
+            #9b8aff 100%
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.brand-text span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color:
+        rgba(
+            150,
+            190,
+            215,
+            0.62
+        );
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   TOPBAR NAVIGATION
+========================================================== */
+
+.topbar-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-left: auto;
+
+    margin-right: 22px;
+
+    flex-shrink: 0;
+}
+
+
+.topbar-nav-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 108px;
+
+    height: 38px;
+
+    padding: 0 15px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid rgba(0, 220, 255, 0.45);
+
+    background:
+        rgba(0, 150, 220, 0.10);
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    box-shadow:
+        inset 0 0 12px rgba(0, 180, 255, 0.025);
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease;
+}
+
+
+.topbar-nav-link:hover {
+
+    background:
+        rgba(0, 190, 255, 0.16);
+
+    border-color:
+        rgba(0, 225, 255, 0.75);
+
+    box-shadow:
+        0 0 12px rgba(0, 210, 255, 0.18),
+        inset 0 0 12px rgba(0, 200, 255, 0.05);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.topbar-nav-link.active {
+
+    background:
+        rgba(0, 180, 235, 0.12);
+
+    border-color:
+        rgba(0, 220, 255, 0.58);
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   CONNECTION AREA
+========================================================== */
+
+.connection-area {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 42px;
+
+    min-width: 0;
+
+    flex-shrink: 0;
+}
+
+
+.device-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 130px;
+}
+
+
+/* ==========================================================
+   STATUS DOT
+========================================================== */
+
+.status-dot {
+
+    width: 12px;
+    height: 12px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #ff375f;
+
+    box-shadow:
+        0 0 10px rgba(255, 55, 95, 0.75),
+        0 0 18px rgba(255, 55, 95, 0.22);
+}
+
+
+.status-dot.online {
+
+    background: #00d894;
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 157, 0.75),
+        0 0 18px rgba(0, 255, 157, 0.28);
+
+    animation:
+        pulse 1.6s infinite;
+}
+
+
+.status-dot.offline {
+
+    background: #ff405d;
+
+    box-shadow:
+        0 0 10px rgba(255, 55, 95, 0.75),
+        0 0 18px rgba(255, 55, 95, 0.25);
+}
+
+
+/* ==========================================================
+   STATUS TEXT
+========================================================== */
+
+.status-label {
+
+    display: block;
+
+    color:
+        rgba(
+            145,
+            180,
+            205,
+            0.58
+        );
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: 1.6px;
+
+    white-space: nowrap;
+}
+
+
+.status-value {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   DASHBOARD GRID
+========================================================== */
+
+.dashboard-grid {
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    grid-template-areas:
+        "device control safety"
+        "command command ack"
+        "activity activity activity";
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+
+/* ==========================================================
+   GRID CHILDREN
+========================================================== */
+
+.dashboard-grid > * {
+    min-width: 0;
+
+    max-width: 100%;
+}
+
+
+/* ==========================================================
+   GLASS CARD
+========================================================== */
+
+.glass-card {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8, 22, 52, 0.72),
+            rgba(5, 12, 32, 0.64)
+        );
+
+    border:
+        1px solid rgba(100, 225, 255, 0.18);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 0 35px rgba(0, 160, 255, 0.05);
+
+    backdrop-filter: blur(18px);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+    animation:
+        cardIn .45s ease both;
+}
+
+.glass-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 235, 255, .65),
+            rgba(140, 80, 255, .65),
+            transparent
+        );
+
+    opacity: .8;
+}
+
+.glass-card:hover {
+    border-color:
+        rgba(0, 230, 255, 0.32);
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, .32),
+        0 0 30px rgba(0, 180, 255, .09);
+}
+
+
+/* ==========================================================
+   CARD PLACEMENT
+========================================================== */
+
+.status-card {
+    grid-area: device;
+
+    animation-delay: .05s;
+}
+
+.control-card {
+    grid-area: control;
+
+    animation-delay: .10s;
+}
+
+.safety-card {
+    grid-area: safety;
+
+    animation-delay: .15s;
+}
+
+.command-card {
+    grid-area: command;
+
+    animation-delay: .20s;
+}
+
+.ack-card {
+    grid-area: ack;
+
+    animation-delay: .25s;
+}
+
+
+/* ==========================================================
+   ACTIVITY CARD
+========================================================== */
+
+.activity-card {
+    grid-area: activity;
+
+    width: 100%;
+
+    min-width: 0;
+
+    max-width: none;
+}
+
+.dashboard-grid > .activity-card {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    min-width: 0;
+
+    max-width: none;
+}
+
+
+/* ==========================================================
+   CARD HEADERS
+========================================================== */
+
+.card-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+    min-width: 0;
+}
+
+.card-header > * {
+    min-width: 0;
+}
+
+.card-header h2 {
+    margin: 5px 0 0;
+
+    font-size: 21px;
+
+    font-weight: 750;
+
+    letter-spacing: .2px;
+
+    overflow-wrap: anywhere;
+}
+
+.section-label {
+    display: block;
+
+    color: #54eaff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================================
+   LIVE INDICATOR
+========================================================== */
+
+.live-indicator {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 255, 155, .07);
+
+    border: 1px solid rgba(0, 255, 155, .18);
+
+    color: #00ffb0;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+.live-indicator span {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #00ff9d;
+
+    box-shadow: 0 0 10px #00ff9d;
+
+    animation: pulse 1.5s infinite;
+}
+
+
+/* ==========================================================
+   DEVICE SELECTOR
+========================================================== */
+
+.device-selector-container {
+    width: 100%;
+
+    min-width: 0;
+
+    margin-bottom: 18px;
+}
+
+.device-selector-container label,
+.device-selector-container > label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #54eaff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.device-selector,
+.device-selector-container select {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin-top: 8px;
+
+    padding: 12px 14px;
+
+    border-radius: 13px;
+
+    border:
+        1px solid rgba(0, 220, 255, 0.25);
+
+    outline: none;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 150, 255, 0.14),
+            rgba(91, 44, 190, 0.18)
+        );
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.device-selector:hover,
+.device-selector-container select:hover {
+    border-color:
+        rgba(0, 230, 255, 0.55);
+
+    box-shadow:
+        0 0 18px rgba(0, 220, 255, 0.15);
+}
+
+.device-selector:focus,
+.device-selector-container select:focus {
+    border-color:
+        rgba(0, 235, 255, 0.75);
+
+    box-shadow:
+        0 0 20px rgba(0, 220, 255, 0.22),
+        inset 0 0 12px rgba(0, 220, 255, 0.05);
+}
+
+.device-selector option,
+.device-selector-container select option {
+    background: #07152d;
+
+    color: #ffffff;
+}
+
+.device-selector small,
+.selected-device-text {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #718da5;
+
+    font-size: 9px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   ROBOT STATE
+========================================================== */
+
+.robot-state {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 200, 255, .08),
+            rgba(120, 70, 255, .06)
+        );
+
+    border:
+        1px solid rgba(0, 220, 255, .12);
+}
+
+.state-icon {
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 17px;
+
+    color: #00ff9d;
+
+    font-size: 30px;
+
+    background:
+        rgba(0, 255, 160, .07);
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 255, 160, .05);
+}
+
+.state-information {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+.state-label {
+    font-size: 9px;
+
+    color: rgba(190, 220, 240, .55);
+
+    letter-spacing: 1.5px;
+}
+
+.state-information strong {
+    font-size: 20px;
+
+    color: #ffffff;
+
+    overflow-wrap: anywhere;
+}
+
+.state-information small {
+    color: #8fa8bf;
+
+    font-size: 11px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   TELEMETRY
+========================================================== */
+
+.telemetry-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+.telemetry-box {
+    min-width: 0;
+
+    padding: 13px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(0, 0, 0, .22);
+
+    border:
+        1px solid rgba(255,255,255,.05);
+}
+
+.telemetry-box span {
+    display: block;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    color: #7f99af;
+}
+
+.telemetry-box strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    color: #6eefff;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+
+/* ==========================================================
+   CONTROL PAD
+========================================================== */
+
+.control-card {
+    text-align: center;
+}
+
+.control-pad {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    max-width: 100%;
+}
+
+.middle-controls {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+.control-button {
+    border: 0;
+
+    min-width: 88px;
+
+    max-width: 100%;
+
+    padding: 12px 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 13px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    letter-spacing: .6px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 150, 255, .72),
+            rgba(91, 44, 190, .78)
+        );
+
+    border:
+        1px solid rgba(90, 220, 255, .35);
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, .25),
+        inset 0 1px rgba(255,255,255,.15);
+
+    cursor: pointer;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    touch-action: manipulation;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        transform .15s ease,
+        filter .15s ease,
+        box-shadow .15s ease;
+}
+
+.control-button:hover {
+    filter: brightness(1.25);
+
+    box-shadow:
+        0 0 12px rgba(0, 220, 255, 0.35),
+        0 0 28px rgba(0, 220, 255, 0.28),
+        0 0 48px rgba(90, 80, 255, 0.18),
+        0 7px 25px rgba(0, 0, 0, 0.35);
+
+    transform: translateY(-2px);
+}
+
+.control-button:active {
+    transform: scale(.94);
+}
+
+.control-button .arrow {
+    font-size: 15px;
+}
+
+.stop-button {
+    background:
+        linear-gradient(
+            145deg,
+            #ff174f,
+            #8e1230
+        );
+
+    border-color:
+        rgba(255, 95, 125, .55);
+}
+
+.stop-button:hover {
+    filter: brightness(1.2);
+
+    box-shadow:
+        0 0 8px rgba(255, 40, 90, 0.65),
+        0 0 20px rgba(255, 30, 80, 0.45),
+        0 0 35px rgba(255, 20, 70, 0.3);
+}
+
+.stop-symbol {
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   SECONDARY CONTROLS
+========================================================== */
+
+.secondary-controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: 18px;
+}
+
+.secondary-button {
+    padding: 11px 16px;
+
+    border-radius: 13px;
+
+    border:
+        1px solid rgba(151, 100, 255, .38);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(38, 145, 255, .26),
+            rgba(128, 55, 255, .32)
+        );
+
+    color: #dffaff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    touch-action: manipulation;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.secondary-button:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(150, 130, 255, .7);
+
+    box-shadow:
+        0 0 12px rgba(120, 100, 255, 0.32),
+        0 0 28px rgba(120, 80, 255, 0.24),
+        0 0 45px rgba(0, 200, 255, 0.12);
+}
+
+
+/* ==========================================================
+   KEYBOARD
+========================================================== */
+
+.keyboard-control {
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    border-top:
+        1px solid rgba(255,255,255,.07);
+}
+
+.keyboard-info {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.keyboard-info strong {
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+.keyboard-info small {
+    color: #718aa1;
+
+    font-size: 10px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   TOGGLE SWITCH
+========================================================== */
+
+.toggle {
+    position: relative;
+
+    display: block;
+
+    width: 58px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+.toggle input {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    transition: .25s;
+}
+
+.toggle-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    left: 3px;
+    top: 3px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.4);
+
+    transition: .25s;
+}
+
+.toggle input:checked + .toggle-slider {
+    background:
+        linear-gradient(
+            90deg,
+            #00cfff,
+            #7455ff
+        );
+
+    box-shadow:
+        0 0 18px rgba(0,220,255,.3);
+}
+
+.toggle input:checked + .toggle-slider::before {
+    transform: translateX(28px);
+}
+
+
+/* ==========================================================
+   SAFETY
+========================================================== */
+
+.safety-card {
+    width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   SAFETY GRID
+========================================================== */
+
+.safety-grid {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    min-width: 0;
+
+    gap: 10px;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+/* ==========================================================
+   SAFETY ITEM
+========================================================== */
+
+.safety-item {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 44px;
+
+    padding:
+        12px 14px;
+
+    margin: 0;
+
+    gap: 12px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(0, 0, 0, .20);
+
+    border:
+        1px solid rgba(100, 225, 255, .08);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.025);
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* ==========================================================
+   SAFETY NAME
+========================================================== */
+
+.safety-name {
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    margin: 0;
+
+    color: #8299ad;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================================
+   SAFETY STATUS
+========================================================== */
+
+.safety-item strong {
+
+    flex: 0 0 auto;
+
+    min-width: 60px;
+
+    margin: 0;
+
+    color: #00ffae;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    line-height: 1;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   SAFETY STATUS POINTER
+========================================================== */
+
+.safety-status {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex: 0 0 auto;
+
+    gap: 7px;
+
+    min-width: 0;
+
+    white-space: nowrap;
+}
+
+.safety-pointer {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 12px;
+
+    height: 12px;
+
+    flex-shrink: 0;
+
+    color: #00ffae;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 8px rgba(0, 255, 174, .75);
+}
+
+
+/* ==========================================================
+   OBSTACLE ACTIVE STATE
+========================================================== */
+
+.safety-item.obstacle {
+
+    border-color:
+        rgba(255, 55, 85, .65);
+
+    background:
+        rgba(255, 40, 70, .08);
+
+    box-shadow:
+        inset 0 0 16px rgba(255, 40, 70, .06),
+        0 0 16px rgba(255, 40, 70, .10);
+}
+
+.safety-item.obstacle strong {
+
+    color: #ff405d;
+
+    text-shadow:
+        0 0 9px rgba(255, 64, 93, .55);
+}
+
+.safety-item.obstacle .safety-pointer {
+
+    color: #ff405d;
+
+    text-shadow:
+        0 0 7px rgba(255, 64, 93, .95),
+        0 0 15px rgba(255, 64, 93, .55);
+
+    animation:
+        safetyPointerPulse .9s ease-in-out infinite;
+}
+
+
+/* ==========================================================
+   SAFETY POINTER ANIMATION
+========================================================== */
+
+@keyframes safetyPointerPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+        opacity: .45;
+
+        transform:
+            scale(1.3);
+    }
+}
+
+
+/* ==========================================================
+   EMERGENCY STATUS
+========================================================== */
+
+#emergencyStatus {
+
+    color: #00ffae;
+
+    text-shadow:
+        0 0 8px rgba(0, 255, 174, .25);
+}
+
+
+/* ==========================================================
+   EMERGENCY STOP BUTTON
+========================================================== */
+
+#emergencyBtn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    min-width: 0;
+
+    height: 46px;
+
+    margin:
+        11px 0 0;
+
+    padding:
+        0 14px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid rgba(255, 50, 90, .60);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e61945,
+            #761329
+        );
+
+    color: #ffffff;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    touch-action: manipulation;
+
+    -webkit-tap-highlight-color: transparent;
+
+    box-shadow:
+        0 0 20px rgba(255, 30, 70, .14);
+
+    transition:
+        transform .2s ease,
+        filter .2s ease,
+        box-shadow .2s ease;
+}
+
+#emergencyBtn:hover {
+
+    filter: brightness(1.18);
+
+    box-shadow:
+        0 0 12px rgba(255, 30, 70, .50),
+        0 0 30px rgba(255, 30, 70, .32),
+        0 0 50px rgba(255, 30, 70, .16);
+}
+
+#emergencyBtn:active {
+
+    transform:
+        scale(.97);
+}
+
+
+/* ==========================================================
+   COMMAND
+========================================================== */
+
+.command-display {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 54px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(0, 0, 0, .35);
+
+    border:
+        1px solid rgba(0, 230, 255, .16);
+}
+
+.command-prefix {
+    color: #00eaff;
+
+    flex-shrink: 0;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.command-display code {
+    min-width: 0;
+
+    color: #70f7ff;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+.command-meta {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 12px;
+}
+
+.command-meta div {
+    min-width: 0;
+
+    padding: 11px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0,0,0,.2);
+}
+
+.command-meta span {
+    display: block;
+
+    color: #738ba0;
+
+    font-size: 8px;
+
+    letter-spacing: 1.3px;
+}
+
+.command-meta strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #d7faff;
+
+    font-size: 10px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   ACK
+========================================================== */
+
+.response-indicator {
+    padding: 7px 10px;
+
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 193, 7, .08);
+
+    border:
+        1px solid rgba(255, 193, 7, .18);
+
+    color: #ffd45c;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.ack-display {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 130px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 0, 0, .25),
+            rgba(0, 150, 255, .05)
+        );
+
+    border:
+        1px solid rgba(0, 220, 255, .12);
+}
+
+.ack-type {
+    color: #50eaff;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.ack-display strong {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+.ack-display small {
+    color: #71899d;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   ACTIVITY / CONSOLE MONITOR GRID
+========================================================== */
+
+.monitor-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+.activity-card .monitor-grid {
+    display: grid;
+
+    width: 100%;
+
+    min-width: 0;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 18px;
+}
+
+.monitor-panel {
+    width: 100%;
+
+    min-width: 0;
+
+    max-width: none;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(0, 0, 0, .25);
+
+    border:
+        1px solid rgba(0, 220, 255, .12);
+}
+
+.monitor-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+
+    margin-bottom: 11px;
+
+    color: #a5c8d9;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.monitor-dot {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #00eaff;
+
+    box-shadow:
+        0 0 10px #00eaff;
+}
+
+
+/* ==========================================================
+   ACTIVITY LOG
+========================================================== */
+
+.log-container {
+    width: 100%;
+
+    min-width: 0;
+
+    max-width: 100%;
+
+    height: 245px;
+
+    overflow-y: auto;
+
+    overflow-x: auto;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0,0,0,.55);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+}
+
+.log-entry {
+    display: grid;
+
+    grid-template-columns:
+        78px minmax(0, 1fr);
+
+    gap: 10px;
+
+    min-width: 0;
+
+    padding: 6px 4px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.025);
+}
+
+.log-time {
+    color: #5e879b;
+
+    flex-shrink: 0;
+}
+
+.log-message {
+    min-width: 0;
+
+    color: #00ff9d;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+.log-entry.system .log-message {
+    color: #72eaff;
+}
+
+.log-entry.tx .log-message {
+    color: #ffd45a;
+}
+
+.log-entry.ack .log-message {
+    color: #6cffad;
+}
+
+.log-entry.error .log-message {
+    color: #ff617f;
+}
+
+
+/* ==========================================================
+   CONSOLE
+========================================================== */
+
+.console-output {
+    width: 100%;
+
+    min-width: 0;
+
+    max-width: 100%;
+
+    height: 245px;
+
+    overflow-y: auto;
+
+    overflow-x: auto;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0, 0, 0, .65);
+
+    border:
+        1px solid rgba(0, 220, 255, .12);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    color: #00eaff;
+}
+
+.console-line {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    min-width: 0;
+
+    margin-bottom: 8px;
+
+    line-height: 1.5;
+}
+
+.console-line.system {
+    color: #00eaff;
+}
+
+.console-line.tx {
+    color: #ffd45a;
+}
+
+.console-line.rx {
+    color: #00ff9d;
+}
+
+.console-line.error {
+    color: #ff5475;
+}
+
+.console-time {
+    flex: 0 0 auto;
+
+    min-width: 82px;
+
+    color: #5e879b;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+}
+
+.console-message {
+    min-width: 0;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+.console-input-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 10px;
+
+    padding: 7px 8px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0,0,0,.55);
+
+    border:
+        1px solid rgba(0,220,255,.15);
+}
+
+/* ==========================================================
+   ACTIVITY LOG DOWNLOAD BUTTON
+   ========================================================== */
+
+.console-download-button {
+    flex-shrink: 0;
+
+    min-height: 40px;
+    padding: 0 14px;
+
+    border: 1px solid rgba(0, 255, 200, 0.25);
+    border-radius: 8px;
+
+    background: rgba(0, 255, 200, 0.06);
+
+    color: #00ffc8;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.console-download-button:hover {
+    background: rgba(0, 255, 200, 0.12);
+
+    border-color:
+        rgba(0, 255, 200, 0.55);
+
+    box-shadow:
+        0 0 14px rgba(0, 255, 200, 0.12);
+
+    transform: translateY(-1px);
+}
+
+.console-download-button:active {
+    transform: translateY(0);
+}
+
+.console-download-button:focus-visible {
+    outline: 2px solid rgba(0, 255, 200, 0.65);
+    outline-offset: 2px;
+}
+
+.console-prompt {
+    color: #00eaff;
+
+    flex-shrink: 0;
+
+    font-family: monospace;
+
+    font-weight: bold;
+}
+
+.console-input-area input {
+    flex: 1;
+
+    min-width: 0;
+
+    width: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+}
+
+.console-input-area input::placeholder {
+    color: #587080;
+}
+
+.console-input-area button {
+    flex-shrink: 0;
+
+    padding: 8px 13px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00bfe9,
+            #6754ff
+        );
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        filter .2s ease,
+        box-shadow .2s ease;
+}
+
+.console-input-area button:hover {
+    filter: brightness(1.2);
+
+    box-shadow:
+        0 0 12px rgba(0, 220, 255, 0.35),
+        0 0 25px rgba(100, 80, 255, 0.25);
+}
+
+
+/* ==========================================================
+   CLEAR BUTTON
+========================================================== */
+
+.clear-button {
+    flex-shrink: 0;
+
+    padding: 7px 12px;
+
+    border-radius: 9px;
+
+    border:
+        1px solid rgba(0, 220, 255, .2);
+
+    background:
+        rgba(0, 150, 255, .08);
+
+    color: #77eaff;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.clear-button:hover {
+    background:
+        rgba(0, 220, 255, 0.18);
+
+    box-shadow:
+        0 0 14px rgba(0, 220, 255, 0.18);
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 18px;
+
+    padding: 12px 18px;
+
+    color: rgba(170, 205, 220, .45);
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    border-top:
+        1px solid rgba(255,255,255,.05);
+}
+
+
+/* ==========================================================
+   NOTIFICATION
+========================================================== */
+
+.notification {
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    min-width: 240px;
+
+    max-width: 380px;
+
+    padding: 13px 17px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(5, 18, 40, .92);
+
+    border:
+        1px solid rgba(0, 225, 255, .28);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35),
+        0 0 25px rgba(0,200,255,.12);
+
+    backdrop-filter: blur(15px);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: .3s;
+
+    z-index: 100;
+
+    overflow-wrap: anywhere;
+}
+
+.notification.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .35;
+    }
+}
+
+@keyframes cardIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   LARGE DESKTOP
+   1400px+
+========================================================== */
+
+@media (min-width: 1400px) {
+
+    .dashboard-grid {
+        gap: 22px;
+    }
+
+    .activity-card .monitor-grid {
+        gap: 22px;
+    }
+
+}
+
+
+/* ==========================================================
+   DESKTOP / LAPTOP
+   1101px - 1399px
+========================================================== */
+
+@media (min-width: 1101px) and (max-width: 1399px) {
+
+    .dashboard-grid {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        grid-template-areas:
+            "device control safety"
+            "command command ack"
+            "activity activity activity";
+
+        gap: 18px;
+    }
+
+    .dashboard-grid > .activity-card {
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: none;
+    }
+
+    .activity-card .monitor-grid {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 18px;
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   751px - 1100px
+========================================================== */
+
+@media (min-width: 751px) and (max-width: 1100px) {
+
+    .app-container {
+
+        width: 94%;
+
+        padding-top: 18px;
+    }
+
+    .dashboard-grid {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        grid-template-areas:
+            "device safety"
+            "control control"
+            "command ack"
+            "activity activity";
+
+        gap: 18px;
+    }
+
+    .dashboard-grid > .activity-card {
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: none;
+    }
+
+    .activity-card .monitor-grid {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+    .topbar {
+
+    gap: 18px;
+
+    padding:
+        18px 20px;
+    }
+
+
+    .brand {
+
+        min-width: 260px;
+    }
+
+
+    .brand-text h1 {
+
+        font-size: 30px;
+    }
+
+
+    .topbar-nav {
+
+        margin-right: 10px;
+
+        gap: 3px;
+    }
+
+
+    .topbar-nav-link {
+
+        font-size: 12px;
+    }
+
+
+    .connection-area {
+
+        gap: 20px;
+    }
+
+
+    .device-info {
+
+        min-width: 105px;
+    }
+
+    .connection-area {
+
+        gap: 18px;
+    }
+
+    .glass-card {
+
+        padding: 20px;
+    }
+
+    .log-container,
+    .console-output {
+
+        height: 230px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   0px - 750px
+========================================================== */
+
+@media (max-width: 750px) {
+
+    .app-container {
+
+        width: calc(100% - 24px);
+
+        max-width: none;
+
+        padding:
+            12px
+            0
+            25px;
+    }
+
+
+    /* ------------------------------------------------------
+       SINGLE COLUMN DASHBOARD
+    ------------------------------------------------------ */
+
+    .dashboard-grid {
+
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "device"
+            "control"
+            "safety"
+            "command"
+            "ack"
+            "activity";
+
+        gap: 14px;
+    }
+
+
+    .dashboard-grid > * {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    /* ------------------------------------------------------
+       ACTIVITY CARD
+    ------------------------------------------------------ */
+
+    .dashboard-grid > .activity-card {
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: none;
+    }
+
+
+    /* ------------------------------------------------------
+       OTHER CARDS
+    ------------------------------------------------------ */
+
+    .status-card,
+    .control-card,
+    .safety-card,
+    .command-card,
+    .ack-card {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    /* ------------------------------------------------------
+       ACTIVITY + CONSOLE
+    ------------------------------------------------------ */
+
+    .activity-card .monitor-grid {
+
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .activity-card .monitor-panel {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    /* ------------------------------------------------------
+    TOP BAR
+    ------------------------------------------------------ */
+
+    .topbar {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 18px;
+
+        gap: 17px;
+    }
+
+
+    .brand {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .brand-text h1 {
+
+        white-space: normal;
+    }
+
+
+    .brand-text span {
+
+        white-space: normal;
+    }
+
+
+    .topbar-nav {
+
+        width: 100%;
+
+        margin: 0;
+
+        justify-content: center;
+
+        gap: 14px;
+    }
+
+
+    .topbar-nav-link {
+
+        font-size: 12px;
+    }
+
+
+    .connection-area {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+
+    .device-info {
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 10px 12px;
+    }
+
+
+    /* ------------------------------------------------------
+       CARDS
+    ------------------------------------------------------ */
+
+    .glass-card {
+
+        padding: 18px;
+
+        border-radius: 18px;
+    }
+
+    .card-header {
+
+        gap: 10px;
+    }
+
+    .card-header h2 {
+
+        font-size: 18px;
+    }
+
+
+    /* ------------------------------------------------------
+       CONTROL BUTTONS
+    ------------------------------------------------------ */
+
+    .control-pad {
+
+        width: 100%;
+    }
+
+    .middle-controls {
+
+        width: 100%;
+
+        gap: 6px;
+    }
+
+    .control-button {
+
+        min-width: 0;
+
+        flex: 1;
+
+        width: 100%;
+
+        padding: 11px 8px;
+    }
+
+    .secondary-controls {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .secondary-button {
+
+        width: 100%;
+    }
+
+
+    /* ------------------------------------------------------
+       KEYBOARD
+    ------------------------------------------------------ */
+
+    .keyboard-control {
+
+        width: 100%;
+
+        align-items: center;
+    }
+
+
+    /* ------------------------------------------------------
+       TELEMETRY
+    ------------------------------------------------------ */
+
+    .telemetry-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* ------------------------------------------------------
+       COMMAND
+    ------------------------------------------------------ */
+
+    .command-meta {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* ------------------------------------------------------
+       SAFETY
+    ------------------------------------------------------ */
+
+    .safety-grid {
+
+        width: 100%;
+
+        gap: 8px;
+    }
+
+    .safety-item {
+
+        width: 100%;
+
+        min-height: 42px;
+
+        padding:
+            11px 12px;
+    }
+
+    .safety-name {
+
+        font-size: 8px;
+
+        letter-spacing: .8px;
+    }
+
+    .safety-item strong {
+
+        min-width: 55px;
+
+        font-size: 8px;
+    }
+
+    #emergencyBtn {
+
+        width: 100%;
+
+        height: 43px;
+
+        margin-top: 9px;
+
+        font-size: 9px;
+    }
+
+
+    /* ------------------------------------------------------
+       LOGS
+    ------------------------------------------------------ */
+
+    .log-container,
+    .console-output {
+
+        height: 220px;
+    }
+
+    .log-entry {
+
+        grid-template-columns:
+            68px minmax(0, 1fr);
+
+        gap: 7px;
+    }
+
+    .console-line {
+
+        gap: 6px;
+    }
+
+    .console-time {
+
+        min-width: 68px;
+
+        font-size: 9px;
+    }
+
+
+    /* ------------------------------------------------------
+       FOOTER
+    ------------------------------------------------------ */
+
+    .footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+    }
+
+
+    /* ------------------------------------------------------
+       NOTIFICATION
+    ------------------------------------------------------ */
+
+    .notification {
+
+        left: 12px;
+
+        right: 12px;
+
+        bottom: 12px;
+
+        width: auto;
+
+        min-width: 0;
+
+        max-width: none;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   0px - 480px
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .app-container {
+
+        width: calc(100% - 16px);
+
+        padding-top: 8px;
+    }
+
+    .topbar {
+
+        padding: 15px;
+
+        border-radius: 17px;
+    }
+
+    .glass-card {
+
+        padding: 15px;
+
+        border-radius: 16px;
+    }
+
+
+    /* ------------------------------------------------------
+       BRAND
+    ------------------------------------------------------ */
+
+    .brand {
+
+        gap: 11px;
+    }
+
+    .brand-icon {
+
+        width: 44px;
+        height: 44px;
+
+        font-size: 20px;
+
+        border-radius: 12px;
+    }
+
+    .brand-text h1 {
+
+        font-size: 24px;
+    }
+
+    .brand-text span {
+
+        font-size: 8px;
+
+        letter-spacing: 1.7px;
+    }
+
+
+    /* ------------------------------------------------------
+       CARD HEADERS
+    ------------------------------------------------------ */
+
+    .card-header h2 {
+
+        font-size: 16px;
+    }
+
+
+    /* ------------------------------------------------------
+       SAFETY
+    ------------------------------------------------------ */
+
+    .safety-grid {
+
+        gap: 7px;
+    }
+
+    .safety-item {
+
+        min-height: 40px;
+
+        padding:
+            10px 11px;
+    }
+
+    .safety-name {
+
+        font-size: 10px;
+
+        font-weight: 700;
+    }
+
+    .safety-item strong {
+
+        min-width: 50px;
+
+        font-size: 11px;
+
+        font-weight: 800;
+    }
+
+    #emergencyBtn {
+
+        height: 46px;
+
+        margin-top: 8px;
+
+        padding:
+            0 10px;
+
+        font-size: 11px;
+
+        font-weight: 800;
+
+        letter-spacing: .8px;
+    }
+
+
+    /* ------------------------------------------------------
+       TELEMETRY
+    ------------------------------------------------------ */
+
+    .telemetry-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ------------------------------------------------------
+       COMMAND META
+    ------------------------------------------------------ */
+
+    .command-meta {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ------------------------------------------------------
+       MOVEMENT CONTROLS
+    ------------------------------------------------------ */
+
+    .middle-controls {
+
+        gap: 4px;
+    }
+
+    .control-button {
+
+        padding: 10px 5px;
+
+        font-size: 8px;
+    }
+
+    .control-button .arrow {
+
+        font-size: 13px;
+    }
+
+
+    /* ------------------------------------------------------
+       LOGS
+    ------------------------------------------------------ */
+
+    .log-container,
+    .console-output {
+
+        height: 200px;
+
+        padding: 9px;
+
+        font-size: 10px;
+    }
+
+    .log-entry {
+
+        grid-template-columns:
+            60px minmax(0, 1fr);
+
+        gap: 6px;
+    }
+
+    .console-time {
+
+        min-width: 60px;
+    }
+
+
+    /* ------------------------------------------------------
+       CONSOLE INPUT
+    ------------------------------------------------------ */
+
+    .console-input-area {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    .console-input-area input {
+        min-width: calc(100% - 25px);
+        font-size: 13px;
+        height: 36px;
+    }
+
+    .console-input-area button {
+        flex: 1 1 auto;
+        min-height: 40px;
+        padding: 8px 14px;
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: 0.05em;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL SCREENS
+   0px - 360px
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .app-container {
+
+        width: calc(100% - 12px);
+    }
+
+    .glass-card {
+
+        padding: 12px;
+    }
+
+
+    /* ------------------------------------------------------
+       SAFETY
+    ------------------------------------------------------ */
+
+    .safety-item {
+
+        min-height: 39px;
+
+        padding:
+            9px 10px;
+    }
+
+    .safety-name {
+
+        font-size: 9px;
+
+        font-weight: 700;
+    }
+
+    .safety-item strong {
+
+        min-width: 47px;
+
+        font-size: 11px;
+
+        font-weight: 800;
+    }
+
+    #emergencyBtn {
+
+        height: 44px;
+
+        font-size: 10px;
+
+        font-weight: 800;
+    }
+
+
+    /* ------------------------------------------------------
+       MOVEMENT CONTROLS
+    ------------------------------------------------------ */
+
+    .middle-controls {
+
+        flex-wrap: wrap;
+    }
+
+    .control-button {
+
+        flex:
+            1 1 30%;
+    }
+
+
+    /* ------------------------------------------------------
+       ACTIVITY LOG
+    ------------------------------------------------------ */
+
+    .log-entry {
+
+        grid-template-columns: 1fr;
+
+        gap: 2px;
+    }
+
+    .log-time {
+
+        font-size: 8px;
+    }
+
+
+    /* ------------------------------------------------------
+       CONSOLE
+    ------------------------------------------------------ */
+
+    .console-line {
+
+        flex-direction: column;
+
+        gap: 2px;
+    }
+
+    .console-time {
+
+        min-width: 0;
+    }
+
+}
+
+/* ==========================================================
+   SYNAPTIMESH CAR CONTROL PAGE
+   ========================================================== */
+
+
+/* ==================================================
+           MQTT PHYSICAL CONNECTION DIAGRAM
+        ================================================== */
+
+        .mqtt-connection-panel {
+            margin: 6px 0 20px;
+            padding: 16px 14px 14px;
+            border: 1px solid rgba(0, 214, 255, 0.14);
+            border-radius: 18px;
+            background: rgba(3, 18, 39, 0.34);
+        }
+
+        .mqtt-connection-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .mqtt-diagram-state {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            padding: 5px 9px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .mqtt-network-diagram {
+            display: grid;
+            grid-template-columns: minmax(58px, 1fr) minmax(28px, 0.72fr) minmax(58px, 1fr) minmax(28px, 0.72fr) minmax(58px, 1fr);
+            align-items: center;
+            width: 100%;
+            min-height: 88px;
+        }
+
+        .mqtt-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            min-width: 0;
+            color: rgba(255, 255, 255, 0.48);
+            transition: 180ms ease;
+        }
+
+        .mqtt-node span {
+            max-width: 90px;
+            font-size: 8px;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: 0.08em;
+            text-align: center;
+        }
+
+        .mqtt-node-icon {
+            display: grid;
+            place-items: center;
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 11px;
+            background: rgba(255, 255, 255, 0.035);
+            font-size: 13px;
+            font-weight: 900;
+            transition: 180ms ease;
+        }
+
+        .mqtt-node.active {
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .mqtt-node.active .mqtt-node-icon {
+            border-color: rgba(0, 238, 196, 0.45);
+            background: rgba(0, 238, 196, 0.10);
+            box-shadow: 0 0 18px rgba(0, 238, 196, 0.12);
+        }
+
+        .mqtt-node.disconnected {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .mqtt-node.disconnected .mqtt-node-icon {
+            border-color: rgba(255, 75, 110, 0.48);
+            background: rgba(255, 75, 110, 0.09);
+        }
+
+        .mqtt-connection-line {
+            position: relative;
+            height: 2px;
+            margin: 0 2px;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.10);
+            transition: 180ms ease;
+        }
+
+        .mqtt-connection-line.active {
+            background: rgba(0, 238, 196, 0.72);
+            box-shadow: 0 0 10px rgba(0, 238, 196, 0.24);
+        }
+
+        .mqtt-connection-line.disconnected {
+            background: rgba(255, 75, 110, 0.28);
+        }
+
+        .mqtt-line-cross {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: none;
+            width: 18px;
+            height: 18px;
+            transform: translate(-50%, -50%);
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 75, 110, 0.55);
+            border-radius: 50%;
+            background: #06142a;
+            color: rgba(255, 110, 135, 0.95);
+            font-size: 14px;
+            font-weight: 900;
+            line-height: 1;
+            z-index: 2;
+        }
+
+        .mqtt-connection-line.disconnected .mqtt-line-cross,
+        .mqtt-connection-line.inactive .mqtt-line-cross {
+            display: flex;
+        }
+
+        .mqtt-connection-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            margin-top: 13px;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.40);
+        }
+
+        .mqtt-connection-details strong {
+            margin-left: 3px;
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+        #mqttStatus.online,
+        #mqttDiagramState.online {
+            color: #00eec4;
+        }
+
+        #mqttStatus.connected,
+        #mqttDiagramState.connected {
+            color: #4fdcff;
+        }
+
+        #mqttStatus.disconnected,
+        #mqttDiagramState.disconnected {
+            color: #ff6f91;
+        }
+
+        #mqttStatus.offline,
+        #mqttDiagramState.offline {
+            color: rgba(255, 255, 255, 0.48);
+        }
+
+        @media (max-width: 620px) {
+            .mqtt-network-diagram {
+                grid-template-columns: minmax(48px, 1fr) minmax(18px, 0.55fr) minmax(48px, 1fr) minmax(18px, 0.55fr) minmax(48px, 1fr);
+            }
+
+            .mqtt-node span {
+                font-size: 7px;
+            }
+
+            .mqtt-node-icon {
+                width: 34px;
+                height: 34px;
+            }
+        }
+
+/* Dashboard MQTT diagram styles moved from index.html. */
+
+
+/* ==========================================================
+   SHARED COMMAND / LOG TOOLBAR
+
+   The command entry, log source, format selector and download
+   button belong to the Activity + Console monitor as one full-
+   width control bar instead of being confined to the Console
+   column.
+========================================================== */
+
+.shared-console-input-area {
+    width: 100%;
+    min-width: 0;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 10px;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8, 24, 48, 0.62),
+            rgba(5, 13, 30, 0.52)
+        ) !important;
+
+    border:
+        1px solid rgba(100, 220, 255, 0.16) !important;
+
+    -webkit-backdrop-filter: blur(16px) saturate(135%);
+    backdrop-filter: blur(16px) saturate(135%);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.02),
+        0 0 20px rgba(0, 200, 255, 0.035);
+}
+
+.shared-console-input-area .console-prompt {
+    flex: 0 0 auto;
+    padding-left: 3px;
+}
+
+.shared-console-input-area input {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 120px;
+    height: 38px;
+}
+
+.shared-console-input-area .console-send-button {
+    flex: 0 0 auto;
+    min-width: 52px;
+    min-height: 38px;
+}
+
+.shared-console-input-area .console-download-select {
+    flex: 0 0 auto;
+    min-width: 108px;
+    height: 38px;
+}
+
+.shared-console-input-area .console-download-button {
+    flex: 0 0 auto;
+    min-height: 38px;
+    white-space: nowrap;
+}
+
+
+/* Keep the command bar intact at normal desktop/tablet widths. */
+@media (min-width: 751px) {
+    .shared-console-input-area {
+        flex-wrap: nowrap;
+    }
+}
+
+
+/* Tablet: allow the command field to absorb most of the width. */
+@media (min-width: 751px) and (max-width: 1100px) {
+    .shared-console-input-area input {
+        min-width: 100px;
+    }
+
+    .shared-console-input-area .console-download-select {
+        min-width: 96px;
+    }
+
+    .shared-console-input-area .console-download-button {
+        padding-left: 11px;
+        padding-right: 11px;
+        font-size: 10px;
+    }
+}
+
+
+/* Mobile: command field gets its own full-width row; the action
+   controls sit beneath it and still span the whole monitor card. */
+@media (max-width: 750px) {
+    .shared-console-input-area {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+        padding: 9px;
+    }
+
+    .shared-console-input-area .console-prompt {
+        display: none;
+    }
+
+    .shared-console-input-area input {
+        grid-column: 1 / -1;
+        width: 100%;
+        min-width: 0;
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 9px;
+        background: rgba(0, 0, 0, 0.18);
+        border: 1px solid rgba(120, 220, 255, 0.08);
+    }
+
+    .shared-console-input-area .console-send-button,
+    .shared-console-input-area .console-download-select,
+    .shared-console-input-area .console-download-button {
+        width: 100%;
+        min-width: 0;
+        min-height: 40px;
+    }
+
+    .shared-console-input-area .console-send-button {
+        grid-column: 1;
+    }
+
+    .shared-console-input-area #downloadLogSource {
+        grid-column: 2;
+    }
+
+    .shared-console-input-area #downloadLogFormat {
+        grid-column: 1;
+    }
+
+    .shared-console-input-area .console-download-button {
+        grid-column: 2;
+    }
+}
+
+
+/* Small mobile: stack the toolbar controls for reliable touch targets. */
+@media (max-width: 480px) {
+    .shared-console-input-area {
+        grid-template-columns: 1fr;
+    }
+
+    .shared-console-input-area .console-send-button,
+    .shared-console-input-area #downloadLogSource,
+    .shared-console-input-area #downloadLogFormat,
+    .shared-console-input-area .console-download-button {
+        grid-column: 1;
+    }
+}
+
+/* ==========================================================
+   MOBILE GAME CONTROLS
+
+   On touch/mobile/tablet layouts the desktop control pad,
+   360 controls and keyboard section are replaced by the
+   dedicated game-style control cluster.
+========================================================== */
+
+.mobile-game-controls {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .control-card .control-pad,
+    .control-card .secondary-controls,
+    .control-card .keyboard-control {
+        display: none !important;
+    }
+
+    .control-card .mobile-game-controls {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        justify-items: center;
+        gap: 12px;
+        width: 100%;
+        margin: 18px auto 4px;
+        padding: 4px 0;
+    }
+
+    .mobile-game-control-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .mobile-game-button {
+        box-sizing: border-box;
+        width: min(132px, 100%);
+        min-height: 48px;
+        padding: 10px 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        border: 1px solid rgba(105, 225, 255, 0.34);
+        border-radius: 14px;
+        color: rgba(239, 252, 255, 0.96);
+        background:
+            linear-gradient(
+                145deg,
+                rgba(18, 104, 176, 0.30),
+                rgba(74, 55, 170, 0.30)
+            );
+        box-shadow:
+            0 8px 22px rgba(0, 0, 0, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.10),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.025),
+            0 0 18px rgba(0, 200, 255, 0.035);
+        -webkit-backdrop-filter: blur(14px) saturate(135%);
+        backdrop-filter: blur(14px) saturate(135%);
+        font: inherit;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.45px;
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        transition:
+            transform .12s ease,
+            background .15s ease,
+            border-color .15s ease,
+            box-shadow .15s ease,
+            filter .15s ease;
+    }
+
+    .mobile-game-button:hover {
+        border-color: rgba(105, 225, 255, 0.58);
+        background:
+            linear-gradient(
+                145deg,
+                rgba(18, 135, 205, 0.38),
+                rgba(86, 65, 190, 0.38)
+            );
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.28),
+            0 0 18px rgba(0, 210, 255, 0.13),
+            inset 0 1px 0 rgba(255, 255, 255, 0.13);
+        filter: brightness(1.08);
+    }
+
+    .mobile-game-button:active,
+    .mobile-game-button.pressed {
+        transform: scale(0.94);
+        border-color: rgba(130, 235, 255, 0.72);
+        background:
+            linear-gradient(
+                145deg,
+                rgba(25, 150, 220, 0.48),
+                rgba(92, 68, 205, 0.48)
+            );
+        box-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.14),
+            0 0 20px rgba(0, 215, 255, 0.14);
+    }
+
+    .mobile-game-arrow {
+        font-size: 15px;
+        line-height: 1;
+    }
+
+    .mobile-game-stop {
+        width: 64px;
+        min-height: 64px;
+        padding: 8px;
+        flex-direction: column;
+        gap: 5px;
+        border-color: rgba(255, 100, 135, 0.40);
+        background:
+            linear-gradient(
+                145deg,
+                rgba(190, 24, 65, 0.30),
+                rgba(111, 18, 49, 0.32)
+            );
+        box-shadow:
+            0 8px 22px rgba(0, 0, 0, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.09),
+            0 0 18px rgba(255, 40, 90, 0.04);
+    }
+
+    .mobile-game-stop:hover {
+        border-color: rgba(255, 120, 150, 0.66);
+        background:
+            linear-gradient(
+                145deg,
+                rgba(205, 28, 72, 0.40),
+                rgba(125, 20, 54, 0.42)
+            );
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.28),
+            0 0 18px rgba(255, 40, 90, 0.14),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .mobile-game-stop:active,
+    .mobile-game-stop.pressed {
+        border-color: rgba(255, 145, 170, 0.76);
+        background:
+            linear-gradient(
+                145deg,
+                rgba(220, 30, 78, 0.50),
+                rgba(135, 20, 58, 0.52)
+            );
+    }
+
+    .mobile-game-stop-symbol {
+        font-size: 13px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 560px) {
+    .control-card .mobile-game-controls {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        gap: 7px;
+        margin-top: 14px;
+    }
+
+    .mobile-game-control-group {
+        gap: 7px;
+    }
+
+    .mobile-game-button {
+        width: min(122px, 100%);
+        min-height: 46px;
+        padding: 9px 7px;
+        border-radius: 13px;
+        font-size: 9px;
+    }
+
+    .mobile-game-stop {
+        width: 58px;
+        min-height: 58px;
+    }
+}
+
+
+/* ==========================================================
+   GLASS LOG EXPORT CONTROLS
+
+   Native <select> elements often ignore the visual treatment
+   used by the rest of the dashboard. These rules explicitly
+   style the newly added source/format controls as glass UI.
+========================================================== */
+
+.shared-console-input-area .console-download-select {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid rgba(105, 225, 255, 0.22) !important;
+    border-radius: 10px;
+    padding: 0 30px 0 12px;
+    color: rgba(239, 252, 255, 0.95);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16, 58, 92, 0.42),
+            rgba(55, 42, 112, 0.38)
+        ) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(135%);
+    backdrop-filter: blur(14px) saturate(135%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.025),
+        0 0 14px rgba(0, 200, 255, 0.025);
+    font: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .45px;
+    outline: none;
+    cursor: pointer;
+}
+
+.shared-console-input-area .console-download-select:hover {
+    border-color: rgba(105, 225, 255, 0.46) !important;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18, 76, 116, 0.50),
+            rgba(68, 50, 132, 0.46)
+        ) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.09),
+        0 0 14px rgba(0, 210, 255, 0.08);
+}
+
+.shared-console-input-area .console-download-select:focus {
+    border-color: rgba(90, 225, 255, 0.68) !important;
+    box-shadow:
+        0 0 0 2px rgba(0, 200, 255, 0.08),
+        0 0 18px rgba(0, 210, 255, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+.shared-console-input-area .console-download-select option {
+    color: #eafaff;
+    background: #071426;
+    font-weight: 700;
+}
+
+.shared-console-input-area .console-select-wrap {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+.shared-console-input-area .console-select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+    color: rgba(125, 235, 255, 0.88);
+    font-size: 8px;
+    line-height: 1;
+    text-shadow: 0 0 7px rgba(0, 210, 255, 0.25);
+}
+
+.shared-console-input-area .console-download-select {
+    width: 100%;
+}
+
+.shared-console-input-area .console-send-button,
+.shared-console-input-area .console-download-button {
+    border: 1px solid rgba(105, 225, 255, 0.32);
+    border-radius: 10px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.11),
+        0 7px 18px rgba(0, 0, 0, 0.20),
+        0 0 14px rgba(0, 200, 255, 0.04);
+}
+
+.shared-console-input-area input {
+    border: 1px solid rgba(105, 225, 255, 0.16) !important;
+    border-radius: 10px;
+    color: rgba(239, 252, 255, 0.96);
+    background: rgba(1, 9, 22, 0.30) !important;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.045),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.shared-console-input-area input:focus {
+    border-color: rgba(90, 225, 255, 0.48) !important;
+    outline: none;
+    box-shadow:
+        0 0 0 2px rgba(0, 200, 255, 0.06),
+        0 0 16px rgba(0, 210, 255, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+
+/* ==========================================================
+   MQTT BROKER CONFIGURATION POPUP
+   ========================================================== */
+
+.mqtt-broker-popup-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 99990;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.18s ease,
+        visibility 0.18s ease;
+
+    pointer-events: none;
+}
+
+
+.mqtt-broker-popup-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* ----------------------------------------------------------
+   POPUP
+---------------------------------------------------------- */
+
+.mqtt-broker-popup {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: min(
+        410px,
+        calc(100vw - 32px)
+    );
+
+    transform:
+        translate(-50%, -46%)
+        scale(0.96);
+
+    z-index: 99991;
+
+    padding: 20px;
+
+    border:
+        1px solid rgba(
+            0,
+            229,
+            255,
+            0.35
+        );
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12, 27, 47, 0.96),
+            rgba(5, 15, 29, 0.97)
+        );
+
+    box-shadow:
+        0 24px 70px
+        rgba(0, 0, 0, 0.55),
+
+        0 0 30px
+        rgba(0, 229, 255, 0.08);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease,
+        visibility 0.18s ease;
+
+    pointer-events: none;
+}
+
+
+.mqtt-broker-popup.open {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+    pointer-events: auto;
+}
+
+
+/* ----------------------------------------------------------
+   HEADER
+---------------------------------------------------------- */
+
+.mqtt-broker-popup-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+
+.mqtt-broker-popup-header h3 {
+    margin: 5px 0 0;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.mqtt-popup-close {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #ffffff;
+
+    font-size: 22px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+.mqtt-popup-close:hover {
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    border-color:
+        rgba(0, 229, 255, 0.35);
+}
+
+
+/* ----------------------------------------------------------
+   BODY
+---------------------------------------------------------- */
+
+.mqtt-popup-body {
+    padding-top: 17px;
+}
+
+
+.mqtt-popup-label {
+    display: block;
+
+    margin:
+        0 0 7px;
+
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+.mqtt-popup-input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 42px;
+
+    margin-bottom: 14px;
+
+    padding:
+        0 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 9px;
+
+    background:
+        rgba(3, 12, 24, 0.78);
+
+    color: #ffffff;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+
+.mqtt-popup-input:focus {
+    border-color:
+        rgba(0, 229, 255, 0.60);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 229, 255, 0.08);
+}
+
+
+.mqtt-popup-input option {
+    background: #081525;
+    color: #ffffff;
+}
+
+
+/* ----------------------------------------------------------
+   STATUS
+---------------------------------------------------------- */
+
+.mqtt-popup-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin:
+        3px 0 16px;
+
+    padding:
+        10px 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.mqtt-popup-status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #737b86;
+
+    box-shadow:
+        0 0 8px
+        rgba(115, 123, 134, 0.5);
+}
+
+
+.mqtt-popup-status.online .mqtt-popup-status-dot {
+    background: #00d9a6;
+
+    box-shadow:
+        0 0 10px
+        rgba(0, 217, 166, 0.65);
+}
+
+
+.mqtt-popup-status.error .mqtt-popup-status-dot {
+    background: #ff4d67;
+
+    box-shadow:
+        0 0 10px
+        rgba(255, 77, 103, 0.65);
+}
+
+
+/* ----------------------------------------------------------
+   ACTION
+---------------------------------------------------------- */
+
+.mqtt-popup-actions {
+    display: flex;
+}
+
+
+.mqtt-popup-apply {
+    width: 100%;
+
+    min-height: 42px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00d9e9,
+            #16a9ff
+        );
+
+    color: #03101d;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.03em;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+
+.mqtt-popup-apply:hover {
+    filter: brightness(1.08);
+}
+
+
+.mqtt-popup-apply:active {
+    transform: scale(0.98);
+}
+
+
+.mqtt-popup-apply:disabled {
+    opacity: 0.55;
+    cursor: wait;
+}
+
+
+/* ----------------------------------------------------------
+   MAKE THE MQTT STATUS PILL CLICKABLE
+---------------------------------------------------------- */
+
+#mqttDiagramState {
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+
+#mqttDiagramState:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.12);
+}
+
+
+#mqttDiagramState:active {
+    transform: scale(0.96);
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE
+---------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .mqtt-broker-popup {
+        width:
+            calc(100vw - 24px);
+
+        padding: 17px;
+
+        border-radius: 15px;
+    }
+
+}

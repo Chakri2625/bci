@@ -1,0 +1,5 @@
+[
+  {"timestamp": "2026-09-05T13:10:01.120", "command": "PUSH", "confidence": 0.91},
+  {"timestamp": "2026-09-05T13:10:01.500", "command": "PUSH", "confidence": 0.88},
+  {"timestamp": "2026-09-05T13:10:01.800", "command": "PUSH", "confidence": 0.92}
+]

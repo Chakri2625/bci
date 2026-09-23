@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MasterHub — IoT Team Console (ESP32 Smart Relays & Telemetry)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/iot/static/styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <div class="brand-group" onclick="showPhase(1)">
+      <div class="brand-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v8"></path>
+          <path d="m4.93 10.93 1.41 1.41"></path>
+          <path d="M2 18h2"></path>
+          <path d="M20 18h2"></path>
+          <path d="m19.07 10.93-1.41 1.41"></path>
+          <path d="M22 22H2"></path>
+          <path d="m8 22 4-10 4 10"></path>
+        </svg>
+      </div>
+      <div>
+        <h1 class="brand-title">
+          MasterHub
+          <span class="brand-badge iot">IoT Real-Time Pipeline</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <!-- Back to SynaptiMesh -->
+      <button class="nav-hub-btn" onclick="returnToMainHub()">
+        🏠 Back to SynaptiMesh
+      </button>
+
+      <!-- Backend URL Config -->
+      <div class="api-config-box">
+        <span style="color: var(--text-muted); font-size: 11px; font-weight: 700;">API:</span>
+        <input type="text" id="apiUrlInput" class="api-input" placeholder="http://localhost:8000" onchange="initWebSocket()">
+      </div>
+
+      <!-- Pulse Status Badge -->
+      <div class="pulse-badge">
+        <span class="dot-ping" id="connDot"></span>
+        <span id="connText">Connecting WebSocket...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Persistent Live Telemetry Grid -->
+  <div class="telemetry-bar" id="statusBar">
+    <div class="telemetry-metric">
+      <span class="metric-label">Active FSM Mode</span>
+      <span class="metric-value" id="currentModeText">IOT_MODE</span>
+    </div>
+
+    <div class="telemetry-divider"></div>
+
+    <div class="telemetry-metric">
+      <span class="metric-label">Selected Appliance</span>
+      <span style="font-size: 14px; font-weight: 700; color: var(--text-primary);" id="currentSelectedLabel">
+        None (Browse Phase 1)
+      </span>
+    </div>
+
+    <div class="telemetry-metric">
+      <span class="metric-label">Last Dispatched Command</span>
+      <div class="command-card-box">
+        <span class="command-name" id="lastCmdName">none</span>
+        <span class="badge-tag success" id="lastOutcomeTag">READY</span>
+        <span class="badge-tag status-off" id="lastPowerStateTag">STANDBY</span>
+      </div>
+    </div>
+
+    <div class="telemetry-metric">
+      <span class="metric-label">Backend Pipeline</span>
+      <div class="command-card-box">
+        <span class="badge-tag success" id="lifecycleStageTag" style="font-size: 11px;">WEBSOCKET REAL-TIME</span>
+        <span class="mono" id="lastCmdIdTag" style="font-size: 10px; color: var(--text-muted);">cmd: ready</span>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 8px;">
+      <button class="nav-hub-btn" onclick="switchMode('mode_iot')">
+        <span>⚡ IOT_MODE</span>
+      </button>
+      <button class="nav-hub-btn" onclick="returnToMainHub()">
+        <span>🏠 IDLE Mode</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Real-Time Environmental & Energy Sensor Telemetry Strip (Task 3 & 8) -->
+  <div class="telemetry-bar" style="margin-bottom: 24px; background: var(--surface); border: 1px solid var(--border);">
+    <div class="telemetry-metric">
+      <span class="metric-label">🌡️ Temperature</span>
+      <span class="metric-value" id="sensorTemp" style="color: #ea580c;">-- °C</span>
+    </div>
+    <div class="telemetry-divider"></div>
+    <div class="telemetry-metric">
+      <span class="metric-label">💧 Humidity</span>
+      <span class="metric-value" id="sensorHumidity" style="color: var(--blue);">-- %</span>
+    </div>
+    <div class="telemetry-divider"></div>
+    <div class="telemetry-metric">
+      <span class="metric-label">☀️ Ambient Light</span>
+      <span class="metric-value" id="sensorLux" style="color: var(--warning);">-- Lux</span>
+    </div>
+    <div class="telemetry-divider"></div>
+    <div class="telemetry-metric">
+      <span class="metric-label">⚡ Power Load</span>
+      <span class="metric-value" id="sensorPower" style="color: var(--purple);">-- W</span>
+    </div>
+    <div class="telemetry-divider"></div>
+    <div class="telemetry-metric">
+      <span class="metric-label">📶 WiFi Signal</span>
+      <span class="metric-value" id="sensorRssi" style="color: var(--primary);">-- dBm</span>
+    </div>
+    <div class="telemetry-divider"></div>
+    <div class="telemetry-metric">
+      <span class="metric-label">🚶 Motion</span>
+      <span class="badge-tag" id="sensorMotion" style="background: var(--surface-tertiary); color: var(--text-secondary);">CLEAR</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PHASE 1: APPLIANCE SELECTION VIEW          -->
+  <!-- ========================================== -->
+  <main id="phase1-view">
+    <div class="panel-card">
+      <div class="panel-header">
+        <div>
+          <h2 class="panel-heading">
+            <span>💡 IoT Team Integration — Appliance Selection (Phase 1)</span>
+          </h2>
+          <span style="color: var(--text-secondary); font-size: 13.5px; margin-top: 4px; display: block;">
+            Select an ESP32 relay appliance to open dedicated ON / OFF power controls:
+          </span>
+        </div>
+        <span class="brand-badge iot" id="deviceCountBadge">3 Primary Relays</span>
+      </div>
+
+      <div class="appliance-grid">
+        <!-- 1. Light Appliance -->
+        <div class="appliance-card" onclick="selectAppliance('light')">
+          <div class="appliance-card-top">
+            <div class="appliance-icon-box">💡</div>
+            <span class="brand-badge">Relay 1 (ESP32)</span>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 class="appliance-title">Light Relay</h3>
+              <span class="badge-tag status-off" id="cardStateLight">OFF</span>
+            </div>
+            <div class="appliance-meta">
+              Gesture trigger: <strong>PUSH</strong><br>
+              MQTT: <code class="mono" style="font-size: 11px;">Left_light_on / off</code>
+            </div>
+          </div>
+          <div class="appliance-card-footer">
+            <span>Open Power Controls (Phase 2)</span>
+            <span>→</span>
+          </div>
+        </div>
+
+        <!-- 2. Fan Appliance -->
+        <div class="appliance-card" onclick="selectAppliance('fan')">
+          <div class="appliance-card-top">
+            <div class="appliance-icon-box" style="background: var(--blue-dim); color: var(--blue);">🌀</div>
+            <span class="brand-badge">Relay 2 (ESP32)</span>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 class="appliance-title">Fan Relay</h3>
+              <span class="badge-tag status-off" id="cardStateFan">OFF</span>
+            </div>
+            <div class="appliance-meta">
+              Gesture trigger: <strong>PULL</strong><br>
+              MQTT: <code class="mono" style="font-size: 11px;">Left_fan_on / off</code>
+            </div>
+          </div>
+          <div class="appliance-card-footer" style="color: var(--blue);">
+            <span>Open Power Controls (Phase 2)</span>
+            <span>→</span>
+          </div>
+        </div>
+
+        <!-- 3. Water Pump Appliance -->
+        <div class="appliance-card" onclick="selectAppliance('pump')">
+          <div class="appliance-card-top">
+            <div class="appliance-icon-box" style="background: var(--purple-dim); color: var(--purple);">💧</div>
+            <span class="brand-badge">Relay 3 (ESP32)</span>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 class="appliance-title">Water Pump</h3>
+              <span class="badge-tag status-off" id="cardStatePump">OFF</span>
+            </div>
+            <div class="appliance-meta">
+              Gesture trigger: <strong>LEFT</strong><br>
+              MQTT: <code class="mono" style="font-size: 11px;">Left_pump_on / off</code>
+            </div>
+          </div>
+          <div class="appliance-card-footer" style="color: var(--purple);">
+            <span>Open Power Controls (Phase 2)</span>
+            <span>→</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional IoT Peripherals Panel -->
+    <div class="panel-card">
+      <div class="panel-header">
+        <h3 class="panel-heading">Additional Peripheral Relays & Maintenance</h3>
+        <span class="brand-badge">Expansion Board</span>
+      </div>
+      <div class="actions-grid">
+        <button class="btn-command" onclick="selectAppliance('right_light')">
+          <span>💡 Right Light (Relay 4)</span>
+          <span class="btn-sub">Open Power Controls</span>
+        </button>
+        <button class="btn-command" onclick="selectAppliance('right_fan')">
+          <span>🌀 Right Fan (Relay 5)</span>
+          <span class="btn-sub">Open Power Controls</span>
+        </button>
+        <button class="btn-command" onclick="sendIoTCommand('ota_update')">
+          <span>🔄 ESP32 OTA Update</span>
+          <span class="btn-sub">Payload: OTA_UPDATE</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- PHASE 2: APPLIANCE POWER CONTROL DOCK      -->
+  <!-- ========================================== -->
+  <section id="phase2-view" style="display: none;">
+    <div class="phase2-dock">
+      <div class="phase2-header">
+        <div class="active-appliance-info">
+          <div class="active-appliance-icon" id="p2Icon">💡</div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <h2 class="active-appliance-name" id="p2Name">Light Relay</h2>
+              <span class="brand-badge" id="p2RelayBadge">Relay 1</span>
+              <span class="badge-tag status-off" id="p2StateBadge">OFF</span>
+            </div>
+            <div style="display: flex; gap: 12px; font-size: 12.5px; color: var(--text-secondary); margin-top: 2px;">
+              <span id="p2GestureBadge">Gesture: PUSH</span>
+              <span>•</span>
+              <span class="mono" id="p2MqttTopic" style="font-size: 11.5px;">iot/device/ESP32_RELAY_01/action</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-back-phase" onclick="showPhase(1)">
+            ← Back to Appliances (Phase 1)
+          </button>
+          <button class="btn-back-phase" onclick="returnToMainHub()">
+            🏠 Main Menu (IDLE)
+          </button>
+        </div>
+      </div>
+
+      <!-- Big Dual Power Switches -->
+      <div class="power-switch-container">
+        <!-- ON Switch (Right Gesture) -->
+        <button class="power-btn on" id="p2OnBtn">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+            <line x1="12" y1="2" x2="12" y2="12"></line>
+          </svg>
+          <div>
+            <div class="power-btn-label">RIGHT (TURN ON)</div>
+            <div class="power-btn-sub" id="p2OnCmdText">Cmd: left_light_on</div>
+          </div>
+        </button>
+
+        <!-- OFF Switch (Left Gesture) -->
+        <button class="power-btn off" id="p2OffBtn">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+            <line x1="12" y1="2" x2="12" y2="12"></line>
+          </svg>
+          <div>
+            <div class="power-btn-label">LEFT (TURN OFF)</div>
+            <div class="power-btn-sub" id="p2OffCmdText">Cmd: left_light_off</div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Live Device Telemetry Feedback -->
+      <div class="device-telemetry-card">
+        <div class="telemetry-item">
+          <span style="color: var(--text-muted); font-size: 11px; font-weight: 700; text-transform: uppercase;">Last Wire Payload:</span>
+          <code class="mono" id="p2LastPayload" style="font-size: 12px; color: var(--text-primary); font-weight: 600;">Waiting for command...</code>
+        </div>
+        <div class="telemetry-item">
+          <span style="color: var(--text-muted); font-size: 11px; font-weight: 700; text-transform: uppercase;">Channel / Topic:</span>
+          <span class="mono" style="font-size: 12px; color: var(--primary);">iot/esp32/action</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activity & MQTT Event Log Terminal (Task 2 & 8) -->
+  <footer class="terminal-card">
+    <div class="terminal-header">
+      <div class="terminal-dots">
+        <div class="tdot r" onclick="clearLogs()" title="Clear logs"></div>
+        <div class="tdot y"></div>
+        <div class="tdot g"></div>
+      </div>
+      <span style="letter-spacing: 0.05em;">IOT REAL-TIME WEBSOCKET & ACTIVITY STREAM</span>
+      <span id="logTimestamp" class="mono">--:--:--</span>
+    </div>
+    <div class="terminal-window" id="terminalLogs">
+      <div class="t-log info">IoT Team Console initialized. Subscribed to real-time WebSocket stream...</div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="/iot/static/app.js"></script>
+</body>
+</html>

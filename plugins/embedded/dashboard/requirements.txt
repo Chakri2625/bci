@@ -1,0 +1,6 @@
+Flask
+Flask-SocketIO
+gunicorn
+eventlet
+paho-mqtt
+python-socketio

@@ -1,0 +1,8 @@
+plugin_id: aiml
+name: AIML Master Hub
+version: 1.0.0
+dashboard_url: /aiml
+description: Unified BCI Master Hub for AI/ML Media Automation, Cortex Streaming, and Cross-Platform Dashboards.
+author: SynaptiMesh AIML Team
+enabled: true
+entrypoint: plugins.aiml.plugin:AIMLPlugin

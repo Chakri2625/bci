@@ -1,0 +1,1293 @@
+{
+  "$defs": {
+    "AiMlTelemetry": {
+      "description": "Standard AI/ML Pipeline & Inference Telemetry.",
+      "properties": {
+        "model_name": {
+          "description": "Model identifier or architecture name",
+          "title": "Model Name",
+          "type": "string"
+        },
+        "model_version": {
+          "default": "1.0.0",
+          "description": "Model semantic version",
+          "title": "Model Version",
+          "type": "string"
+        },
+        "pipeline_stage": {
+          "default": "INFERENCE",
+          "description": "Active pipeline stage (PREPROCESSING, INFERENCE, POSTPROCESSING)",
+          "title": "Pipeline Stage",
+          "type": "string"
+        },
+        "inference_latency_ms": {
+          "description": "Execution time for forward pass in milliseconds",
+          "minimum": 0.0,
+          "title": "Inference Latency Ms",
+          "type": "number"
+        },
+        "preprocess_latency_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Data preprocessing duration in milliseconds",
+          "title": "Preprocess Latency Ms"
+        },
+        "postprocess_latency_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Thresholding and smoothing duration in milliseconds",
+          "title": "Postprocess Latency Ms"
+        },
+        "prediction": {
+          "$ref": "#/$defs/PredictionMetrics",
+          "description": "Model classification results"
+        },
+        "hardware_metrics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HardwareMetrics"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Hardware resource utilization during inference"
+        }
+      },
+      "required": [
+        "model_name",
+        "inference_latency_ms",
+        "prediction"
+      ],
+      "title": "AiMlTelemetry",
+      "type": "object"
+    },
+    "BciTelemetry": {
+      "description": "Standard Brain-Computer Interface (BCI) Telemetry.",
+      "properties": {
+        "headset_model": {
+          "default": "Emotiv EPOC X",
+          "description": "Headset model / manufacturer identifier",
+          "title": "Headset Model",
+          "type": "string"
+        },
+        "headset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Headset hardware identifier or serial number",
+          "title": "Headset Id"
+        },
+        "sampling_rate_hz": {
+          "default": 128,
+          "description": "Signal sampling frequency in Hz",
+          "title": "Sampling Rate Hz",
+          "type": "integer"
+        },
+        "battery_pct": {
+          "default": 100,
+          "description": "Headset battery level percentage",
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Battery Pct",
+          "type": "integer"
+        },
+        "packet_loss_rate": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 0.0,
+          "description": "Wireless packet loss ratio",
+          "title": "Packet Loss Rate"
+        },
+        "signal_quality": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "Contact quality score (0.0 to 1.0) indexed by EEG channel name (AF3, F7, F3, etc.)",
+          "title": "Signal Quality",
+          "type": "object"
+        },
+        "mental_command": {
+          "$ref": "#/$defs/MentalCommandTelemetry",
+          "description": "Current classified mental intent"
+        },
+        "frequency_bands": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FrequencyBandsTelemetry"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Power spectral density values"
+        },
+        "raw_channels_uv": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional raw microvolt time-series arrays per channel",
+          "title": "Raw Channels Uv"
+        }
+      },
+      "required": [
+        "mental_command"
+      ],
+      "title": "BciTelemetry",
+      "type": "object"
+    },
+    "BusTelemetry": {
+      "properties": {
+        "protocol": {
+          "default": "MQTT",
+          "description": "Bus communication protocol (UART, CAN, SPI, I2C, MQTT, TCP_SOCKET)",
+          "title": "Protocol",
+          "type": "string"
+        },
+        "baud_rate": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Serial baud rate if using UART",
+          "title": "Baud Rate"
+        },
+        "rx_buffer_overflows": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 0,
+          "description": "Serial/CAN RX buffer overflow count",
+          "title": "Rx Buffer Overflows"
+        },
+        "packet_crc_errors": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 0,
+          "description": "Corrupt packet / CRC error count",
+          "title": "Packet Crc Errors"
+        },
+        "round_trip_latency_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Command to ACK round-trip latency in ms",
+          "title": "Round Trip Latency Ms"
+        }
+      },
+      "title": "BusTelemetry",
+      "type": "object"
+    },
+    "ConnectivityMetrics": {
+      "properties": {
+        "protocol": {
+          "default": "MQTT",
+          "description": "Active communication protocol (MQTT, HTTP, WEBSOCKET, COAP)",
+          "title": "Protocol",
+          "type": "string"
+        },
+        "wifi_rssi_dbm": {
+          "anyOf": [
+            {
+              "maximum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "WiFi Signal Strength in dBm",
+          "title": "Wifi Rssi Dbm"
+        },
+        "ip_address": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Local or assigned IPv4 address",
+          "title": "Ip Address"
+        },
+        "uptime_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Device uptime since last boot in seconds",
+          "title": "Uptime Seconds"
+        }
+      },
+      "title": "ConnectivityMetrics",
+      "type": "object"
+    },
+    "EmbeddedTelemetry": {
+      "description": "Standard Embedded Microcontroller & Robotics Telemetry (RC Car, Wheelchair).",
+      "properties": {
+        "device_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Microcontroller or robotics hardware identifier",
+          "title": "Device Id"
+        },
+        "device_mode": {
+          "default": "RC_CAR",
+          "description": "Device operational mode (RC_CAR, WHEELCHAIR, ROBOTIC_ARM)",
+          "title": "Device Mode",
+          "type": "string"
+        },
+        "mcu_architecture": {
+          "default": "ESP32-WROOM-32",
+          "description": "Microcontroller architecture (ESP32, STM32, RP2040)",
+          "title": "Mcu Architecture",
+          "type": "string"
+        },
+        "firmware_version": {
+          "default": "2.0.0-unified",
+          "description": "Firmware version running on MCU",
+          "title": "Firmware Version",
+          "type": "string"
+        },
+        "status": {
+          "default": "ONLINE",
+          "description": "Operational device status",
+          "enum": [
+            "ONLINE",
+            "OFFLINE",
+            "DEGRADED",
+            "ERROR",
+            "MOVING",
+            "STOPPED",
+            "TIMEOUT",
+            "ACTIVE",
+            "IDLE"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "system_health": {
+          "$ref": "#/$defs/SystemHealthTelemetry",
+          "description": "MCU system health, memory, and voltage metrics"
+        },
+        "kinematics": {
+          "$ref": "#/$defs/KinematicsTelemetry",
+          "description": "Motor drive and steering kinematics"
+        },
+        "imu_sensors": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ImuTelemetry"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "6-DOF / 9-DOF IMU motion sensor readings"
+        },
+        "safety_and_ranging": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SafetyRangingTelemetry"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Obstacle proximity and safety flags"
+        },
+        "bus_telemetry": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BusTelemetry"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Bus performance and error counters"
+        }
+      },
+      "required": [
+        "system_health"
+      ],
+      "title": "EmbeddedTelemetry",
+      "type": "object"
+    },
+    "EnergyMetrics": {
+      "properties": {
+        "voltage_v": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "AC/DC supply voltage in Volts",
+          "title": "Voltage V"
+        },
+        "current_a": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Current consumption in Amperes",
+          "title": "Current A"
+        },
+        "power_watts": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Active power consumption in Watts",
+          "title": "Power Watts"
+        },
+        "energy_kwh": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Cumulative energy consumption in kWh",
+          "title": "Energy Kwh"
+        }
+      },
+      "title": "EnergyMetrics",
+      "type": "object"
+    },
+    "EnvironmentalSensors": {
+      "properties": {
+        "temperature_celsius": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Ambient temperature in degrees Celsius",
+          "title": "Temperature Celsius"
+        },
+        "humidity_pct": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Relative humidity percentage",
+          "title": "Humidity Pct"
+        },
+        "ambient_light_lux": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Ambient illuminance in Lux",
+          "title": "Ambient Light Lux"
+        },
+        "motion_detected": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "PIR / Radar motion detection flag",
+          "title": "Motion Detected"
+        }
+      },
+      "title": "EnvironmentalSensors",
+      "type": "object"
+    },
+    "FrequencyBandsTelemetry": {
+      "properties": {
+        "delta_uv2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Delta band power (0.5 - 4 Hz) in uV^2",
+          "title": "Delta Uv2"
+        },
+        "theta_uv2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Theta band power (4 - 8 Hz) in uV^2",
+          "title": "Theta Uv2"
+        },
+        "alpha_uv2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Alpha band power (8 - 12 Hz) in uV^2",
+          "title": "Alpha Uv2"
+        },
+        "beta_low_uv2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Low Beta band power (12 - 18 Hz) in uV^2",
+          "title": "Beta Low Uv2"
+        },
+        "beta_high_uv2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "High Beta band power (18 - 30 Hz) in uV^2",
+          "title": "Beta High Uv2"
+        },
+        "gamma_uv2": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Gamma band power (30 - 45 Hz) in uV^2",
+          "title": "Gamma Uv2"
+        }
+      },
+      "title": "FrequencyBandsTelemetry",
+      "type": "object"
+    },
+    "HardwareMetrics": {
+      "properties": {
+        "execution_device": {
+          "default": "CPU",
+          "description": "Inference device (CPU, CUDA_GPU, TENSORRT, EDGE_TPU)",
+          "title": "Execution Device",
+          "type": "string"
+        },
+        "cpu_utilization_pct": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "CPU usage %",
+          "title": "Cpu Utilization Pct"
+        },
+        "gpu_utilization_pct": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "GPU usage %",
+          "title": "Gpu Utilization Pct"
+        },
+        "ram_memory_used_mb": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "RAM memory allocated in MB",
+          "title": "Ram Memory Used Mb"
+        },
+        "gpu_vram_used_mb": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "GPU VRAM allocated in MB",
+          "title": "Gpu Vram Used Mb"
+        }
+      },
+      "title": "HardwareMetrics",
+      "type": "object"
+    },
+    "ImuTelemetry": {
+      "properties": {
+        "accel_x_g": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Acceleration X axis in Gs",
+          "title": "Accel X G"
+        },
+        "accel_y_g": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Acceleration Y axis in Gs",
+          "title": "Accel Y G"
+        },
+        "accel_z_g": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Acceleration Z axis in Gs",
+          "title": "Accel Z G"
+        },
+        "gyro_roll_deg_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Angular roll rate in deg/s",
+          "title": "Gyro Roll Deg S"
+        },
+        "gyro_pitch_deg_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Angular pitch rate in deg/s",
+          "title": "Gyro Pitch Deg S"
+        },
+        "gyro_yaw_deg_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Angular yaw rate in deg/s",
+          "title": "Gyro Yaw Deg S"
+        }
+      },
+      "title": "ImuTelemetry",
+      "type": "object"
+    },
+    "IotTelemetry": {
+      "description": "Standard IoT Relay & Sensor Node Telemetry.",
+      "properties": {
+        "device_type": {
+          "default": "SMART_RELAY",
+          "description": "Device category (SMART_RELAY, SENSOR_NODE, SMART_HUB)",
+          "title": "Device Type",
+          "type": "string"
+        },
+        "firmware_version": {
+          "default": "2.0.0-unified",
+          "description": "Firmware version running on MCU",
+          "title": "Firmware Version",
+          "type": "string"
+        },
+        "status": {
+          "default": "ONLINE",
+          "description": "Operational device status",
+          "enum": [
+            "ONLINE",
+            "OFFLINE",
+            "DEGRADED",
+            "ERROR"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "relays": {
+          "$ref": "#/$defs/RelayStates",
+          "description": "Actuator / relay channel states"
+        },
+        "environmental_sensors": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EnvironmentalSensors"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Ambient environmental sensor readings"
+        },
+        "energy_metrics": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EnergyMetrics"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Power and energy telemetry"
+        },
+        "connectivity": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ConnectivityMetrics"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Network and connectivity diagnostics"
+        }
+      },
+      "title": "IotTelemetry",
+      "type": "object"
+    },
+    "KinematicsTelemetry": {
+      "properties": {
+        "movement": {
+          "default": "STOP",
+          "description": "Active movement direction/command (FORWARD, BACKWARD, LEFT, RIGHT, STOP, LEFT360, RIGHT360, IDLE)",
+          "title": "Movement",
+          "type": "string"
+        },
+        "state": {
+          "default": "IDLE",
+          "description": "Kinematic state (e.g. IDLE, MOVING_FORWARD, MOVING_BACKWARD, TURNING_LEFT, TURNING_RIGHT, STOP, STOPPED)",
+          "title": "State",
+          "type": "string"
+        },
+        "speed": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 0.0,
+          "description": "Normalized or current speed scalar/velocity",
+          "title": "Speed"
+        },
+        "speed_pwm": {
+          "anyOf": [
+            {
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Motor PWM speed value (0 to 255)",
+          "title": "Speed Pwm"
+        },
+        "speed_mode": {
+          "default": "NORMAL",
+          "description": "Active drive speed mode (SLOW, NORMAL, MEDIUM, FAST, TURBO)",
+          "title": "Speed Mode",
+          "type": "string"
+        },
+        "motor_left_pwm": {
+          "default": 0,
+          "description": "Left motor PWM duty cycle (-255 to 255)",
+          "maximum": 255,
+          "minimum": -255,
+          "title": "Motor Left Pwm",
+          "type": "integer"
+        },
+        "motor_right_pwm": {
+          "default": 0,
+          "description": "Right motor PWM duty cycle (-255 to 255)",
+          "maximum": 255,
+          "minimum": -255,
+          "title": "Motor Right Pwm",
+          "type": "integer"
+        },
+        "steering_angle_deg": {
+          "anyOf": [
+            {
+              "maximum": 90.0,
+              "minimum": -90.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 0.0,
+          "description": "Front steering angle in degrees",
+          "title": "Steering Angle Deg"
+        },
+        "linear_velocity_mps": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Estimated linear velocity in meters/second",
+          "title": "Linear Velocity Mps"
+        },
+        "wheel_encoder_left_ticks": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Left wheel encoder cumulative ticks",
+          "title": "Wheel Encoder Left Ticks"
+        },
+        "wheel_encoder_right_ticks": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Right wheel encoder cumulative ticks",
+          "title": "Wheel Encoder Right Ticks"
+        }
+      },
+      "title": "KinematicsTelemetry",
+      "type": "object"
+    },
+    "MentalCommandTelemetry": {
+      "properties": {
+        "action": {
+          "description": "Mental command action (e.g. PUSH, PULL, LEFT, RIGHT, NEUTRAL, STOP)",
+          "title": "Action",
+          "type": "string"
+        },
+        "power": {
+          "default": 0.0,
+          "description": "Confidence power score between 0.0 and 1.0",
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Power",
+          "type": "number"
+        },
+        "is_debounced": {
+          "default": true,
+          "description": "Whether the command passed debounce filtering",
+          "title": "Is Debounced",
+          "type": "boolean"
+        },
+        "duration_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Active command duration in milliseconds",
+          "title": "Duration Ms"
+        }
+      },
+      "required": [
+        "action"
+      ],
+      "title": "MentalCommandTelemetry",
+      "type": "object"
+    },
+    "PredictionMetrics": {
+      "properties": {
+        "predicted_intent": {
+          "description": "Top classified class label or intent",
+          "title": "Predicted Intent",
+          "type": "string"
+        },
+        "confidence": {
+          "description": "Prediction confidence score",
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "probabilities": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "Probability distribution across all target classes",
+          "title": "Probabilities",
+          "type": "object"
+        },
+        "window_samples": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Number of samples in the inference window",
+          "title": "Window Samples"
+        }
+      },
+      "required": [
+        "predicted_intent",
+        "confidence"
+      ],
+      "title": "PredictionMetrics",
+      "type": "object"
+    },
+    "RelayStates": {
+      "properties": {
+        "light": {
+          "default": "OFF",
+          "description": "Smart light relay state",
+          "enum": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "title": "Light",
+          "type": "string"
+        },
+        "fan": {
+          "default": "OFF",
+          "description": "Smart fan relay state",
+          "enum": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "title": "Fan",
+          "type": "string"
+        },
+        "pump": {
+          "default": "OFF",
+          "description": "Smart pump relay state",
+          "enum": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "title": "Pump",
+          "type": "string"
+        }
+      },
+      "title": "RelayStates",
+      "type": "object"
+    },
+    "SafetyRangingTelemetry": {
+      "properties": {
+        "ultrasonic_front_distance_cm": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Front ultrasonic sensor distance in cm",
+          "title": "Ultrasonic Front Distance Cm"
+        },
+        "ultrasonic_rear_distance_cm": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Rear ultrasonic sensor distance in cm",
+          "title": "Ultrasonic Rear Distance Cm"
+        },
+        "collision_detected": {
+          "default": false,
+          "description": "Collision or proximity trigger flag",
+          "title": "Collision Detected",
+          "type": "boolean"
+        },
+        "emergency_stop_triggered": {
+          "default": false,
+          "description": "Emergency stop hardware or software flag",
+          "title": "Emergency Stop Triggered",
+          "type": "boolean"
+        }
+      },
+      "title": "SafetyRangingTelemetry",
+      "type": "object"
+    },
+    "SystemHealthTelemetry": {
+      "properties": {
+        "free_heap_bytes": {
+          "default": 0,
+          "description": "Available RAM heap in bytes",
+          "minimum": 0,
+          "title": "Free Heap Bytes",
+          "type": "integer"
+        },
+        "cpu_core_temp_c": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Microcontroller core temperature in Celsius",
+          "title": "Cpu Core Temp C"
+        },
+        "supply_voltage_v": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Main supply / battery voltage",
+          "title": "Supply Voltage V"
+        },
+        "battery_soc_pct": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Battery state of charge percentage",
+          "title": "Battery Soc Pct"
+        },
+        "loop_frequency_hz": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Firmware main loop execution frequency in Hz",
+          "title": "Loop Frequency Hz"
+        }
+      },
+      "title": "SystemHealthTelemetry",
+      "type": "object"
+    },
+    "TelemetryDomain": {
+      "enum": [
+        "BCI",
+        "AI_ML",
+        "IOT",
+        "EMBEDDED"
+      ],
+      "title": "TelemetryDomain",
+      "type": "string"
+    }
+  },
+  "description": "Unified standard telemetry envelope wrapping domain-specific payloads.",
+  "properties": {
+    "telemetry_id": {
+      "description": "Unique telemetry packet identifier",
+      "title": "Telemetry Id",
+      "type": "string"
+    },
+    "timestamp": {
+      "description": "ISO-8601 UTC timestamp of packet emission",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "source_domain": {
+      "$ref": "#/$defs/TelemetryDomain",
+      "description": "Origin domain (BCI, AI_ML, IOT, EMBEDDED)"
+    },
+    "source_id": {
+      "description": "Device MAC, headset ID, microcontroller ID, or inference node ID",
+      "title": "Source Id",
+      "type": "string"
+    },
+    "session_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "default",
+      "description": "Active user session identifier",
+      "title": "Session Id"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Distributed trace identifier linking commands to telemetry",
+      "title": "Trace Id"
+    },
+    "sequence_number": {
+      "default": 0,
+      "description": "Monotonically increasing sequence index",
+      "minimum": 0,
+      "title": "Sequence Number",
+      "type": "integer"
+    },
+    "payload": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/BciTelemetry"
+        },
+        {
+          "$ref": "#/$defs/AiMlTelemetry"
+        },
+        {
+          "$ref": "#/$defs/IotTelemetry"
+        },
+        {
+          "$ref": "#/$defs/EmbeddedTelemetry"
+        },
+        {
+          "additionalProperties": true,
+          "type": "object"
+        }
+      ],
+      "description": "Domain-specific structured telemetry payload",
+      "title": "Payload"
+    }
+  },
+  "required": [
+    "source_domain",
+    "source_id",
+    "payload"
+  ],
+  "title": "UnifiedTelemetryPacket",
+  "type": "object"
+}

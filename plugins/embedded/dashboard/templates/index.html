@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SynaptiMesh Master Hub</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}?v=20260916_controls_glass2"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ======================================================
+         BACKGROUND
+    ======================================================= -->
+
+    <div class="background-layer"></div>
+
+    <div class="background-overlay"></div>
+
+
+    <!-- ======================================================
+         APPLICATION
+    ======================================================= -->
+
+    <main class="app-container">
+
+
+        <!-- ==================================================
+            TOP BAR
+        =================================================== -->
+
+        <header class="topbar">
+
+            <!-- BRAND -->
+            <div class="brand">
+
+                <div class="brand-icon">
+                    S
+                </div>
+
+                <div class="brand-text">
+                    <h1>
+                        SynaptiMesh
+                    </h1>
+
+                    <span>
+                        EMBEDDED CONTROL SYSTEM
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+            <nav class="topbar-nav">
+                <a href="/?reset=1" class="topbar-nav-link" style="color: #00f6ff; border: 1px solid rgba(0,246,255,0.35); border-radius: 999px; padding: 4px 12px; cursor: pointer; text-decoration: none;">🏠 BACK TO SYNAPTIMESH</a>
+                <a href="/embedded" class="topbar-nav-link active">DASHBOARD</a>
+                <a href="/embedded/car-control" class="topbar-nav-link">CAR CONTROL</a>
+            </nav>
+
+
+            <!-- CONNECTION STATUS -->
+            <div class="connection-area">
+
+                <!-- MASTER HUB -->
+                <div class="device-info">
+
+                    <span
+                        id="connectionDot"
+                        class="status-dot"
+                    ></span>
+
+                    <div>
+
+                        <span class="status-label">
+                            MASTER HUB
+                        </span>
+
+                        <strong
+                            id="connectionStatus"
+                            class="status-value"
+                        >
+                            DISCONNECTED
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMBEDDED DEVICE -->
+                <div class="device-info">
+
+                    <span
+                        id="robotDot"
+                        class="status-dot"
+                    ></span>
+
+                    <div>
+
+                        <span class="status-label">
+                            EMBEDDED DEVICE
+                        </span>
+
+                        <strong
+                            id="robotStatus"
+                            class="status-value"
+                        >
+                            UNKNOWN
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==================================================
+             MAIN DASHBOARD GRID
+        =================================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- ==================================================
+                 1. DEVICE STATUS
+            =================================================== -->
+
+            <section class="glass-card status-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            DEVICE
+                        </span>
+
+                        <h2>
+                            Embedded Device
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="deviceLiveIndicator"
+                        class="live-indicator"
+                    >
+
+                        <span></span>
+
+                        LIVE
+
+                    </div>
+
+                </div>
+
+
+                <!-- MQTT CONNECTION STATUS DIAGRAM -->
+
+                <div class="mqtt-connection-panel">
+
+                    <div class="mqtt-connection-header">
+
+                        <span class="section-label">
+                            MQTT CONNECTION
+                        </span>
+
+                        <span
+                            id="mqttDiagramState"
+                            class="mqtt-diagram-state offline"
+                        >
+                            OFFLINE
+                        </span>
+
+                    </div>
+
+
+                    <div class="mqtt-network-diagram">
+
+                        <div
+                            id="mqttNodeHub"
+                            class="mqtt-node inactive"
+                        >
+                            <div class="mqtt-node-icon">
+                                H
+                            </div>
+
+                            <span>
+                                MASTER HUB
+                            </span>
+                        </div>
+
+
+                        <div
+                            id="mqttLineHubBroker"
+                            class="mqtt-connection-line inactive"
+                        >
+                            <span class="mqtt-line-cross">
+                                ×
+                            </span>
+                        </div>
+
+
+                        <div
+                            id="mqttNodeBroker"
+                            class="mqtt-node inactive"
+                        >
+                            <div class="mqtt-node-icon">
+                                M
+                            </div>
+
+                            <span>
+                                MQTT BROKER
+                            </span>
+                        </div>
+
+
+                        <div
+                            id="mqttLineBrokerSlave"
+                            class="mqtt-connection-line inactive"
+                        >
+                            <span class="mqtt-line-cross">
+                                ×
+                            </span>
+                        </div>
+
+
+                        <div
+                            id="mqttNodeSlave"
+                            class="mqtt-node inactive"
+                        >
+                            <div class="mqtt-node-icon">
+                                R
+                            </div>
+
+                            <span>
+                                ROBOT CAR
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mqtt-connection-details">
+
+                        <span>
+                            HUB ↔ BROKER:
+                            <strong id="mqttBrokerConnectionText">
+                                OFFLINE
+                            </strong>
+                        </span>
+
+                        <span>
+                            BROKER ↔ SLAVE:
+                            <strong id="mqttSlaveConnectionText">
+                                OFFLINE
+                            </strong>
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- ======================================================
+                    MQTT BROKER POPUP
+                ======================================================= -->
+
+                <div
+                    id="mqttBrokerPopup"
+                    class="mqtt-broker-popup"
+                    aria-hidden="true"
+                >
+
+                    <div class="mqtt-broker-popup-header">
+
+                        <div>
+                            <span class="section-label">
+                                MQTT CONFIGURATION
+                            </span>
+
+                            <h3>
+                                Broker Connection
+                            </h3>
+                        </div>
+
+                        <button
+                            type="button"
+                            id="mqttBrokerPopupClose"
+                            class="mqtt-popup-close"
+                            aria-label="Close"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <div class="mqtt-popup-body">
+
+                        <label
+                            for="mqttBrokerProfile"
+                            class="mqtt-popup-label"
+                        >
+                            Broker Profile
+                        </label>
+
+                        <select
+                            id="mqttBrokerProfile"
+                            class="mqtt-popup-input"
+                        >
+
+                            <option value="devops_1">
+                                DevOps MQTT 1
+                            </option>
+
+                            <option value="devops_2">
+                                DevOps MQTT 2
+                            </option>
+
+                            <option value="hivemq">
+                                Public HiveMQ
+                            </option>
+
+                            <option value="custom">
+                                Custom
+                            </option>
+
+                        </select>
+
+
+                        <label
+                            for="mqttBrokerHost"
+                            class="mqtt-popup-label"
+                        >
+                            Broker
+                        </label>
+
+                        <input
+                            id="mqttBrokerHost"
+                            class="mqtt-popup-input"
+                            type="text"
+                            value="3.210.13.251"
+                            autocomplete="off"
+                        >
+
+
+                        <label
+                            for="mqttBrokerPort"
+                            class="mqtt-popup-label"
+                        >
+                            MQTT Port
+                        </label>
+
+                        <input
+                            id="mqttBrokerPort"
+                            class="mqtt-popup-input"
+                            type="number"
+                            min="1"
+                            max="65535"
+                            value="1883"
+                        >
+
+
+                        <div
+                            id="mqttPopupStatus"
+                            class="mqtt-popup-status"
+                        >
+                            <span class="mqtt-popup-status-dot"></span>
+
+                            <span id="mqttPopupStatusText">
+                                CONNECTED
+                            </span>
+                        </div>
+
+
+                        <div class="mqtt-popup-actions">
+
+                            <button
+                                type="button"
+                                id="mqttBrokerApply"
+                                class="mqtt-popup-apply"
+                            >
+                                APPLY & CONNECT
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="mqttBrokerPopupBackdrop"
+                    class="mqtt-broker-popup-backdrop"
+                ></div>
+                <!-- DEVICE SELECTOR -->
+
+                <div class="device-selector-container">
+
+                    <span class="section-label">
+                        TARGET DEVICE
+                    </span>
+
+                    <select
+                        id="deviceSelector"
+                        class="device-selector"
+                    >
+
+                        <option value="">
+                            SELECT EMBEDDED DEVICE
+                        </option>
+
+                        <option value="98:A3:16:BF:2C:C0">
+                            Robot Car — 98:A3:16:BF:2C:C0
+                        </option>
+
+                        <option value="ROBOTCAR_01">
+                            Robot Car — ROBOTCAR_01
+                        </option>
+
+                        <option value="WHEELCHAIR_01">
+                            Smart Wheelchair — WHEELCHAIR_01
+                        </option>
+
+                    </select>
+
+                    <small
+                        id="selectedDeviceInfo"
+                        class="selected-device-text"
+                    >
+                        No device selected
+                    </small>
+
+                </div>
+
+
+                <!-- CURRENT STATE -->
+
+                <div class="robot-state">
+
+                    <div
+                        id="robotStateIcon"
+                        class="state-icon"
+                    >
+                        ■
+                    </div>
+
+                    <div class="state-information">
+
+                        <span class="state-label">
+                            CURRENT STATE
+                        </span>
+
+                        <strong id="currentState">
+                            STOP
+                        </strong>
+
+                        <small id="currentCommand">
+                            Robot stopped
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TELEMETRY -->
+
+                <div class="telemetry-grid">
+
+
+                    <div class="telemetry-box">
+
+                        <span>
+                            DEVICE
+                        </span>
+
+                        <strong id="deviceId">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="telemetry-box">
+
+                        <span>
+                            MQTT
+                        </span>
+
+                        <strong id="mqttStatus">
+                            OFFLINE
+                        </strong>
+
+                    </div>
+
+
+                    <div class="telemetry-box">
+
+                        <span>
+                            FRONT
+                        </span>
+
+                        <strong id="frontDistance">
+                            -- cm
+                        </strong>
+
+                    </div>
+
+
+                    <div class="telemetry-box">
+
+                        <span>
+                            REAR
+                        </span>
+
+                        <strong id="rearDistance">
+                            -- cm
+                        </strong>
+
+                    </div>
+
+
+                    <div class="telemetry-box">
+
+                        <span>
+                            BATTERY
+                        </span>
+
+                        <strong id="batterySoc">
+                            --%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 2. MANUAL DRIVE
+            =================================================== -->
+
+            <section class="glass-card control-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            CONTROL
+                        </span>
+
+                        <h2>
+                            Manual Drive
+                        </h2>
+
+                    </div>
+
+                    <span>
+                        MANUAL
+                    </span>
+
+                </div>
+
+
+                <!-- CONTROL PAD -->
+
+                <div class="control-pad">
+
+
+                    <!-- FORWARD -->
+
+                    <button
+                        class="control-button"
+                        data-command="LIFTCARFORWARD"
+                    >
+
+                        <span class="arrow">
+                            ▲
+                        </span>
+
+                        FORWARD
+
+                    </button>
+
+
+                    <!-- LEFT / STOP / RIGHT -->
+
+                    <div class="middle-controls">
+
+                        <button
+                            class="control-button"
+                            data-command="LIFTCARLEFT"
+                        >
+
+                            <span class="arrow">
+                                ◀
+                            </span>
+
+                            LEFT
+
+                        </button>
+
+
+                        <button
+                            class="control-button stop-button"
+                            data-command="LIFTCARSTOP"
+                        >
+
+                            <span class="stop-symbol">
+                                ■
+                            </span>
+
+                            STOP
+
+                        </button>
+
+
+                        <button
+                            class="control-button"
+                            data-command="LIFTCARRIGHT"
+                        >
+
+                            <span class="arrow">
+                                ▶
+                            </span>
+
+                            RIGHT
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- BACKWARD -->
+
+                    <button
+                        class="control-button"
+                        data-command="LIFTCARBACKWARD"
+                    >
+
+                        <span class="arrow">
+                            ▼
+                        </span>
+
+                        BACKWARD
+
+                    </button>
+
+                </div>
+
+
+                <!-- 360 CONTROLS -->
+
+                <div class="secondary-controls">
+
+                    <button
+                        class="secondary-button"
+                        data-command="LIFTCARLEFT360"
+                    >
+                        ↶ LEFT 360°
+                    </button>
+
+                    <button
+                        class="secondary-button"
+                        data-command="LIFTCARRIGHT360"
+                    >
+                        RIGHT 360° ↷
+                    </button>
+
+                </div>
+
+
+                <!-- MOBILE GAME CONTROLS
+                     Visible only on touch/mobile/tablet layouts.
+                     Desktop keeps the existing control pad + keyboard.
+                -->
+                <div class="mobile-game-controls" aria-label="Mobile game controls">
+
+                    <div class="mobile-game-control-group mobile-game-left">
+                        <button
+                            type="button"
+                            class="mobile-game-button mobile-game-forward"
+                            data-command="LIFTCARFORWARD"
+                            aria-label="Move Forward"
+                        >
+                            <span class="mobile-game-arrow">▲</span>
+                            <span>FORWARD</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="mobile-game-button mobile-game-backward"
+                            data-command="LIFTCARBACKWARD"
+                            aria-label="Move Backward"
+                        >
+                            <span class="mobile-game-arrow">▼</span>
+                            <span>BACKWARD</span>
+                        </button>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="mobile-game-button mobile-game-stop"
+                        data-command="LIFTCARSTOP"
+                        aria-label="Stop"
+                    >
+                        <span class="mobile-game-stop-symbol">■</span>
+                        <span>STOP</span>
+                    </button>
+
+                    <div class="mobile-game-control-group mobile-game-right">
+                        <button
+                            type="button"
+                            class="mobile-game-button mobile-game-left-turn"
+                            data-command="LIFTCARLEFT"
+                            aria-label="Turn Left"
+                        >
+                            <span class="mobile-game-arrow">◀</span>
+                            <span>LEFT</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="mobile-game-button mobile-game-right-turn"
+                            data-command="LIFTCARRIGHT"
+                            aria-label="Turn Right"
+                        >
+                            <span class="mobile-game-arrow">▶</span>
+                            <span>RIGHT</span>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <!-- KEYBOARD -->
+
+                <div class="keyboard-control">
+
+                    <div class="keyboard-info">
+
+                        <span class="section-label">
+                            KEYBOARD INPUT
+                        </span>
+
+                        <strong>
+                            WASD / Arrow Keys
+                        </strong>
+
+                        <small id="keyboardStatusText">
+                            Keyboard control disabled
+                        </small>
+
+                    </div>
+
+
+                    <label class="toggle">
+
+                        <input
+                            type="checkbox"
+                            id="keyboardToggle"
+                        >
+
+                        <span class="toggle-slider"></span>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 3. SAFETY CONTROLS
+            =================================================== -->
+
+            <section class="glass-card safety-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            SAFETY
+                        </span>
+
+                        <h2>
+                            Safety Controls
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================================
+                     SAFETY STATUS
+                =================================================== -->
+
+                <div class="safety-grid">
+
+
+                    <!-- FRONT SENSOR -->
+
+                    <div
+                        id="frontSafetyItem"
+                        class="safety-item"
+                    >
+
+                        <span class="safety-name">
+                            FRONT SENSOR
+                        </span>
+
+                        <span class="safety-status">
+
+                            <span
+                                id="frontSafetyPointer"
+                                class="safety-pointer"
+                            >
+                                ●
+                            </span>
+
+                            <strong id="frontSafety">
+                                CLEAR
+                            </strong>
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- REAR SENSOR -->
+
+                    <div
+                        id="rearSafetyItem"
+                        class="safety-item"
+                    >
+
+                        <span class="safety-name">
+                            REAR SENSOR
+                        </span>
+
+                        <span class="safety-status">
+
+                            <span
+                                id="rearSafetyPointer"
+                                class="safety-pointer"
+                            >
+                                ●
+                            </span>
+
+                            <strong id="rearSafety">
+                                CLEAR
+                            </strong>
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- EMERGENCY -->
+
+                    <div
+                        id="emergencySafetyItem"
+                        class="safety-item"
+                    >
+
+                        <span class="safety-name">
+                            EMERGENCY
+                        </span>
+
+                        <span class="safety-status">
+
+                            <span class="safety-pointer">
+                                ●
+                            </span>
+
+                            <strong id="emergencyStatus">
+                                READY
+                            </strong>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================================
+                     EMERGENCY STOP
+                =================================================== -->
+
+                <button
+                    id="emergencyBtn"
+                    class="emergency-button"
+                    data-command="LIFTCARSTOP"
+                >
+
+                    ⚠ EMERGENCY STOP
+
+                </button>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 4. LAST TRANSMISSION
+            =================================================== -->
+
+            <section class="glass-card command-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            COMMAND
+                        </span>
+
+                        <h2>
+                            Last Transmission
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="command-display">
+
+                    <span class="command-prefix">
+                        TX
+                    </span>
+
+                    <code id="lastCommand">
+                        NO COMMAND
+                    </code>
+
+                </div>
+
+
+                <div class="command-meta">
+
+
+                    <div>
+
+                        <span>
+                            TIME
+                        </span>
+
+                        <strong id="lastCommandTime">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            RESULT
+                        </span>
+
+                        <strong id="lastCommandResult">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 5. ACK / STATUS
+            =================================================== -->
+
+            <section class="glass-card ack-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            DEVICE RESPONSE
+                        </span>
+
+                        <h2>
+                            ACK / STATUS
+                        </h2>
+
+                    </div>
+
+                    <span
+                        id="responseIndicator"
+                        class="response-indicator"
+                    >
+                        WAITING
+                    </span>
+
+                </div>
+
+
+                <div class="ack-display">
+
+                    <span
+                        id="ackType"
+                        class="ack-type"
+                    >
+                        SYSTEM
+                    </span>
+
+
+                    <strong id="ackMessage">
+                        Waiting for ESP32 response...
+                    </strong>
+
+
+                    <small id="ackTime">
+                        --
+                    </small>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 6. ACTIVITY & CONSOLE
+            =================================================== -->
+
+            <section class="glass-card activity-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            SYSTEM MONITOR
+                        </span>
+
+                        <h2>
+                            Activity & Console
+                        </h2>
+
+                    </div>
+
+                    <button
+                        id="clearLogsBtn"
+                        class="clear-button"
+                    >
+                        CLEAR
+                    </button>
+
+                </div>
+
+
+                <div class="monitor-grid">
+
+
+                    <!-- ACTIVITY LOG -->
+
+                    <div class="monitor-panel">
+
+                        <div class="monitor-title">
+
+                            <span class="monitor-dot"></span>
+
+                            ACTIVITY LOG
+
+                        </div>
+
+
+                        <div
+                            id="activityLog"
+                            class="log-container"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- COMMAND CONSOLE -->
+
+                    <div class="monitor-panel">
+
+                        <div class="monitor-title">
+
+                            <span class="monitor-dot"></span>
+
+                            COMMAND CONSOLE
+
+                        </div>
+
+
+                        <div
+                            id="consoleOutput"
+                            class="console-output"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SHARED COMMAND / LOG TOOLBAR -->
+                <!-- This toolbar spans the complete Activity + Console card. -->
+                <form
+                    id="consoleForm"
+                    class="console-input-area shared-console-input-area"
+                >
+
+                    <span class="console-prompt">
+                        &gt;
+                    </span>
+
+                    <input
+                        id="consoleInput"
+                        type="text"
+                        placeholder="Enter command..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="submit"
+                        class="console-send-button"
+                    >
+                        SEND
+                    </button>
+
+                    <span class="console-select-wrap">
+                        <select
+                            id="downloadLogSource"
+                            class="console-download-select"
+                            aria-label="Log source"
+                        >
+                            <option value="activity">ACTIVITY</option>
+                            <option value="console">CONSOLE</option>
+                            <option value="both">ACTIVITY + CONSOLE</option>
+                        </select>
+                        <span class="console-select-arrow" aria-hidden="true">▼</span>
+                    </span>
+
+                    <span class="console-select-wrap">
+                        <select
+                            id="downloadLogFormat"
+                            class="console-download-select"
+                            aria-label="Download format"
+                        >
+                            <option value="txt">TXT</option>
+                            <option value="csv">CSV</option>
+                            <option value="json">JSON</option>
+                        </select>
+                        <span class="console-select-arrow" aria-hidden="true">▼</span>
+                    </span>
+
+                    <button
+                        type="button"
+                        id="downloadActivityBtn"
+                        class="console-download-button"
+                    >
+                        DOWNLOAD LOG
+                    </button>
+
+                </form>
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             FOOTER
+        =================================================== -->
+
+        <footer class="footer">
+
+            <span>
+                SYNAPTIMESH MASTER HUB
+            </span>
+
+            <span id="footerTime">
+                --
+            </span>
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- ======================================================
+         NOTIFICATION
+    ======================================================= -->
+
+    <div
+        id="notification"
+        class="notification"
+    >
+
+        <span id="notificationMessage"></span>
+
+    </div>
+
+
+
+    <!-- ======================================================
+         DASHBOARD JAVASCRIPT
+    ======================================================= -->
+
+    <script src="{{ url_for('static', filename='js/websocket_manager.js') }}"></script>
+    <script
+        src="{{ url_for('static', filename='js/dashboard.js') }}?v=20260916_controls_glass2"
+    ></script>
+
+    <script
+        src="{{ url_for('static', filename='js/mqtt_broker_popup.js') }}?v=20260917_mqtt_popup2"
+    ></script>
+
+</body>
+
+</html>
